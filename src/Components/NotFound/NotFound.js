@@ -17,13 +17,13 @@ const NotFound = () => {
           </p>
           <Link
             to="/"
-            className="w-full mb-2 py-2 px-3 text-white mt-3 bg-cyan-600 sm:w-auto sm:mb-0"
+            className="w-full mb-2 py-2 px-3 text-white mt-3 bg-blue-600 sm:w-auto sm:mb-0"
           >
             Back to homepage
           </Link>
           <Link
             to="/contact"
-            className="w-full mb-2 py-2 px-3 text-white mt-3 mx-2 bg-cyan-600 sm:w-auto sm:mb-0"
+            className="w-full mb-2 py-2 px-3 text-white mt-3 mx-2 bg-blue-600 sm:w-auto sm:mb-0"
           >
             Contact us
           </Link>

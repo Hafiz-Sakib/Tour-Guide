@@ -81,8 +81,8 @@ const Footer = () => {
             </svg>
           </a>
         </div>
-        <div className="text-center text-green-500 pt-10 sm:pt-12 font-light flex items-center justify-center">
-          All Rights Reserved By Sakib | 2022-2026
+        <div className="text-center text-blue-600 pt-10 sm:pt-12 font-light flex items-center justify-center">
+          All Rights Reserved By ©Hafiz Sakib | 2022-2026
         </div>
       </div>
     </footer>
