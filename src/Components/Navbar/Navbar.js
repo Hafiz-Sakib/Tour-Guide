@@ -4,10 +4,10 @@ import { HiMenu, HiX, HiLibrary } from "react-icons/hi";
 
 const NavBar = () => {
   let Links = [
-    { name: "HOME", link: "/" },
-    { name: "SERVICE", link: "/" },
-    { name: "ABOUT", link: "/" },
-    { name: "BLOG'S", link: "/" },
+    { name: "Home", link: "/" },
+    { name: "Services", link: "/" },
+    { name: "Blogs", link: "/" },
+    { name: "About", link: "/" },
     { name: "CONTACT", link: "/" },
   ];
   let [open, setOpen] = useState(false);

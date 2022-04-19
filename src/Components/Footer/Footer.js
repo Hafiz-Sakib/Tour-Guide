@@ -2,18 +2,18 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-white  w-full py-8 mt-8">
+    <footer className="bg-white  w-full py-8 mt-8" id="footer__container">
       <div className="max-w-screen-xl mx-auto px-4">
         <div className=" flex max-w-xs mx-auto items-center justify-between">
           <a
             href="https://github.com/Hafiz-Sakib"
-            className="text-gray-400 hover:text-gray-800 transition-colors duration-200"
+            className="text-gray-400 hover:text-cyan-600transition-colors duration-200"
           >
             <svg
               width="20"
               height="20"
               fill="currentColor"
-              className="text-xl hover:text-gray-800 transition-colors duration-200"
+              className="text-xl hover:text-cyan-600 transition-colors duration-200"
               viewBox="0 0 1792 1792"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -22,13 +22,13 @@ const Footer = () => {
           </a>
           <a
             href="https://github.com/Hafiz-Sakib"
-            className="text-gray-400 hover:text-gray-800 transition-colors duration-200"
+            className="text-gray-400 hover:text-cyan-600 transition-colors duration-200"
           >
             <svg
               width="20"
               height="20"
               fill="currentColor"
-              className="text-xl hover:text-gray-800 transition-colors duration-200"
+              className="text-xl hover:text-cyan-600 transition-colors duration-200"
               viewBox="0 0 1792 1792"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -37,7 +37,7 @@ const Footer = () => {
           </a>
           <a
             href="https://github.com/Hafiz-Sakib"
-            className="text-gray-400 hover:text-gray-800 transition-colors duration-200"
+            className="text-gray-400 hover:text-cyan-600 transition-colors duration-200"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -52,13 +52,13 @@ const Footer = () => {
           </a>
           <a
             href="https://github.com/Hafiz-Sakib"
-            className="text-gray-400 hover:text-gray-800 transition-colors duration-200"
+            className="text-gray-400 hover:text-cyan-600 transition-colors duration-200"
           >
             <svg
               width="20"
               height="20"
               fill="currentColor"
-              className="text-xl hover:text-gray-800 transition-colors duration-200"
+              className="text-xl hover:text-cyan-600 transition-colors duration-200"
               viewBox="0 0 1792 1792"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -67,13 +67,13 @@ const Footer = () => {
           </a>
           <a
             href="https://github.com/Hafiz-Sakib"
-            className="text-gray-400 hover:text-gray-800 transition-colors duration-200"
+            className="text-gray-400 hover:text-cyan-600 transition-colors duration-200"
           >
             <svg
               width="20"
               height="20"
               fill="currentColor"
-              className="text-xl hover:text-gray-800 transition-colors duration-200"
+              className="text-xl hover:text-cyan-600 transition-colors duration-200"
               viewBox="0 0 1792 1792"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -81,8 +81,8 @@ const Footer = () => {
             </svg>
           </a>
         </div>
-        <div className="text-center text-cyan-600 pt-10 sm:pt-12 font-light flex items-center justify-center">
-          All Rights Reserved By &copy; Crypto Cafe | 2022-2026
+        <div className="text-center text-green-500 pt-10 sm:pt-12 font-light flex items-center justify-center">
+          All Rights Reserved By Sakib | 2022-2026
         </div>
       </div>
     </footer>
