@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
+import { Link } from "react-router-dom";
 import CustomLink from "../Utilities/CustomLink";
 
 const NavBar = () => {
@@ -18,13 +19,15 @@ const NavBar = () => {
             className="font-bold text-2xl cursor-pointer flex items-center font-[Poppins] 
       text-gray-800"
           >
-            <img
-              className="h-14"
-              src={
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuUyUpPXN22vqd8YSB_qrgTPQlrpkCsRw_Kw&usqp=CAU"
-              }
-              alt=""
-            />
+            <Link to={"/"}>
+              <img
+                className="h-14"
+                src={
+                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuUyUpPXN22vqd8YSB_qrgTPQlrpkCsRw_Kw&usqp=CAU"
+                }
+                alt=""
+              />
+            </Link>
           </div>
           <div
             onClick={() => setOpen(!open)}

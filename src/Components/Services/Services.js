@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ServiceCard from "./ServiceCard";
 
-const Service = () => {
+const Services = () => {
   const [services, setServices] = useState([]);
   useEffect(() => {
     fetch("FakeData.json")
@@ -24,4 +24,4 @@ const Service = () => {
     </div>
   );
 };
-export default Service;
+export default Services;
