@@ -3,7 +3,6 @@ import HeroImg from "../../assets/Hero.png";
 import Icon1 from "../../assets/icon-1.png";
 import Icon2 from "../../assets/icon-2.png";
 import Icon3 from "../../assets/icon-3.png";
-import NavBar from "../NavBar/NavBar";
 const Home = () => {
   const Info = [
     {
@@ -23,8 +22,7 @@ const Home = () => {
     },
   ];
   return (
-    <section className="bg-Hero bg-cover bg-center  py-4 md:px-24 px-4">
-      <NavBar />
+    <section className="bg-Hero bg-cover bg-center py-4  md:px-24 px-4">
       <div className="flex md:flex-row flex-col gap-5 pt-20">
         <div className="flex-1 md:mt-24">
           <h1

@@ -1,24 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import ServiceCard from "./ServiceCard";
 
 const Service = () => {
+  const [services, setServices] = useState([]);
+  useEffect(() => {
+    fetch("FakeData.json")
+      .then((res) => res.json())
+      .then((data) => setServices(data));
+  }, []);
   return (
-    <div className="mt-24">
-      <h1 className="text-6xl">Service page</h1>
-      <h1 className="text-6xl">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure doloribus
-        est itaque dolor aut nesciunt provident ea cumque rerum sapiente. Quod,
-        exercitationem dolores? Asperiores rem minima placeat earum nihil alias
-        ex, dolor quibusdam perferendis, quos, libero repellendus. Inventore
-        illum quo ea neque dolores obcaecati sequi asperiores optio aut,
-        officiis hic consequuntur suscipit impedit ipsum quas beatae incidunt
-        qui corporis? Quas vitae dolor nesciunt cupiditate dolorem nemo ab
-        fugiat quisquam officiis inventore nam facere nobis, aperiam est quam
-        dignissimos, dolores perspiciatis unde repellat mollitia necessitatibus
-        maxime odio minus. Fugit omnis mollitia deserunt soluta doloremque
-        consectetur impedit repellat, non quasi! Optio, nesciunt.
-      </h1>
+    <div>
+      <div className="mt-36">
+        <h1 className="text-green-400 text-4xl text-center">My Services</h1>
+        <hr />
+      </div>
+      <div className="md:grid grid-cols-3 mt-12">
+        {services.map((service) => (
+          <ServiceCard key={service.id} service={service}></ServiceCard>
+        ))}
+      </div>
     </div>
   );
 };
-
 export default Service;
