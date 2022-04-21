@@ -11,7 +11,7 @@ const NavBar = () => {
     { name: "About", link: "/About" },
   ];
   return (
-    <nav>
+    <nav className="sticky top-0">
       <div className="shadow-md w-full fixed top-0 left-0">
         <div className="md:flex items-center justify-between bg-white py-4 md:px-10 px-7">
           <div
@@ -21,7 +21,7 @@ const NavBar = () => {
             <img
               className="h-14"
               src={
-                "https://www.armourycoachingstudio.co.uk/uploads/1/2/9/5/129586512/armoury-7.jpg"
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuUyUpPXN22vqd8YSB_qrgTPQlrpkCsRw_Kw&usqp=CAU"
               }
               alt=""
             />
