@@ -11,7 +11,9 @@ const Service = () => {
   return (
     <div>
       <div className="mt-36">
-        <h1 className="text-green-400 text-4xl text-center">My Services</h1>
+        <h1 className="text-blue-700 text-4xl text-center">
+          🚵‍♀️ My Services 🚵
+        </h1>
         <hr />
       </div>
       <div className="md:grid grid-cols-3 mt-12">
