@@ -7,6 +7,8 @@ import Services from "./Components/Services/Services";
 import Blogs from "./Components/Blogs/Blogs";
 import About from "./Components/About Me/About";
 import NotFound from "./Components/NotFound/NotFound";
+import Login from "./Components/Login/Login";
+import Registration from "./Components/Registration/Registration";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Route path="/Services" element={<Services />} />
         <Route path="/Blogs" element={<Blogs />}></Route>
         <Route path="/About" element={<About />}></Route>
+        <Route path="/Login" element={<Login />}></Route>
+        <Route path="/Registration" element={<Registration />}></Route>
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
       <Footer />

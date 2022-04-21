@@ -10,6 +10,8 @@ const NavBar = () => {
     { name: "Services", link: "/Services" },
     { name: "Blogs", link: "/Blogs" },
     { name: "About", link: "/About" },
+    { name: "Login", link: "/Login" },
+    { name: "Registration", link: "/Registration" },
   ];
   return (
     <nav className="sticky top-0">
