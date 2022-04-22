@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Login.css";
 
 const Login = () => {
@@ -16,10 +17,18 @@ const Login = () => {
             </div>
             <div className="md:w-8/12 lg:w-5/12 lg:ml-20">
               <form>
+                <div className="flex justify-center pt-8 pb-8 md:justify-start md:ml-40">
+                  <Link
+                    to={"/Registration"}
+                    className="p-4 text-xl font-bold text-white bg-blue-600"
+                  >
+                    Login To Your Account
+                  </Link>
+                </div>
                 <div className="mb-6">
-                  <div class="flex flex-col pt-4">
-                    <div class="flex relative ">
-                      <span class=" inline-flex  items-center px-3 border-t bg-white border-l border-b  border-gray-300 text-gray-500 shadow-sm text-sm">
+                  <div className="flex flex-col pt-4">
+                    <div className="flex relative ">
+                      <span className=" inline-flex  items-center px-3 border-t bg-white border-l border-b  border-gray-300 text-gray-500 shadow-sm text-sm">
                         <svg
                           width="15"
                           height="15"
@@ -40,9 +49,9 @@ const Login = () => {
                   </div>
                 </div>
                 <div className="mb-6">
-                  <div class="flex flex-col pt-4">
-                    <div class="flex relative ">
-                      <span class=" inline-flex  items-center px-3 border-t bg-white border-l border-b  border-gray-300 text-gray-500 shadow-sm text-sm">
+                  <div className="flex flex-col pt-4">
+                    <div className="flex relative ">
+                      <span className=" inline-flex  items-center px-3 border-t bg-white border-l border-b  border-gray-300 text-gray-500 shadow-sm text-sm">
                         <svg
                           width="15"
                           height="15"
@@ -99,7 +108,7 @@ const Login = () => {
                   <button
                     type="button"
                     id="button"
-                    class="text-black bg-[#ffff] font-medium rounded-lg text-sm px-9 py-3 text-center inline-flex items-center border-2 bg-gray-200 mr-2 mb-2 hover:bg-gray-400"
+                    className="text-black bg-[#ffff] font-medium rounded-lg text-sm px-9 py-3 text-center inline-flex items-center border-2 bg-gray-200 mr-2 mb-2 hover:bg-gray-400"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -150,6 +159,17 @@ const Login = () => {
                     </svg>
                     Sign in with Facebook
                   </button>
+                </div>
+                <div className="pt-6 pb-12 text-center md:pt-12">
+                  <p>
+                    Don&#x27;t have an account?
+                    <Link
+                      to={"/Registration"}
+                      className="font-semibold underline"
+                    >
+                      Register here.
+                    </Link>
+                  </p>
                 </div>
               </form>
             </div>
