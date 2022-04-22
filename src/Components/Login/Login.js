@@ -20,7 +20,7 @@ const Login = () => {
                 <div className="flex justify-center pt-8 pb-8 md:justify-start md:ml-40">
                   <Link
                     to={"/Registration"}
-                    className="p-4 text-xl font-bold text-white bg-blue-600"
+                    className="p-4 text-xl font-bold text-white bg-blue-600 shadow-lg shadow-blue-500"
                   >
                     Login To Your Account
                   </Link>
@@ -95,7 +95,7 @@ const Login = () => {
                 </div>
                 <button
                   type="submit"
-                  className="inline-block px-7 py-3 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out w-full"
+                  className="inline-block px-7 py-3 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out w-full shadow-lg shadow-blue-500"
                 >
                   Sign in
                 </button>

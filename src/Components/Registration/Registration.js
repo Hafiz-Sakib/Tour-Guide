@@ -16,7 +16,7 @@ const Registration = () => {
           <div className="flex justify-center md:justify-start md:ml-52 md:pt-28 pb-4">
             <Link
               to={"/Registration"}
-              className="p-4 text-xl font-bold text-white bg-blue-600"
+              className="p-4 text-xl font-bold text-white bg-blue-600 shadow-lg shadow-blue-500"
             >
               Register Now For Your Booking!
             </Link>
@@ -28,7 +28,8 @@ const Registration = () => {
                 <div className="flex relative ">
                   <input
                     type="text"
-                    id="design-login-email"
+                    required
+                    id="design-login-name"
                     className=" flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                     placeholder="Your Name"
                   />
@@ -70,6 +71,7 @@ const Registration = () => {
                   </span>
                   <input
                     type="password"
+                    required
                     id="design-login-password"
                     className=" flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                     placeholder="Password"
@@ -78,7 +80,7 @@ const Registration = () => {
               </div>
               <button
                 type="submit"
-                className="w-full px-4 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in bg-blue-600 shadow-md hover:text-black hover:bg-green-600 focus:outline-none focus:ring-2"
+                className="w-full px-4 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in bg-blue-600 hover:text-black hover:bg-green-600 focus:outline-none focus:ring-2 shadow-lg shadow-blue-500"
               >
                 <span className="w-full">Register Now</span>
               </button>
