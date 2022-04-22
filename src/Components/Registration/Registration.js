@@ -13,7 +13,7 @@ const Registration = () => {
           />
         </div>
         <div className="flex flex-col w-full md:w-1/2">
-          <div className="flex justify-center pt-36 md:justify-start md:ml-52">
+          <div className="flex justify-center md:justify-start md:ml-52 md:pt-28 pb-4">
             <Link
               to={"/Registration"}
               className="p-4 text-xl font-bold text-white bg-blue-600"
