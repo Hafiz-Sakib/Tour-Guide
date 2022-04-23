@@ -4,6 +4,14 @@ import "./Blogs.css";
 const Blogs = () => {
   return (
     <div className="text-justify mt-28 my-24 mx-16">
+      <div className="text-center">
+        <h1 className="text-4xl text-green-500 md:text-5xl">
+          Some Random Questions & Answers❓
+        </h1>
+        <hr />
+      </div>
+      <br />
+      <br />
       <div>
         <h1 className="text-4xl text-red-500 mb-8">
           What is the difference between authentication and authorization?
