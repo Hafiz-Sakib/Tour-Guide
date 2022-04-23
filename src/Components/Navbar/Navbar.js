@@ -2,6 +2,7 @@ import { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import CustomLink from "../Utilities/CustomLink";
+import Button from "./Button";
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
@@ -10,8 +11,6 @@ const NavBar = () => {
     { name: "Services", link: "/Services" },
     { name: "Blogs", link: "/Blogs" },
     { name: "About", link: "/About" },
-    { name: "Login", link: "/Login" },
-    { name: "Registration", link: "/Registration" },
   ];
   return (
     <nav className="sticky top-0">
@@ -50,6 +49,14 @@ const NavBar = () => {
                 <CustomLink to={link.link}>{link.name}</CustomLink>
               </li>
             ))}
+            <Link to={"/Login"}>
+              <button className="bg-blue-600 text-white font-[Poppins] py-2 px-6 rounded md:ml-4  duration-500">
+                Login
+              </button>
+            </Link>
+            <Link to={"/Registration"}>
+              <Button>Register Now</Button>
+            </Link>
           </ul>
         </div>
       </div>
