@@ -19,7 +19,7 @@ const Login = () => {
               <form>
                 <div className="flex justify-center pt-8 pb-8 md:justify-start md:ml-40">
                   <Link
-                    to={"/Registration"}
+                    to={"/Login"}
                     className="p-4 text-xl font-bold text-white bg-blue-600 shadow-lg shadow-blue-500"
                   >
                     Login To Your Account
