@@ -44,7 +44,7 @@ const NavBar = () => {
             {Links.map((link) => (
               <li
                 key={link.name}
-                className="md:ml-8 text-xl font-semibold md:my-0 my-7"
+                className="md:ml-8 text-xl font-medium md:my-0 my-7"
               >
                 <CustomLink to={link.link}>{link.name}</CustomLink>
               </li>
