@@ -1,7 +1,24 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { getAuth, signInWithPopup } from "firebase/auth";
+import app from "../../Firebase.init";
+import { GoogleAuthProvider } from "firebase/auth";
+const auth = getAuth(app);
 
 const Registration = () => {
+  const navigate = useNavigate();
+  const provider = new GoogleAuthProvider();
+  const handleGoogleLogin = () => {
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   return (
     <div className="mt-24">
       <div className="flex flex-wrap w-full">
@@ -89,6 +106,7 @@ const Registration = () => {
               </div>
               <div className="ml-16 md:ml-32">
                 <button
+                  onClick={handleGoogleLogin}
                   type="button"
                   id="button"
                   className="text-black bg-[#ffff] font-medium rounded-lg text-sm px-9 py-3 text-center inline-flex items-center border-2 bg-gray-200 mr-2 mb-2 hover:bg-gray-400"

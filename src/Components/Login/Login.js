@@ -1,8 +1,25 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import app from "../../Firebase.init";
+
+const auth = getAuth(app);
 
 const Login = () => {
+  const provider = new GoogleAuthProvider();
+  const navigate = useNavigate();
+  const handleGoogleLogin = () => {
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   return (
     <div className="mt-24">
       <section className="h-screen">
@@ -106,6 +123,7 @@ const Login = () => {
 
                 <div className="ml-16">
                   <button
+                    onClick={handleGoogleLogin}
                     type="button"
                     id="button"
                     className="text-black bg-[#ffff] font-medium rounded-lg text-sm px-9 py-3 text-center inline-flex items-center border-2 bg-gray-200 mr-2 mb-2 hover:bg-gray-400"
@@ -160,7 +178,7 @@ const Login = () => {
                     Sign in with Facebook
                   </button>
                 </div>
-                <div className="pt-6 pb-12 text-center md:pt-12">
+                <div className="pt-2 pb-12 text-center md:pt-12">
                   <p>
                     Don&#x27;t have an account?
                     <Link
@@ -176,6 +194,8 @@ const Login = () => {
           </div>
         </div>
       </section>
+      <br />
+      <br />
     </div>
   );
 };

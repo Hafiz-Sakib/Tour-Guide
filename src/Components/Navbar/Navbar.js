@@ -1,10 +1,16 @@
-import { useState } from "react";
+import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
+import { useEffect, useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
 import { Link } from "react-router-dom";
+import app from "../../Firebase.init";
 import CustomLink from "../Utilities/CustomLink";
 import Button from "./Button";
 
 const NavBar = () => {
+  const auth = getAuth(app);
+  const [user, setUser] = useState({});
+  const { displayName, photoURL } = user;
+
   const [open, setOpen] = useState(false);
   const Links = [
     { name: "Home", link: "/" },
@@ -12,6 +18,27 @@ const NavBar = () => {
     { name: "Blogs", link: "/Blogs" },
     { name: "About", link: "/About" },
   ];
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setUser(user);
+      } else {
+        setUser({});
+      }
+    });
+  }, []);
+
+  const handleLogout = () => {
+    signOut(auth)
+      .then(() => {
+        // Sign-out successful.
+      })
+      .catch((error) => {
+        // An error happened.
+      });
+  };
+
   return (
     <nav className="sticky top-0">
       <div className="shadow-md w-full fixed top-0 left-0">
@@ -49,14 +76,31 @@ const NavBar = () => {
                 <CustomLink to={link.link}>{link.name}</CustomLink>
               </li>
             ))}
-            <Link to={"/Login"}>
-              <button className="bg-blue-600 text-white font-[Poppins] py-2 px-6 rounded md:ml-4  duration-500">
-                Login
+            {user?.uid ? (
+              <button
+                onClick={handleLogout}
+                className="bg-blue-600 text-white font-[Poppins] py-2 px-6 rounded md:ml-4  duration-500"
+              >
+                Log Out
               </button>
-            </Link>
-            <Link to={"/Registration"}>
-              <Button>Register Now</Button>
-            </Link>
+            ) : (
+              <div className="grid md:block">
+                <Link to={"/Login"}>
+                  <button className="bg-blue-600 text-white font-[Poppins] py-2 px-6 rounded md:ml-4  duration-500">
+                    Login
+                  </button>
+                </Link>
+                <Link to={"/Registration"}>
+                  <Button>Register Now</Button>
+                </Link>
+              </div>
+            )}
+            <p className="text-red-600 md:ml-2">{displayName}</p>
+            <img
+              src={photoURL}
+              className="align-middle w-[50px] height-[50px] rounded-full md:ml-2"
+              alt=""
+            />
           </ul>
         </div>
       </div>
