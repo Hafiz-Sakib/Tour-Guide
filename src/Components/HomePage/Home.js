@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./Home.css";
 import { Link } from "react-router-dom";
 import HeroImg from "../../assets/Hero.png";
 import Icon1 from "../../assets/icon-1.png";
@@ -52,7 +53,7 @@ const Home = () => {
   ];
   return (
     <div>
-      <div className="bg-Hero bg-cover bg-center py-4  md:px-24 px-4">
+      <div className="bg-Hero bg-cover bg-center py-4  md:px-24 px-4" id="home">
         <div className="flex md:flex-row flex-col gap-5 pt-20">
           <div className="flex-1 md:mt-24">
             <h1

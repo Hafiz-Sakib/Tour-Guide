@@ -1,16 +1,19 @@
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx,./src/**/*.{html,js}', './node_modules/tw-elements/dist/js/**/*.js}",
-  ],
+  mode: "jit",
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        Poppins: "Poppins",
+      },
+      colors: {
+        primary: "#3E82FC",
+        lightprimary: "#ECF3FF",
+      },
+      backgroundImage: {
+        Hero: "./src/assets/Hero.png",
+      },
+    },
   },
-  plugins: [require("tw-elements/dist/plugin")],
+  plugins: [],
 };
-// module.exports = {
-//   content: [
-//     "./src/**/*.{html,js}",
-//     "./node_modules/tw-elements/dist/js/**/*.js",
-//   ],
-//   plugins: [require("tw-elements/dist/plugin")],
-// };
