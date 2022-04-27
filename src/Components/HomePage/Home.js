@@ -10,6 +10,7 @@ import ServiceCard from "../Services/ServiceCard";
 import img1 from "../../assets/img1_1.jpg";
 import img2 from "../../assets/img2_1.jpg";
 import img3 from "../../assets/img3_1.jpg";
+import Review from "./Review";
 const Home = () => {
   const [services, setServices] = useState([]);
   useEffect(() => {
@@ -26,6 +27,7 @@ const Home = () => {
     {
       title: "Enjoy Your Journey With Me!",
       des: "You can change that. The secret of being happy is accepting where you are in life and making the most out of everyday. It doesn't matter how old we are, what we've done, or how much money we have. Our journey is a personal one-full of lessons and reasons to be happy. When we stop comparing ourselves to others and realize how full our lives are, we can appreciate our individual value.",
+
       img: img2,
     },
     {
@@ -64,8 +66,11 @@ const Home = () => {
             </h1>
             <p className="text-gray-600 md:w-2/3 md:py-4 py-2 leading-relaxed text-justify">
               Are you looking for amazing hiking travel in{" "}
-              <span className="text-indigo-600 text-bold"> Bandarban</span>?
-              Don’t worry! I got it for you! Keeping one’s self going is a
+              <span className="text-indigo-600 text-bold">
+                {" "}
+                Bandarban,Khagrachari,Rangamati or Sitakundu
+              </span>
+              ? Don’t worry! I got it for you! Keeping one’s self going is a
               difficult thing to do. There are a million distractions that occur
               every day and that can mean that we do not stay on track with what
               we should be doing. Self-motivation is something that does not
@@ -121,7 +126,7 @@ const Home = () => {
             <ServiceCard key={service.id} service={service}></ServiceCard>
           ))}
         </div>
-        <div className="text-center">
+        <div className="text-center md:mb-24">
           <Link to={"/Services"}>
             <button
               type="button"
@@ -147,6 +152,9 @@ const Home = () => {
           <ExtraSection content={contents[0]}></ExtraSection>
           <ExtraSection content={contents[1]} alternative={true}></ExtraSection>
           <ExtraSection content={contents[2]}></ExtraSection>
+        </div>
+        <div>
+          <Review></Review>
         </div>
       </div>
     </div>

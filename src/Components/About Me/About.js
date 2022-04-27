@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="mt-32 justify-center">
+    <div className="mt-32 mb-32 justify-center">
       <h1 className="text-3xl text-center text-blue-700">
         🎯 My Goals in Next 4 Months 🎯
       </h1>

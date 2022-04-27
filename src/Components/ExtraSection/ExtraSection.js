@@ -13,7 +13,7 @@ const ExtraSection = ({ content, alternative }) => {
         <img
           src={content.img}
           alt="img"
-          className="md:h-[550px] h-full object-cover"
+          className="md:h-[500px] h-full object-cover rounded-xl"
         />
       </div>
       <div className="flex-1">
