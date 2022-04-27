@@ -4,7 +4,11 @@ import HeroImg from "../../assets/Hero.png";
 import Icon1 from "../../assets/icon-1.png";
 import Icon2 from "../../assets/icon-2.png";
 import Icon3 from "../../assets/icon-3.png";
+import ExtraSection from "../ExtraSection/ExtraSection";
 import ServiceCard from "../Services/ServiceCard";
+import img1 from "../../assets/img1_1.jpg";
+import img2 from "../../assets/img2_1.jpg";
+import img3 from "../../assets/img3_1.jpg";
 const Home = () => {
   const [services, setServices] = useState([]);
   useEffect(() => {
@@ -12,6 +16,23 @@ const Home = () => {
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
+  const contents = [
+    {
+      title: "Safe, Affordable, And Trusted",
+      des: "AffordableTours takes your health and well-being very seriously, which is why we partner with operators who have elevated and introduced health and safety protocols to ensure everyone on your trip is safe and remains healthy. We have all adapted to this new world, where it is important for us to take additional hygiene measures. In addition to the measures taken by our partners, we ask that you please take personal responsibility for your well-being as well.",
+      img: img1,
+    },
+    {
+      title: "Enjoy Your Journey With Me!",
+      des: "You can change that. The secret of being happy is accepting where you are in life and making the most out of everyday. It doesn't matter how old we are, what we've done, or how much money we have. Our journey is a personal one-full of lessons and reasons to be happy. When we stop comparing ourselves to others and realize how full our lives are, we can appreciate our individual value.",
+      img: img2,
+    },
+    {
+      title: "Let’s Enjoy Nature With Me!",
+      des: "I declare this world is so beautiful that I can hardly believe it exists.”  The beauty of nature can have a profound effect upon our senses, those gateways from the outer world to the inner, whether it results in disbelief in its very existence as Emerson notes, or feelings such as awe, wonder, or amazement.  But what is it about nature and the entities that make it up that cause us, oftentimes unwillingly, to feel or declare that they are beautiful?",
+      img: img3,
+    },
+  ];
   const Info = [
     {
       icon: Icon1,
@@ -120,6 +141,11 @@ const Home = () => {
               </svg>
             </button>
           </Link>
+        </div>
+        <div>
+          <ExtraSection content={contents[0]}></ExtraSection>
+          <ExtraSection content={contents[1]} alternative={true}></ExtraSection>
+          <ExtraSection content={contents[2]}></ExtraSection>
         </div>
       </div>
     </div>
