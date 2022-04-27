@@ -154,10 +154,10 @@ const Registration = () => {
                 <button
                   type="button"
                   onClick={handleGitHubSignIn}
-                  class="text-white bg-[#24292F] hover:bg-black focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-10 py-3.5 text-center inline-flex items-center dark:focus:ring-gray-800 dark:hover:bg-black mr-2 mb-2"
+                  className="text-white bg-[#24292F] hover:bg-black focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-10 py-3.5 text-center inline-flex items-center dark:focus:ring-gray-800 dark:hover:bg-black mr-2 mb-2"
                 >
                   <svg
-                    class="w-4 h-4 mr-2 -ml-1"
+                    className="w-4 h-4 mr-2 -ml-1"
                     aria-hidden="true"
                     focusable="false"
                     data-prefix="fab"

@@ -106,16 +106,16 @@ const Login = () => {
                   </div>
                 </div>
                 <div className="flex justify-between items-center mb-6">
-                  <div class="form-group form-check">
+                  <div className="form-group form-check">
                     <input
                       type="checkbox"
-                      class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                      className="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                       id="exampleCheck3"
                       defaultChecked
                     />
                     <label
-                      class="form-check-label inline-block text-gray-800"
-                      for="exampleCheck2"
+                      className="form-check-label inline-block text-gray-800"
+                      htmlFor="exampleCheck2"
                     >
                       Remember me
                     </label>
@@ -175,10 +175,10 @@ const Login = () => {
                   <button
                     type="button"
                     onClick={handleGitHubSignIn}
-                    class="text-white bg-[#24292F] hover:bg-black focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-10 py-3.5 text-center inline-flex items-center dark:focus:ring-gray-800 dark:hover:bg-black mr-2 mb-2"
+                    className="text-white bg-[#24292F] hover:bg-black focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-10 py-3.5 text-center inline-flex items-center dark:focus:ring-gray-800 dark:hover:bg-black mr-2 mb-2"
                   >
                     <svg
-                      class="w-4 h-4 mr-2 -ml-1"
+                      className="w-4 h-4 mr-2 -ml-1"
                       aria-hidden="true"
                       focusable="false"
                       data-prefix="fab"
