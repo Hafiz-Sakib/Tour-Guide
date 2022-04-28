@@ -42,7 +42,10 @@ const Footer = () => {
         </div>
       </div>
       <p className="text-center py-10 mt-6 text-sm text-gray-600">
-        Copyright © <span className="text-blue-600">Hafiz Sakib</span>{" "}
+        Copyright ©{" "}
+        <a href="https://www.facebook.com/Sakib1056">
+          <span className="text-blue-600">Hafiz Sakib</span>
+        </a>{" "}
         (2022-2026). All Right Reserved.
       </p>
     </footer>

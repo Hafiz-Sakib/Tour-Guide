@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Home.css";
 import { Link } from "react-router-dom";
+import { FaArrowRight } from "react-icons/fa";
 import HeroImg from "../../assets/Hero.png";
 import Icon1 from "../../assets/icon-1.png";
 import Icon2 from "../../assets/icon-2.png";
@@ -104,7 +105,7 @@ const Home = () => {
                 {info.des}
               </p>
               <button className="text-rose-600 font-medium text-sm my-1">
-                Read More
+                Read More <FaArrowRight className="ml-6"></FaArrowRight>
               </button>
             </div>
           ))}

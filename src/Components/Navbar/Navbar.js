@@ -15,6 +15,7 @@ const NavBar = () => {
   const Links = [
     { name: "Home", link: "/" },
     { name: "Services", link: "/Services" },
+    { name: "My Bookings", link: "/Booking" },
     { name: "Blogs", link: "/Blogs" },
     { name: "About", link: "/About" },
   ];
