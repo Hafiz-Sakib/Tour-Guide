@@ -4,7 +4,7 @@ const Booking = () => {
   const { BookingId } = useParams();
 
   return (
-    <div className="mt-24 text-center text-3xl">
+    <div className="mt-36 mb-36 text-center text-3xl">
       <p>{BookingId}</p>
     </div>
   );
