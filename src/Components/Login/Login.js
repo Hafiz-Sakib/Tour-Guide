@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
 import {
@@ -12,6 +12,18 @@ import app from "../../Firebase.init";
 const auth = getAuth(app);
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const handleEmailBlur = (e) => {
+    setEmail(e.target.value);
+  };
+  const handlePasswordBlur = (e) => {
+    setPassword(e.target.value);
+  };
+  const handleLogin = (e) => {
+    e.preventDefault();
+  };
+
   const googleProvider = new GoogleAuthProvider();
   const gitProvider = new GithubAuthProvider();
   const navigate = useNavigate();
@@ -29,12 +41,12 @@ const Login = () => {
   const handleGitHubSignIn = () => {
     signInWithPopup(auth, gitProvider)
       .then((result) => {
-        const user = result.user;
-        console.log(user);
+        // const user = result.user;
+        // console.log(user);
         navigate("/");
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
       });
   };
   return (
@@ -75,6 +87,7 @@ const Login = () => {
                       </span>
                       <input
                         type="email"
+                        onBlur={handleEmailBlur}
                         required
                         className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                         placeholder="Email address"
@@ -98,6 +111,7 @@ const Login = () => {
                       </span>
                       <input
                         type="password"
+                        onBlur={handlePasswordBlur}
                         required
                         className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                         placeholder="Password"
@@ -129,6 +143,7 @@ const Login = () => {
                 </div>
                 <button
                   type="submit"
+                  onClick={handleLogin}
                   className="inline-block px-7 py-3 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out w-full shadow-lg shadow-blue-500"
                 >
                   Sign in
