@@ -62,7 +62,7 @@ const Login = () => {
               />
             </div>
             <div className="md:w-8/12 lg:w-5/12 lg:ml-20">
-              <form>
+              <form onSubmit={handleLogin}>
                 <div className="flex justify-center pt-8 pb-8 md:justify-start md:ml-40">
                   <Link
                     to={"/Login"}
@@ -143,7 +143,6 @@ const Login = () => {
                 </div>
                 <button
                   type="submit"
-                  onClick={handleLogin}
                   className="inline-block px-7 py-3 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out w-full shadow-lg shadow-blue-500"
                 >
                   Sign in

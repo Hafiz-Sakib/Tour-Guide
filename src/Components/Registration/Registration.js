@@ -1,10 +1,24 @@
 import { Link, useNavigate } from "react-router-dom";
-import { getAuth, GithubAuthProvider, signInWithPopup } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  getAuth,
+  GithubAuthProvider,
+  signInWithPopup,
+} from "firebase/auth";
 import app from "../../Firebase.init";
 import { GoogleAuthProvider } from "firebase/auth";
+import toast from "react-hot-toast";
+import { useState } from "react";
+import { AiOutlineExclamationCircle } from "react-icons/ai";
 const auth = getAuth(app);
 
 const Registration = () => {
+  const [email, setEmail] = useState({ value: "", error: "" });
+  const [password, setPassword] = useState({ value: "", error: "" });
+  const [passwordConfirmation, setPasswordConfirmation] = useState({
+    value: "",
+    error: "",
+  });
   const navigate = useNavigate();
   const googleProvider = new GoogleAuthProvider();
   const gitProvider = new GithubAuthProvider();
@@ -31,6 +45,73 @@ const Registration = () => {
       });
   };
 
+  const handleEmail = (event) => {
+    const emailInput = event.target.value;
+    console.log(emailInput);
+    if (/\S+@\S+\.\S+/.test(emailInput)) {
+      setEmail({ value: emailInput, error: "" });
+    } else {
+      setEmail({ value: "", error: "Please Provide a Valid Email" });
+    }
+  };
+
+  const handlePassword = (event) => {
+    const passwordInput = event.target.value;
+
+    if (passwordInput.length < 7) {
+      setPassword({ value: "", error: "Password too short" });
+    } else if (!/(?=.*[A-Z])/.test(passwordInput)) {
+      setPassword({
+        value: "",
+        error: "Password must contain a capital letter",
+      });
+    } else {
+      setPassword({ value: passwordInput, error: "" });
+    }
+  };
+
+  const handleConfirmPassword = (event) => {
+    const confirmationInput = event.target.value;
+
+    if (confirmationInput !== password.value) {
+      setPasswordConfirmation({ value: "", error: "Password Mismatched" });
+    } else {
+      setPasswordConfirmation({ value: confirmationInput, error: "" });
+    }
+  };
+
+  const handleRegistration = (event) => {
+    event.preventDefault();
+    if (email.value === "") {
+      setEmail({ value: "", error: "Email is required" });
+    }
+    if (password.value === "") {
+      setPassword({ value: "", error: "Password is required" });
+    }
+    if (passwordConfirmation.value === "") {
+      setPasswordConfirmation({
+        value: "",
+        error: "Password confirmation is required",
+      });
+    }
+    if (email.value && password.value === passwordConfirmation.value) {
+      createUserWithEmailAndPassword(auth, email.value, password.value)
+        .then((userCredential) => {
+          const user = userCredential.user;
+          toast.success("Account created", { id: "created" });
+          navigate("/");
+        })
+        .catch((error) => {
+          const errorMessage = error.message;
+          if (errorMessage.includes("already-in-use")) {
+            toast.error("Email already in use", { id: "error" });
+          } else {
+            toast.error(errorMessage, { id: "error" });
+          }
+        });
+    }
+  };
+
   return (
     <div className="mt-24">
       <div className="flex flex-wrap w-full">
@@ -52,7 +133,10 @@ const Registration = () => {
           </div>
           <div className="flex flex-col justify-center px-8 pt-8 my-auto md:justify-start md:pt-0 md:px-24 lg:px-32">
             <p className="text-3xl text-center">Welcome.</p>
-            <form className="flex flex-col pt-3 md:pt-8">
+            <form
+              className="flex flex-col pt-3 md:pt-8"
+              onSubmit={handleRegistration}
+            >
               <div className="flex flex-col pt-4"></div>
               <div className="flex flex-col pt-4">
                 <div className="flex relative ">
@@ -68,11 +152,17 @@ const Registration = () => {
                     </svg>
                   </span>
                   <input
+                    onBlur={handleEmail}
                     type="text"
                     id="design-login-email"
                     className=" flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                     placeholder="Email"
                   />
+                </div>
+                <div className="mt-2">
+                  {email?.error && (
+                    <p className="error text-red-600">{email.error}</p>
+                  )}
                 </div>
               </div>
               <div className="flex flex-col pt-4 mb-12">
@@ -89,6 +179,7 @@ const Registration = () => {
                     </svg>
                   </span>
                   <input
+                    onBlur={handlePassword}
                     type="password"
                     required
                     id="design-login-password"
@@ -96,7 +187,11 @@ const Registration = () => {
                     placeholder="Password"
                   />
                 </div>
-
+                <div className="mb-3">
+                  {password.error && (
+                    <p className="error text-red-600">{password.error}</p>
+                  )}
+                </div>
                 <div className="flex relative">
                   <span className=" inline-flex  items-center px-3 border-t bg-white border-l border-b  border-gray-300 text-gray-500 shadow-sm text-sm">
                     <svg
@@ -110,12 +205,21 @@ const Registration = () => {
                     </svg>
                   </span>
                   <input
+                    onBlur={handleConfirmPassword}
                     type="password"
                     required
-                    id="design-login-password"
+                    id="design-Confirm-password"
                     className=" flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                     placeholder="Confirm Password"
                   />
+                </div>
+                <div className="mt-2">
+                  {passwordConfirmation.error && (
+                    <p className="text-red-600">
+                      <AiOutlineExclamationCircle />{" "}
+                      {passwordConfirmation.error}
+                    </p>
+                  )}
                 </div>
               </div>
               <button
