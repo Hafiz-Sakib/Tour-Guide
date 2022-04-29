@@ -12,12 +12,12 @@ Live Site Link : [Tourist Guide](https://github.com/facebook/create-react-app).
 6. Users can Login via Google and Github Account
 7. Users also can manually Register account by email address and passswords
 
-## Things that used to build this Website
+## Things That used to build this Website
 
 - React JS as Javascript FrameWork
-- React Tailwind CSS as CSS Frameword
+- React Tailwind CSS as CSS Framework
 - React Router for Routing
 - Firebase for Authentication
 - React Hot Toast For Toast
 - React icons for Icons
-- Unsplash for image Sources [Unsplash.com](www.unsplash.com).
+- Unsplash for image Sources [Unsplash](www.unsplash.com).
