@@ -51,7 +51,7 @@ const Registration = () => {
     if (/\S+@\S+\.\S+/.test(emailInput)) {
       setEmail({ value: emailInput, error: "" });
     } else {
-      setEmail({ value: "", error: "Please Provide a Valid Email" });
+      setEmail({ value: "", error: "Please Provide a Valid Email❗" });
     }
   };
 
@@ -59,11 +59,11 @@ const Registration = () => {
     const passwordInput = event.target.value;
 
     if (passwordInput.length < 7) {
-      setPassword({ value: "", error: "Password too short" });
+      setPassword({ value: "", error: "Password too short❗" });
     } else if (!/(?=.*[A-Z])/.test(passwordInput)) {
       setPassword({
         value: "",
-        error: "Password must contain a capital letter",
+        error: "Password must contain a capital letter❗",
       });
     } else {
       setPassword({ value: passwordInput, error: "" });
@@ -153,7 +153,8 @@ const Registration = () => {
                   </span>
                   <input
                     onBlur={handleEmail}
-                    type="text"
+                    type="email"
+                    name="email"
                     id="design-login-email"
                     className=" flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                     placeholder="Email"
@@ -181,6 +182,7 @@ const Registration = () => {
                   <input
                     onBlur={handlePassword}
                     type="password"
+                    name="password"
                     required
                     id="design-login-password"
                     className=" flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
@@ -207,6 +209,7 @@ const Registration = () => {
                   <input
                     onBlur={handleConfirmPassword}
                     type="password"
+                    name="password"
                     required
                     id="design-Confirm-password"
                     className=" flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"

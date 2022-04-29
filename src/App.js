@@ -20,7 +20,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Services" element={<Services />} />
         <Route
-          path="/Booking"
+          path="/Booking/:BookingId"
           element={
             <RequireAuth>
               <Booking />

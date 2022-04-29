@@ -5,28 +5,22 @@ import {
   getAuth,
   GithubAuthProvider,
   GoogleAuthProvider,
+  signInWithEmailAndPassword,
   signInWithPopup,
 } from "firebase/auth";
 import app from "../../Firebase.init";
+import toast from "react-hot-toast";
 
 const auth = getAuth(app);
 
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const handleEmailBlur = (e) => {
-    setEmail(e.target.value);
-  };
-  const handlePasswordBlur = (e) => {
-    setPassword(e.target.value);
-  };
-  const handleLogin = (e) => {
-    e.preventDefault();
-  };
+  const navigate = useNavigate();
+  const [email, setEmail] = useState({ value: "", error: "" });
+  const [password, setPassword] = useState({ value: "", error: "" });
 
   const googleProvider = new GoogleAuthProvider();
   const gitProvider = new GithubAuthProvider();
-  const navigate = useNavigate();
+
   const handleGoogleLogin = () => {
     signInWithPopup(auth, googleProvider)
       .then((result) => {
@@ -48,6 +42,53 @@ const Login = () => {
       .catch((error) => {
         // console.log(error);
       });
+  };
+
+  const handleEmail = (event) => {
+    const emailInput = event.target.value;
+
+    if (/\S+@\S+\.\S+/.test(emailInput)) {
+      setEmail({ value: emailInput, error: "" });
+    } else {
+      setEmail({ value: "", error: "Please Provide a valid Email❗" });
+    }
+  };
+
+  const handlePassword = (event) => {
+    const passwordInput = event.target.value;
+
+    setPassword({ value: passwordInput, error: "" });
+  };
+
+  const handleLogin = (event) => {
+    event.preventDefault();
+    const email = event.target.email.value;
+    const password = event.target.password.value;
+    if (email === "") {
+      setEmail({ value: "", error: "Email is required❗" });
+    }
+
+    if (password === "") {
+      setPassword({ value: "", error: "Password is required❗" });
+    }
+
+    if (email && password) {
+      signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          const user = userCredential.user;
+          console.log(user);
+          navigate("/");
+        })
+        .catch((error) => {
+          const errorMessage = error.message;
+
+          if (errorMessage.includes("wrong-password")) {
+            toast.error("Wrong Password❗", { id: "error" });
+          } else {
+            toast.error(errorMessage, { id: "error" });
+          }
+        });
+    }
   };
   return (
     <div className="mt-24">
@@ -86,12 +127,18 @@ const Login = () => {
                         </svg>
                       </span>
                       <input
+                        onBlur={handleEmail}
                         type="email"
-                        onBlur={handleEmailBlur}
+                        name="email"
                         required
                         className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                         placeholder="Email address"
                       />
+                    </div>
+                    <div className="mt-2">
+                      {email.error && (
+                        <p className="text-red-600">{email.error}</p>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -110,12 +157,18 @@ const Login = () => {
                         </svg>
                       </span>
                       <input
+                        onBlur={handlePassword}
                         type="password"
-                        onBlur={handlePasswordBlur}
+                        name="password"
                         required
                         className="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                         placeholder="Password"
                       />
+                    </div>
+                    <div className="mt-2">
+                      {password.error && (
+                        <p className="text-red-600">{password.error}</p>
+                      )}
                     </div>
                   </div>
                 </div>
