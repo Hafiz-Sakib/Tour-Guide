@@ -11,7 +11,7 @@ const Footer = () => {
     { title: "Legals", links: ["Privacy", "Disclaimer", "Terms", "Company"] },
   ];
   return (
-    <footer className="pt-20 md:px-24 px-4 bg-[#ECF3FF]">
+    <footer className="pt-20 md:px-24 px-4 bg-[#ECF3FF] mt-24">
       <NewsLetter />
       <div className="flex md:flex-row flex-col gap-20">
         <div className="flex-1">
