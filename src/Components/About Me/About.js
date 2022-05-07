@@ -28,7 +28,7 @@ const About = () => {
         before I complete my undergraduation I must practise Javacript,React
         JS,Node JS,MongoDB Regularly and Join Online Based Freelancing
         marketplaces like - "Fiverr","UpWork" etc. to Become a Freelancer.I am
-        very Hopeful to Complete my Goals in next 4 months!'
+        very Hopeful to Complete my Goals in next 4 months!!'
         <br />
         <span className="text-xl text-indigo-700"> Thank You!</span>
       </p>
