@@ -4,6 +4,7 @@ import "./Booking.css";
 
 const Booking = () => {
   const [service, setService] = useState({});
+
   const { BookingId } = useParams();
   useEffect(() => {
     fetch(
