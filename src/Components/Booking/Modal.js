@@ -4,7 +4,7 @@ import { HiOutlineCheckCircle } from "react-icons/hi";
 
 const Modal = ({ closeModal }) => {
   return (
-    <div className="">
+    <div>
       <div
         id="popup-modal"
         tabindex="-1"
