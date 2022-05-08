@@ -1,9 +1,14 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./Booking.css";
+import Modal from "./Modal";
 
 const Booking = () => {
   const [service, setService] = useState({});
+  const [openModal, setOpenModal] = useState(false);
+
+  const handleClose = () => setOpenModal(false);
+  const handleShow = () => setOpenModal(true);
 
   const { BookingId } = useParams();
   useEffect(() => {
@@ -26,7 +31,7 @@ const Booking = () => {
         className="flex max-w-md bg-gray-300 shadow-2xl rounded-lg overflow-hidden ml-2 md:mx-auto"
         id="Bookingcard"
       >
-        <div class="flex-none w-48 relative">
+        <div className="flex-none w-48 relative">
           <img
             src={picture}
             alt="shoppingimage"
@@ -70,9 +75,15 @@ const Booking = () => {
           </div>
           <div className="flex item-center justify-between mt-3">
             <h1 className="text-red-700 font-bold text-xl">{balance}</h1>
-            <button className="px-3 py-2 bg-blue-800 hover:bg-green-700 text-white text-xs font-bold uppercase rounded">
+            <button
+              className="block px-3 py-2 bg-blue-800 hover:bg-green-700 text-white text-xs font-bold uppercase rounded"
+              type="button"
+              data-modal-toggle="popup-modal"
+              onClick={handleShow}
+            >
               confirm
             </button>
+            {openModal && <Modal closeModal={handleClose} />}
           </div>
         </div>
       </div>
