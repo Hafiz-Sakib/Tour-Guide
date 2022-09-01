@@ -1,6 +1,6 @@
 # Sababa Tours!!
 
-Live Site Link : [Tourist Guide](https://tour-guide-553b5.web.app/).
+Live Site Link : [Tour Guide](https://tour-guide-553b5.web.app/).
 
 # This Website Contains:
 
