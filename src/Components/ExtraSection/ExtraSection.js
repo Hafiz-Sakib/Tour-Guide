@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Button from "../NavBar/Button";
+import Button from "../Navbar/Button";
+// import Button from "../NavBar/Button";
 
 const ExtraSection = ({ content, alternative }) => {
   return (

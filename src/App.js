@@ -1,7 +1,7 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Home from "./Components/HomePage/Home";
-import NavBar from "./Components/NavBar/NavBar";
+// import NavBar from "./Components/NavBar/NavBar";
 import Footer from "./Components/Footer/Footer";
 import Services from "./Components/Services/Services";
 import Blogs from "./Components/Blogs/Blogs";
@@ -11,6 +11,7 @@ import Login from "./Components/Login/Login";
 import Registration from "./Components/Registration/Registration";
 import Booking from "./Components/Booking/Booking";
 import RequireAuth from "./Components/Auth/RequireAuth";
+import NavBar from "./Components/Navbar/Navbar";
 
 function App() {
   return (

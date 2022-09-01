@@ -17,6 +17,7 @@ const Blogs = () => {
           What is the difference between authentication and authorization?
         </h1>
         <h1 className="text-2xl text-blue-600">Authentication</h1>
+        <p>lorem500</p>
         <p className="text-justify font-medium text-xl">
           1.In authentication process, the identity of users are checked for
           providing the access to the system.

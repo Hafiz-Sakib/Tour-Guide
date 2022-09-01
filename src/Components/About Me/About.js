@@ -8,8 +8,8 @@ const About = () => {
       </h1>
       <hr />
       <img
-        className="w-[80%] mb-10 md:w-[30%] mx-auto mt-12"
-        src="https://sakib-first-assingment.netlify.app/images/personal/apic1.png"
+        className="w-[80%] mb-10 md:w-[30%] mx-auto mt-12 rounded-[100%]"
+        src="https://mr-hafiz-sakib.netlify.app/assets/myimg/about-images/about444.jpg"
         alt=""
       />
       <p className="text-justify w-1/2 mx-auto text-xl text-cyan-400">
