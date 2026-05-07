@@ -1,3 +1,4 @@
+// src/Components/Button.js
 import React from "react";
 
 const Button = ({
@@ -6,16 +7,41 @@ const Button = ({
   className = "",
   ...props
 }) => {
-  const base =
-    "inline-flex items-center gap-2 font-bold tracking-wider uppercase text-xs transition-all duration-300 rounded-full";
+  const base = `
+    inline-flex items-center justify-center gap-2
+    font-black tracking-widest uppercase text-xs
+    transition-all duration-300 rounded-full
+    btn-glow active:scale-95
+  `;
 
   const variants = {
-    primary:
-      "px-7 py-3 bg-gradient-to-r from-[#c9a84c] to-[#f0d080] text-[#0a1628] hover:shadow-lg hover:shadow-[#c9a84c]/30 hover:-translate-y-0.5",
-    outline:
-      "px-7 py-3 border-2 border-[#c9a84c] text-[#c9a84c] hover:bg-[#c9a84c] hover:text-[#0a1628]",
-    ghost:
-      "px-7 py-3 text-white/70 hover:text-white border border-white/20 hover:border-white/50",
+    primary: `
+      px-8 py-3.5
+      bg-gradient-to-r from-[#c9a84c] to-[#e8c96a]
+      text-[#0d1f35]
+      hover:shadow-lg hover:shadow-[#c9a84c]/30
+      hover:-translate-y-0.5 hover:scale-105
+    `,
+    outline: `
+      px-8 py-3.5
+      border-2 border-[#c9a84c] text-[#c9a84c]
+      hover:bg-[#c9a84c] hover:text-[#0d1f35]
+      hover:shadow-md hover:shadow-[#c9a84c]/20
+      hover:scale-105
+    `,
+    ghost: `
+      px-8 py-3.5
+      text-white/70 hover:text-white
+      border border-white/20 hover:border-white/50
+      hover:bg-white/8
+    `,
+    dark: `
+      px-8 py-3.5
+      bg-[#0d1f35] text-white
+      hover:bg-[#0b6b62]
+      hover:shadow-lg hover:shadow-[#0b6b62]/20
+      hover:-translate-y-0.5 hover:scale-105
+    `,
   };
 
   return (

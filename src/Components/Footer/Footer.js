@@ -1,6 +1,6 @@
 // src/Components/Footer/Footer.js
 import { Link } from "react-router-dom";
-import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
+import { FiMail, FiMapPin, FiPhone, FiCompass } from "react-icons/fi";
 import {
   FaFacebookF,
   FaInstagram,
@@ -12,169 +12,183 @@ const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#132236] text-white pt-20 pb-12">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+    <footer className="bg-[#070e1c] text-white relative overflow-hidden">
+      {/* Background glows */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_80%,rgba(11,107,98,0.12)_0%,transparent_55%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_20%,rgba(201,168,76,0.05)_0%,transparent_55%)]" />
+
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-10 pt-20 pb-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
-          {/* Brand Column */}
+          {/* ── Brand ── */}
           <div className="lg:col-span-5">
-            <Link to="/" className="flex items-center gap-3 mb-8 group">
-              <div className="w-12 h-12 bg-white text-[#132236] flex items-center justify-center rounded-2xl transition-transform group-hover:rotate-12">
-                <FiMapPin className="text-3xl" />
+            <Link to="/" className="flex items-center gap-3 mb-8 group w-fit">
+              <div className="relative w-12 h-12 bg-white/8 border border-white/12 flex items-center justify-center rounded-[16px] group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                <FiCompass className="text-2xl text-[#c9a84c]" />
+                <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-[#c9a84c] rounded-full" />
               </div>
               <div>
-                <span className="block text-3xl font-black tracking-tighter">
+                <span
+                  className="block text-3xl font-black tracking-tight leading-none"
+                  style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+                >
                   Sababa Tours
                 </span>
-                <span className="text-[#f4c76b] text-xs font-bold uppercase tracking-[0.25em]">
+                <span className="text-[#c9a84c] text-[9px] font-bold uppercase tracking-[0.28em]">
                   BESPOKE TRAVEL
                 </span>
               </div>
             </Link>
 
-            <p className="max-w-md text-white/70 leading-relaxed text-[15px]">
+            <p className="max-w-sm text-white/55 leading-relaxed text-[15px] mb-10">
               We craft refined, responsible, and unforgettable journeys across
               Bangladesh. Thoughtful planning. Trusted partners. Exceptional
               experiences.
             </p>
 
-            {/* Social Links */}
-            <div className="flex gap-4 mt-10">
+            {/* Social */}
+            <div className="flex gap-3">
               {[
                 { icon: <FaFacebookF />, label: "Facebook" },
                 { icon: <FaInstagram />, label: "Instagram" },
                 { icon: <FaLinkedinIn />, label: "LinkedIn" },
                 { icon: <FaTwitter />, label: "Twitter" },
-              ].map((social) => (
+              ].map((s) => (
                 <a
-                  key={social.label}
-                  href="sample-link" // Replace with actual URLs
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={social.label}
-                  className="w-11 h-11 flex items-center justify-center border border-white/20 rounded-2xl text-white/70 hover:border-[#f4c76b] hover:text-[#f4c76b] transition-all hover:-translate-y-1"
+                  key={s.label}
+                  href="sababatours.com"
+                  aria-label={s.label}
+                  className="
+                    group w-11 h-11 flex items-center justify-center
+                    border border-white/12 rounded-[14px]
+                    text-white/50 hover:text-[#c9a84c] hover:border-[#c9a84c]/40
+                    hover:-translate-y-1.5 hover:shadow-lg hover:shadow-[#c9a84c]/10
+                    transition-all duration-300 text-sm
+                  "
                 >
-                  {social.icon}
+                  {s.icon}
                 </a>
               ))}
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* ── Explore ── */}
           <div className="lg:col-span-3">
-            <h3 className="text-[#f4c76b] uppercase tracking-[0.2em] text-sm font-bold mb-6">
+            <h3 className="text-[#c9a84c] uppercase tracking-[0.22em] text-[10px] font-bold mb-7">
               Explore
             </h3>
-            <ul className="space-y-4 text-white/70">
-              <li>
-                <Link to="/services" className="hover:text-white transition">
-                  Tour Packages
-                </Link>
-              </li>
-              <li>
-                <Link to="/blogs" className="hover:text-white transition">
-                  Travel Journal
-                </Link>
-              </li>
-              <li>
-                <Link to="/about" className="hover:text-white transition">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="hover:text-white transition">
-                  Contact
-                </Link>
-              </li>
+            <ul className="space-y-4">
+              {[
+                { label: "Tour Packages", to: "/services" },
+                { label: "Travel Journal", to: "/blogs" },
+                { label: "About Us", to: "/about" },
+                { label: "Contact", to: "/contact" },
+              ].map((l) => (
+                <li key={l.label}>
+                  <Link
+                    to={l.to}
+                    className="group text-white/55 hover:text-white transition-all duration-200 text-sm flex items-center gap-2"
+                  >
+                    <span className="w-0 group-hover:w-3 h-px bg-[#c9a84c] transition-all duration-300" />
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
+          {/* ── Services + Contact ── */}
           <div className="lg:col-span-4">
-            <h3 className="text-[#f4c76b] uppercase tracking-[0.2em] text-sm font-bold mb-6">
+            <h3 className="text-[#c9a84c] uppercase tracking-[0.22em] text-[10px] font-bold mb-7">
               Services
             </h3>
-            <ul className="space-y-4 text-white/70">
-              <li>
-                <Link to="/services" className="hover:text-white transition">
-                  Private Tours
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="hover:text-white transition">
-                  Family Holidays
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="hover:text-white transition">
-                  Honeymoon Packages
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="hover:text-white transition">
-                  Corporate Retreats
-                </Link>
-              </li>
+            <ul className="space-y-4 mb-12">
+              {[
+                "Private Tours",
+                "Family Holidays",
+                "Honeymoon Packages",
+                "Corporate Retreats",
+              ].map((s) => (
+                <li key={s}>
+                  <Link
+                    to="/services"
+                    className="group text-white/55 hover:text-white transition-all duration-200 text-sm flex items-center gap-2"
+                  >
+                    <span className="w-0 group-hover:w-3 h-px bg-[#c9a84c] transition-all duration-300" />
+                    {s}
+                  </Link>
+                </li>
+              ))}
             </ul>
 
-            {/* Contact Info */}
-            <div className="mt-12">
-              <h3 className="text-[#f4c76b] uppercase tracking-[0.2em] text-sm font-bold mb-6">
-                Concierge Desk
-              </h3>
-              <div className="space-y-5 text-sm">
-                <div className="flex gap-4">
-                  <FiMapPin className="mt-1 text-[#f4c76b] flex-shrink-0" />
-                  <div>Chittagong, Bangladesh</div>
+            <h3 className="text-[#c9a84c] uppercase tracking-[0.22em] text-[10px] font-bold mb-6">
+              Concierge Desk
+            </h3>
+            <div className="space-y-4 text-sm">
+              {[
+                { icon: <FiMapPin />, text: "Chittagong, Bangladesh" },
+                { icon: <FiPhone />, text: "+880 1XXX-XXXXXX" },
+                { icon: <FiMail />, text: "hello@sababatours.com" },
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  className="flex gap-3 text-white/55 hover:text-white/80 transition-colors"
+                >
+                  <span className="text-[#c9a84c] mt-0.5 shrink-0">
+                    {item.icon}
+                  </span>
+                  {item.text}
                 </div>
-                <div className="flex gap-4">
-                  <FiPhone className="mt-1 text-[#f4c76b] flex-shrink-0" />
-                  <div>+880 1XXX-XXXXXX</div>
-                </div>
-                <div className="flex gap-4">
-                  <FiMail className="mt-1 text-[#f4c76b] flex-shrink-0" />
-                  <div>hello@sababatours.com</div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
 
-        {/* Newsletter */}
-        <div className="mt-16 border-t border-white/10 pt-12">
+        {/* ── Newsletter ── */}
+        <div className="mt-20 pt-14 border-t border-white/8">
           <div className="max-w-md">
-            <p className="text-[#f4c76b] uppercase tracking-widest text-sm font-bold mb-3">
+            <p className="text-[#c9a84c] uppercase tracking-widest text-[10px] font-bold mb-3">
               Stay Inspired
             </p>
-            <h4 className="text-2xl font-black leading-tight mb-6">
+            <h4
+              className="text-2xl font-black leading-tight mb-7"
+              style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+            >
               Weekly stories from the trails of Bangladesh
             </h4>
-
-            <form className="flex gap-3" onSubmit={(e) => e.preventDefault()}>
+            <form className="flex gap-2.5" onSubmit={(e) => e.preventDefault()}>
               <input
                 type="email"
                 placeholder="Your email address"
-                className="flex-1 bg-white/10 border border-white/20 rounded-2xl px-6 py-4 text-white placeholder:text-white/40 focus:outline-none focus:border-[#f4c76b] transition"
+                className="
+                  flex-1 bg-white/6 border border-white/12 rounded-2xl
+                  px-5 py-4 text-white text-sm placeholder:text-white/35
+                  focus:outline-none focus:border-[#c9a84c]/50 transition-all
+                "
               />
               <button
                 type="submit"
-                className="px-8 bg-[#f4c76b] text-[#132236] font-black uppercase tracking-widest rounded-2xl hover:bg-white transition"
+                className="
+                  px-7 bg-gradient-to-r from-[#c9a84c] to-[#e8c96a]
+                  text-[#0d1f35] font-black uppercase tracking-widest text-xs
+                  rounded-2xl hover:scale-105 hover:shadow-lg hover:shadow-[#c9a84c]/20
+                  transition-all duration-300 whitespace-nowrap btn-glow
+                "
               >
                 Join
               </button>
             </form>
-            <p className="text-white/40 text-xs mt-4">
+            <p className="text-white/25 text-xs mt-4">
               No spam. Unsubscribe anytime.
             </p>
           </div>
         </div>
       </div>
 
-      {/* Bottom Bar */}
-      <div className="border-t border-white/10 mt-20 pt-8">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/50">
+      {/* ── Bottom bar ── */}
+      <div className="border-t border-white/6 mt-12 py-8">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/30">
           <p>© {year} Sababa Tours. All rights reserved.</p>
-          <p className="text-center md:text-right">
-            Crafting exceptional journeys with care and integrity.
-          </p>
+          <p>Crafting exceptional journeys with care and integrity.</p>
         </div>
       </div>
     </footer>
