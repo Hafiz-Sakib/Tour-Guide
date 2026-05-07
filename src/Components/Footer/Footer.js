@@ -1,116 +1,178 @@
+// src/Components/Footer/Footer.js
 import { Link } from "react-router-dom";
-import { FiArrowRight, FiMail, FiMap, FiMapPin, FiPhone } from "react-icons/fi";
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
-
-const columns = [
-  {
-    title: "Explore",
-    links: [
-      { label: "Tour Packages", to: "/services" },
-      { label: "Travel Journal", to: "/blogs" },
-      { label: "About Agency", to: "/about" },
-      { label: "Contact Team", to: "/contact" },
-    ],
-  },
-  {
-    title: "Services",
-    links: [
-      { label: "Private Tours", to: "/services" },
-      { label: "Family Holidays", to: "/services" },
-      { label: "Honeymoon Trips", to: "/services" },
-      { label: "Corporate Retreats", to: "/services" },
-    ],
-  },
-];
-
-const socials = [
-  { icon: <FaFacebookF />, label: "Facebook" },
-  { icon: <FaInstagram />, label: "Instagram" },
-  { icon: <FaLinkedinIn />, label: "LinkedIn" },
-  { icon: <FaTwitter />, label: "Twitter" },
-];
+import { FiArrowRight, FiMail, FiMapPin, FiPhone } from "react-icons/fi";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaTwitter,
+} from "react-icons/fa";
 
 const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#132236] text-white">
-      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
-        <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr_0.8fr_1fr]">
-          <div>
-            <Link to="/" className="mb-6 flex items-center gap-3">
-              <span className="flex h-11 w-11 items-center justify-center bg-white text-[#132236]">
-                <FiMap className="text-xl" />
-              </span>
-              <span>
-                <span className="block text-xl font-black">Sababa Tours</span>
-                <span className="block text-[10px] font-bold uppercase tracking-[0.24em] text-[#f4c76b]">
-                  Travel Agency
+    <footer className="bg-[#132236] text-white pt-20 pb-12">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
+          {/* Brand Column */}
+          <div className="lg:col-span-5">
+            <Link to="/" className="flex items-center gap-3 mb-8 group">
+              <div className="w-12 h-12 bg-white text-[#132236] flex items-center justify-center rounded-2xl transition-transform group-hover:rotate-12">
+                <FiMapPin className="text-3xl" />
+              </div>
+              <div>
+                <span className="block text-3xl font-black tracking-tighter">
+                  Sababa Tours
                 </span>
-              </span>
+                <span className="text-[#f4c76b] text-xs font-bold uppercase tracking-[0.25em]">
+                  BESPOKE TRAVEL
+                </span>
+              </div>
             </Link>
-            <p className="max-w-sm text-sm leading-7 text-white/62">
-              Premium travel planning for Bangladesh and beyond. We design trips with thoughtful pacing, trusted operators, and clear support.
+
+            <p className="max-w-md text-white/70 leading-relaxed text-[15px]">
+              We craft refined, responsible, and unforgettable journeys across
+              Bangladesh. Thoughtful planning. Trusted partners. Exceptional
+              experiences.
             </p>
-            <div className="mt-7 flex gap-3">
-              {socials.map((social) => (
-                <button
+
+            {/* Social Links */}
+            <div className="flex gap-4 mt-10">
+              {[
+                { icon: <FaFacebookF />, label: "Facebook" },
+                { icon: <FaInstagram />, label: "Instagram" },
+                { icon: <FaLinkedinIn />, label: "LinkedIn" },
+                { icon: <FaTwitter />, label: "Twitter" },
+              ].map((social) => (
+                <a
                   key={social.label}
+                  href="#"
                   aria-label={social.label}
-                  type="button"
-                  className="flex h-10 w-10 items-center justify-center border border-white/16 text-white/70 transition hover:border-[#f4c76b] hover:text-[#f4c76b]"
+                  className="w-11 h-11 flex items-center justify-center border border-white/20 rounded-2xl text-white/70 hover:border-[#f4c76b] hover:text-[#f4c76b] transition-all hover:-translate-y-1"
                 >
                   {social.icon}
-                </button>
+                </a>
               ))}
             </div>
           </div>
 
-          {columns.map((column) => (
-            <div key={column.title}>
-              <h3 className="text-xs font-black uppercase tracking-[0.2em] text-[#f4c76b]">{column.title}</h3>
-              <ul className="mt-5 space-y-3">
-                {column.links.map((link) => (
-                  <li key={link.label}>
-                    <Link to={link.to} className="text-sm text-white/62 transition hover:text-white">
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          {/* Quick Links */}
+          <div className="lg:col-span-3">
+            <h3 className="text-[#f4c76b] uppercase tracking-[0.2em] text-sm font-bold mb-6">
+              Explore
+            </h3>
+            <ul className="space-y-4 text-white/70">
+              <li>
+                <Link to="/services" className="hover:text-white transition">
+                  Tour Packages
+                </Link>
+              </li>
+              <li>
+                <Link to="/blogs" className="hover:text-white transition">
+                  Travel Journal
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="hover:text-white transition">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="hover:text-white transition">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
 
-          <div>
-            <h3 className="text-xs font-black uppercase tracking-[0.2em] text-[#f4c76b]">Concierge Desk</h3>
-            <div className="mt-5 space-y-4 text-sm text-white/66">
-              <p className="flex items-start gap-3">
-                <FiMapPin className="mt-1 text-[#f4c76b]" /> Chittagong, Bangladesh
-              </p>
-              <p className="flex items-start gap-3">
-                <FiPhone className="mt-1 text-[#f4c76b]" /> +880 1XXX-XXXXXX
-              </p>
-              <p className="flex items-start gap-3">
-                <FiMail className="mt-1 text-[#f4c76b]" /> hello@sababatours.com
-              </p>
+          <div className="lg:col-span-4">
+            <h3 className="text-[#f4c76b] uppercase tracking-[0.2em] text-sm font-bold mb-6">
+              Services
+            </h3>
+            <ul className="space-y-4 text-white/70">
+              <li>
+                <Link to="/services" className="hover:text-white transition">
+                  Private Tours
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" className="hover:text-white transition">
+                  Family Holidays
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" className="hover:text-white transition">
+                  Honeymoon Packages
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" className="hover:text-white transition">
+                  Corporate Retreats
+                </Link>
+              </li>
+            </ul>
+
+            {/* Contact Info */}
+            <div className="mt-12">
+              <h3 className="text-[#f4c76b] uppercase tracking-[0.2em] text-sm font-bold mb-6">
+                Concierge Desk
+              </h3>
+              <div className="space-y-5 text-sm">
+                <div className="flex gap-4">
+                  <FiMapPin className="mt-1 text-[#f4c76b] flex-shrink-0" />
+                  <div>Chittagong, Bangladesh</div>
+                </div>
+                <div className="flex gap-4">
+                  <FiPhone className="mt-1 text-[#f4c76b] flex-shrink-0" />
+                  <div>+880 1XXX-XXXXXX</div>
+                </div>
+                <div className="flex gap-4">
+                  <FiMail className="mt-1 text-[#f4c76b] flex-shrink-0" />
+                  <div>hello@sababatours.com</div>
+                </div>
+              </div>
             </div>
-            <form onSubmit={(event) => event.preventDefault()} className="mt-6 flex border border-white/16 bg-white/8">
+          </div>
+        </div>
+
+        {/* Newsletter */}
+        <div className="mt-16 border-t border-white/10 pt-12">
+          <div className="max-w-md">
+            <p className="text-[#f4c76b] uppercase tracking-widest text-sm font-bold mb-3">
+              Stay Inspired
+            </p>
+            <h4 className="text-2xl font-black leading-tight mb-6">
+              Weekly stories from the trails of Bangladesh
+            </h4>
+
+            <form className="flex gap-3" onSubmit={(e) => e.preventDefault()}>
               <input
                 type="email"
-                placeholder="Email address"
-                className="min-w-0 flex-1 bg-transparent px-4 py-3 text-sm text-white placeholder:text-white/36 focus:outline-none"
+                placeholder="Your email address"
+                className="flex-1 bg-white/10 border border-white/20 rounded-2xl px-6 py-4 text-white placeholder:text-white/40 focus:outline-none focus:border-[#f4c76b] transition"
               />
-              <button className="bg-[#f25f4c] px-4 text-white" aria-label="Subscribe">
-                <FiArrowRight />
+              <button
+                type="submit"
+                className="px-8 bg-[#f4c76b] text-[#132236] font-black uppercase tracking-widest rounded-2xl hover:bg-white transition"
+              >
+                Join
               </button>
             </form>
+            <p className="text-white/40 text-xs mt-4">
+              No spam. Unsubscribe anytime.
+            </p>
           </div>
         </div>
       </div>
-      <div className="border-t border-white/10 py-6">
-        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-6 text-xs text-white/45 md:flex-row md:items-center md:justify-between lg:px-10">
-          <p>Copyright {year} Sababa Tours. All rights reserved.</p>
-          <p>Designed for refined, reliable travel planning.</p>
+
+      {/* Bottom Bar */}
+      <div className="border-t border-white/10 mt-20 pt-8">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/50">
+          <p>© {year} Sababa Tours. All rights reserved.</p>
+          <p className="text-center md:text-right">
+            Crafting exceptional journeys with care and integrity.
+          </p>
         </div>
       </div>
     </footer>

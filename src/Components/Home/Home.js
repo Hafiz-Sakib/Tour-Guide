@@ -87,6 +87,13 @@ const process = [
   "Confirm the journey and travel with our support team on standby.",
 ];
 
+const stats = [
+  { number: "12000", label: "Happy Travelers" },
+  { number: "98", label: "Repeat Clients", suffix: "%" },
+  { number: "4.9", label: "Average Rating" },
+  { number: "24", label: "Hour Support" },
+];
+
 const Home = () => {
   const [services, setServices] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -94,6 +101,7 @@ const Home = () => {
   const [selectedStyle, setSelectedStyle] = useState(0);
   const [travelers, setTravelers] = useState(2);
   const [days, setDays] = useState(4);
+  const [showStats, setShowStats] = useState(false);
 
   useEffect(() => {
     fetch(
@@ -111,6 +119,15 @@ const Home = () => {
   const activeStyle = tripStyles[selectedStyle];
   const estimate = travelers * days * activeStyle.multiplier;
 
+  // Stats animation on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 600) setShowStats(true);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <main className="bg-[#f6f2ea] text-[#132236]">
       {/* ====================== HERO ====================== */}
@@ -118,36 +135,36 @@ const Home = () => {
         <img
           src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=2000&q=90"
           alt="Bangladesh Landscape"
-          className="absolute inset-0 w-full h-full object-cover opacity-40"
+          className="absolute inset-0 w-full h-full object-cover scale-110"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#132236]/90 via-[#132236]/70 to-[#132236]/90" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 w-full">
-          <div className="max-w-3xl">
-            <p className="inline-flex items-center gap-2 text-[#f4c76b] font-bold tracking-[0.25em] text-sm mb-6">
+          <div className="max-w-4xl">
+            <p className="inline-flex items-center gap-3 text-[#f4c76b] font-bold tracking-[0.25em] text-sm mb-6">
               BESPOKE BANGLADESH TRAVEL
             </p>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-tight tracking-tighter text-white mb-6">
+            <h1 className="text-6xl md:text-7xl lg:text-[82px] font-black leading-[1.05] tracking-tighter text-white mb-8">
               Luxury journeys,
               <br />
               <span className="text-[#f4c76b]">planned with soul.</span>
             </h1>
-            <p className="text-lg md:text-xl text-white/80 max-w-xl mb-10">
+            <p className="text-xl text-white/80 max-w-2xl mb-10">
               Private tours, family escapes, and cultural adventures across
-              Bangladesh — designed with care.
+              Bangladesh — designed with care and executed with precision.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 to="/services"
-                className="group px-8 py-4 bg-[#f25f4c] text-white font-black uppercase tracking-widest text-sm flex items-center justify-center gap-3 rounded-full hover:bg-white hover:text-[#132236] transition-all"
+                className="group px-10 py-5 bg-[#f25f4c] text-white font-black uppercase tracking-widest text-sm flex items-center justify-center gap-3 rounded-full hover:bg-white hover:text-[#132236] transition-all duration-300 hover:scale-105"
               >
                 Explore Packages
                 <FiArrowRight className="group-hover:translate-x-1 transition" />
               </Link>
               <Link
                 to="/contact"
-                className="px-8 py-4 border-2 border-white/60 text-white font-bold uppercase tracking-widest text-sm rounded-full hover:bg-white/10 transition text-center"
+                className="px-10 py-5 border-2 border-white/60 text-white font-bold uppercase tracking-widest text-sm rounded-full hover:bg-white/10 transition text-center"
               >
                 Start Planning
               </Link>
@@ -155,28 +172,25 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Scroll Indicator - Fixed Position */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center text-white/60 text-xs tracking-widest z-20">
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center text-white/60 text-xs tracking-widest">
           SCROLL TO DISCOVER
-          <div className="w-px h-12 bg-gradient-to-b from-transparent via-white/50 to-transparent mt-2" />
+          <div className="w-px h-16 bg-gradient-to-b from-transparent via-white/60 to-transparent mt-3" />
         </div>
       </section>
 
       {/* ====================== PILLARS ====================== */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {pillars.map((pillar, i) => (
               <div
                 key={i}
-                className="p-8 md:p-10 border border-[#e7dfd0] hover:border-[#0f766e] rounded-3xl transition-all hover:-translate-y-2 hover:shadow-xl group"
+                className="group p-10 border border-[#e7dfd0] rounded-3xl hover:border-[#0f766e] transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl"
               >
-                <div className="text-[#0f766e] mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="text-5xl text-[#0f766e] mb-8 group-hover:scale-110 transition-transform duration-500">
                   {pillar.icon}
                 </div>
-                <h3 className="text-2xl md:text-3xl font-black mb-4">
-                  {pillar.title}
-                </h3>
+                <h3 className="text-3xl font-black mb-4">{pillar.title}</h3>
                 <p className="text-[#65758a] leading-relaxed">{pillar.text}</p>
               </div>
             ))}
@@ -185,17 +199,17 @@ const Home = () => {
       </section>
 
       {/* ====================== INTERACTIVE PLANNER ====================== */}
-      <section className="py-16 md:py-24 bg-[#f6f2ea]">
+      <section className="py-20 bg-[#f6f2ea]">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
               <p className="text-[#0f766e] uppercase tracking-widest text-sm font-bold mb-3">
                 Live Planner
               </p>
-              <h2 className="text-4xl md:text-5xl font-black leading-tight">
+              <h2 className="text-5xl font-black leading-tight">
                 Shape your perfect journey
               </h2>
-              <p className="mt-4 text-[#65758a] text-lg">
+              <p className="mt-6 text-lg text-[#65758a]">
                 Adjust options and see the estimate update instantly.
               </p>
             </div>
@@ -205,11 +219,11 @@ const Home = () => {
                 <img
                   src={activeDestination.image}
                   alt={activeDestination.name}
-                  className="absolute inset-0 w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
                 <div className="absolute bottom-6 left-6 text-white">
-                  <h3 className="text-3xl md:text-4xl font-black">
+                  <h3 className="text-4xl font-black">
                     {activeDestination.name}
                   </h3>
                   <p className="text-[#f4c76b] mt-1">
@@ -219,7 +233,7 @@ const Home = () => {
               </div>
 
               <div className="p-6 md:p-8 space-y-8">
-                {/* Destination */}
+                {/* Destination Selection */}
                 <div>
                   <p className="uppercase text-xs tracking-widest text-[#65758a] mb-4">
                     Destination
@@ -229,7 +243,11 @@ const Home = () => {
                       <button
                         key={i}
                         onClick={() => setSelectedDestination(i)}
-                        className={`p-4 rounded-2xl text-sm transition-all ${selectedDestination === i ? "bg-[#132236] text-white" : "bg-[#fbf8f2] hover:bg-white border border-[#e7dfd0]"}`}
+                        className={`p-4 rounded-2xl text-sm font-medium transition-all ${
+                          selectedDestination === i
+                            ? "bg-[#132236] text-white"
+                            : "bg-[#fbf8f2] hover:bg-white border border-[#e7dfd0]"
+                        }`}
                       >
                         {dest.name}
                       </button>
@@ -237,7 +255,7 @@ const Home = () => {
                   </div>
                 </div>
 
-                {/* Style + Counters */}
+                {/* Style & Counters */}
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <p className="uppercase text-xs tracking-widest text-[#65758a] mb-4">
@@ -247,7 +265,11 @@ const Home = () => {
                       <button
                         key={i}
                         onClick={() => setSelectedStyle(i)}
-                        className={`w-full p-4 rounded-2xl text-left mb-2 transition-all ${selectedStyle === i ? "bg-[#132236] text-white" : "hover:bg-[#fbf8f2]"}`}
+                        className={`w-full p-4 rounded-2xl text-left mb-3 transition-all ${
+                          selectedStyle === i
+                            ? "bg-[#132236] text-white"
+                            : "hover:bg-[#fbf8f2] border border-transparent"
+                        }`}
                       >
                         <p className="font-bold">{style.name}</p>
                         <p className="text-xs opacity-70">{style.pace}</p>
@@ -281,18 +303,18 @@ const Home = () => {
                             onClick={() =>
                               item.setter(Math.max(item.min, item.value - 1))
                             }
-                            className="w-11 h-11 flex items-center justify-center text-2xl border rounded-xl hover:bg-white"
+                            className="w-11 h-11 flex items-center justify-center text-2xl border rounded-xl hover:bg-white active:scale-95"
                           >
-                            -
+                            −
                           </button>
-                          <span className="flex-1 text-center text-3xl font-black">
+                          <span className="flex-1 text-center text-4xl font-black">
                             {item.value}
                           </span>
                           <button
                             onClick={() =>
                               item.setter(Math.min(item.max, item.value + 1))
                             }
-                            className="w-11 h-11 flex items-center justify-center text-2xl border rounded-xl hover:bg-white"
+                            className="w-11 h-11 flex items-center justify-center text-2xl border rounded-xl hover:bg-white active:scale-95"
                           >
                             +
                           </button>
@@ -303,12 +325,13 @@ const Home = () => {
                 </div>
 
                 {/* Estimate */}
-                <div className="bg-[#132236] text-white p-6 md:p-8 rounded-3xl text-center">
+                <div className="bg-[#132236] text-white p-8 rounded-3xl text-center">
                   <p className="uppercase text-xs tracking-widest opacity-60">
                     Estimated from
                   </p>
-                  <p className="text-4xl md:text-5xl font-black mt-2">
-                    ${estimate.toLocaleString()}
+                  <p className="text-5xl font-black mt-2">
+                    {" "}
+                    ${estimate.toLocaleString()}{" "}
                   </p>
                   <p className="text-sm mt-2 opacity-70">
                     {travelers} travelers • {days} days • {activeStyle.name}
@@ -317,7 +340,7 @@ const Home = () => {
 
                 <Link
                   to="/contact"
-                  className="block w-full py-5 bg-[#f25f4c] hover:bg-[#d94f3d] text-center text-white font-black uppercase tracking-widest rounded-3xl transition"
+                  className="block w-full py-5 bg-[#f25f4c] hover:bg-[#d94f3d] text-center text-white font-black uppercase tracking-widest rounded-3xl transition text-lg"
                 >
                   Request This Itinerary
                 </Link>
@@ -327,24 +350,44 @@ const Home = () => {
         </div>
       </section>
 
+      {/* ====================== STATS ====================== */}
+      <section className="bg-[#132236] py-20 text-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
+            {stats.map((stat, i) => (
+              <div
+                key={i}
+                className={`transition-all duration-1000 ${showStats ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}`}
+              >
+                <p className="text-6xl font-black text-[#f4c76b]">
+                  {stat.number}
+                  {stat.suffix}
+                </p>
+                <p className="mt-4 text-lg text-white/70">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ====================== SIGNATURE DESTINATIONS ====================== */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="mb-12">
             <p className="text-[#0f766e] uppercase tracking-widest text-sm font-bold">
               Signature Destinations
             </p>
-            <h2 className="text-4xl md:text-5xl font-black mt-3">
+            <h2 className="text-5xl font-black mt-3">
               Where will your next story begin?
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {destinations.map((dest, i) => (
               <div
                 key={i}
                 onClick={() => setSelectedDestination(i)}
-                className="group relative h-80 md:h-96 rounded-3xl overflow-hidden cursor-pointer"
+                className="group relative h-[420px] rounded-3xl overflow-hidden cursor-pointer shadow-xl hover:shadow-2xl transition-all duration-500"
               >
                 <img
                   src={dest.image}
@@ -352,14 +395,12 @@ const Home = () => {
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30" />
-                <div className="absolute bottom-0 p-6 md:p-8 text-white">
+                <div className="absolute bottom-0 p-8 text-white w-full">
                   <p className="text-xs tracking-widest text-[#f4c76b]">
                     {dest.duration}
                   </p>
-                  <h3 className="text-3xl font-black mt-2">{dest.name}</h3>
-                  <p className="text-sm mt-3 text-white/80 line-clamp-2">
-                    {dest.tag}
-                  </p>
+                  <h3 className="text-4xl font-black mt-2">{dest.name}</h3>
+                  <p className="text-white/80 mt-2 line-clamp-2">{dest.tag}</p>
                 </div>
               </div>
             ))}
@@ -368,20 +409,18 @@ const Home = () => {
       </section>
 
       {/* ====================== FEATURED PACKAGES ====================== */}
-      <section className="bg-[#132236] py-16 md:py-24 text-white">
+      <section className="bg-[#132236] py-20 text-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mb-12">
             <div>
               <p className="text-[#f4c76b] uppercase tracking-widest text-sm font-bold">
                 Featured This Season
               </p>
-              <h2 className="text-4xl md:text-5xl font-black">
-                Handpicked Journeys
-              </h2>
+              <h2 className="text-5xl font-black">Handpicked Journeys</h2>
             </div>
             <Link
               to="/services"
-              className="text-[#f4c76b] font-black flex items-center gap-2 hover:text-white transition whitespace-nowrap"
+              className="text-[#f4c76b] font-black flex items-center gap-2 hover:text-white transition"
             >
               Browse All <FiArrowRight />
             </Link>
@@ -402,22 +441,21 @@ const Home = () => {
       </section>
 
       {/* ====================== HOW IT WORKS ====================== */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-[#0f766e] uppercase tracking-widest text-sm font-bold">
                 Process
               </p>
-              <h2 className="text-4xl md:text-5xl font-black leading-tight mt-4">
+              <h2 className="text-5xl font-black leading-tight mt-4">
                 From idea to unforgettable journey in three steps
               </h2>
             </div>
-
             <div className="space-y-8">
               {process.map((step, index) => (
                 <div key={index} className="flex gap-6">
-                  <div className="shrink-0 w-12 h-12 rounded-2xl bg-[#132236] text-white flex items-center justify-center font-black text-2xl">
+                  <div className="shrink-0 w-12 h-12 rounded-2xl bg-[#132236] text-white flex items-center justify-center font-black text-3xl">
                     {index + 1}
                   </div>
                   <p className="text-[17px] leading-relaxed text-[#65758a] pt-1">
@@ -431,7 +469,7 @@ const Home = () => {
       </section>
 
       {/* ====================== FINAL CTA ====================== */}
-      <section className="relative py-20 md:py-28 bg-[#0f766e] text-white overflow-hidden">
+      <section className="relative py-28 bg-[#0f766e] text-white overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1600&q=85"
           alt="Planning"
@@ -441,10 +479,10 @@ const Home = () => {
           <div className="mx-auto mb-8 w-20 h-20 rounded-full bg-white/10 flex items-center justify-center text-5xl">
             <FiCheckCircle />
           </div>
-          <h2 className="text-4xl md:text-5xl font-black tracking-tight">
+          <h2 className="text-5xl font-black tracking-tight">
             Ready for a better-planned trip?
           </h2>
-          <p className="mt-6 text-lg md:text-xl text-white/80 max-w-2xl mx-auto">
+          <p className="mt-6 text-lg text-white/80 max-w-2xl mx-auto">
             Tell us your dream destination. Our team will craft something
             extraordinary.
           </p>
