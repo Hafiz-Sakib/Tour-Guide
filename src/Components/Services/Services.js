@@ -26,7 +26,7 @@ const Services = () => {
 
         const data = await res.json();
 
-        console.table(data);
+        console.log(data);
 
         setServices(data);
       } catch (error) {
@@ -175,7 +175,7 @@ const Services = () => {
         ) : filtered.length > 0 ? (
           <div
             ref={gridRef}
-            className="reveal grid gap-7 md:grid-cols-2 lg:grid-cols-3"
+            className="grid gap-7 md:grid-cols-2 lg:grid-cols-3"
           >
             {filtered.map((s, i) => (
               <div key={s.id} style={{ animationDelay: `${i * 0.06}s` }}>
