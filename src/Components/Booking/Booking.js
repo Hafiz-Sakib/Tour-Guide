@@ -1,15 +1,7 @@
 // src/Components/Booking.js
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import {
-  FiArrowLeft,
-  FiCalendar,
-  FiCheck,
-  FiClock,
-  FiShield,
-  FiStar,
-  FiUsers,
-} from "react-icons/fi";
+import { FiCheck, FiClock, FiShield, FiStar } from "react-icons/fi";
 import Modal from "./Modal";
 
 const inclusions = [
