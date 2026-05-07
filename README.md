@@ -1,30 +1,28 @@
-# 🌴 Sababa Tours - Premium Travel Agency
+# 🌴 Sababa Tours — Premium Travel Agency
 
-A modern, elegant, and luxurious travel website for **Sababa Tours** — a premium travel agency specializing in bespoke journeys across Bangladesh.
-
-![Sababa Tours](https://sababa-tours.vercel.app/og-image.jpg)
+A modern, elegant, and luxury travel website for **Sababa Tours** — a premium travel agency specializing in bespoke journeys across Bangladesh.
 
 ---
 
 ## 🌐 Live Demo
 
-**[Visit Sababa Tours](https://sababa-tours.vercel.app/)**
+🔗 https://sababa-tours.vercel.app/
 
 ---
 
 ## ✨ Features
 
-- ⚡ Blazing fast performance with **Vite + React**
-- 🎨 Sophisticated luxury design with Tailwind CSS
-- 🗺️ **Interactive Live Trip Planner** with real-time pricing
-- 📱 Fully responsive & mobile-first design
+- ⚡ Blazing-fast performance with **Vite + React**
+- 🎨 Sophisticated luxury UI built with **Tailwind CSS**
+- 🗺️ Interactive **Live Trip Planner** with dynamic pricing
+- 📱 Fully responsive and mobile-first design
 - 🔐 Firebase Authentication (Login & Registration)
-- 📬 Working Contact Form (Web3Forms)
-- 📖 Blog Section with Search & Category Filter
-- 🏞️ Beautiful Destination Showcases
-- ⭐ Professional Booking Flow
+- 📬 Functional Contact Form powered by Web3Forms
+- 📖 Blog section with search and category filtering
+- 🏞️ Beautiful destination showcases
+- ⭐ Professional booking experience
 - 🌟 Smooth animations and premium hover effects
-- 📊 Dynamic Statistics with scroll animations
+- 📊 Animated statistics and scroll-based interactions
 
 ---
 
@@ -63,60 +61,111 @@ sababa-tours/
 ├── package.json
 ├── tailwind.config.js
 └── README.md
+```
 
-📍 Website Sections
+---
 
-Home — Hero, Interactive Planner, Destinations, Stats
-Packages — All tours with search, filter & sort
-Journal — Travel blogs + FAQ
-About — Company story, values & metrics
-Contact — Concierge form + location
-Auth — Login & Registration
+## 📍 Website Sections
 
+- **Home** — Hero section, Trip Planner, Destinations, Stats
+- **Packages** — Tour packages with search, filter, and sorting
+- **Journal** — Travel blogs and FAQs
+- **About** — Company story, values, and metrics
+- **Contact** — Concierge form and location map
+- **Authentication** — Login and Registration system
 
-⚙️ Installation & Setup
-1. Clone the Repository
-Bashgit clone https://github.com/yourusername/sababa-tours.git
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/sababa-tours.git
 cd sababa-tours
-2. Install Dependencies
-Bashnpm install
-3. Run Locally
-Bashnpm run dev
-Open http://localhost:5173
-4. Build for Production
-Bashnpm run build
+```
 
-🚀 Deployment
-This project is deployed on Vercel.
-<img src="https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=for-the-badge&#x26;logo=vercel&#x26;logoColor=white" alt="Deployed on Vercel">
+### 2️⃣ Install Dependencies
 
-🤝 Contributing
-Contributions, issues, and feature requests are welcome!
+```bash
+npm install
+```
 
-Fork the project
-Create your feature branch (git checkout -b feature/AmazingFeature)
-Commit your changes (git commit -m 'Add some AmazingFeature')
-Push to the branch (git push origin feature/AmazingFeature)
-Open a Pull Request
+### 3️⃣ Run Locally
 
+```bash
+npm run dev
+```
 
-📄 License
-Distributed under the MIT License. See LICENSE for more information.
+Open:
 
-👨‍💻 Author
-Mohammad Hafizur Rahman
+```bash
+http://localhost:5173
+```
+
+### 4️⃣ Build for Production
+
+```bash
+npm run build
+```
+
+---
+
+## 🚀 Deployment
+
+This project is deployed on **Vercel**.
+
+---
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome.
+
+### Steps to Contribute
+
+1. Fork the repository
+2. Create your feature branch
+
+```bash
+git checkout -b feature/AmazingFeature
+```
+
+3. Commit your changes
+
+```bash
+git commit -m "Add AmazingFeature"
+```
+
+4. Push to the branch
+
+```bash
+git push origin feature/AmazingFeature
+```
+
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+Distributed under the **MIT License**.  
+See the `LICENSE` file for more information.
+
+---
+
+## 👨‍💻 Author
+
+### Mohammad Hafizur Rahman
+
 Full-Stack Developer
 
-Location: Chittagong, Bangladesh
-Live Site: sababa-tours.vercel.app
+📍 Chittagong, Bangladesh
 
+🌐 Live Site:  
+https://sababa-tours.vercel.app/
 
-Made with ❤️ for exceptional travel experiences.
+---
 
-How to Use:
+## ❤️ Acknowledgements
 
-Copy all the content above
-Create a new file named README.md in your project root
-Paste the content
-Commit and push
-```
+Made with passion for exceptional travel experiences.
