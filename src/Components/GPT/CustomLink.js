@@ -19,9 +19,7 @@ const CustomLink = ({ children, to, solid = true, ...props }) => {
       {...props}
     >
       {children}
-      <span
-        className={`absolute inset-x-3 bottom-0 h-0.5 transition ${match ? "bg-current opacity-100" : "bg-current opacity-0"}`}
-      />
+      <span className={`absolute inset-x-3 bottom-0 h-0.5 transition ${match ? "bg-current opacity-100" : "bg-current opacity-0"}`} />
     </Link>
   );
 };

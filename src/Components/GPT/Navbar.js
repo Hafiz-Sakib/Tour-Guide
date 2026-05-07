@@ -1,7 +1,6 @@
-// src/Components/Navbar/Navbar.js
 import { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { onAuthStateChanged, signOut } from "firebase/auth";
+import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 import {
   FiChevronDown,
   FiLogOut,
@@ -11,9 +10,10 @@ import {
   FiSun,
   FiX,
 } from "react-icons/fi";
-
-import { auth } from "../../Firebase.init"; // ← Direct import (Fixed)
+import app from "../../Firebase.init";
 import CustomLink from "../Utilities/CustomLink";
+
+const auth = getAuth(app);
 
 const links = [
   { name: "Home", path: "/" },
@@ -29,22 +29,20 @@ const NavBar = () => {
   const [userMenuOpen, setUserMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [darkMode, setDarkMode] = useState(() => {
+    if (typeof window === "undefined") return false;
     return localStorage.getItem("sababa-theme") === "dark";
   });
-
   const navigate = useNavigate();
   const location = useLocation();
   const isHome = location.pathname === "/";
 
-  // Auth Listener
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser || null);
-    });
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) =>
+      setUser(currentUser || null),
+    );
     return () => unsubscribe();
   }, []);
 
-  // Scroll Effect
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     onScroll();
@@ -52,30 +50,22 @@ const NavBar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Dark Mode
   useEffect(() => {
     document.documentElement.classList.toggle("dark", darkMode);
     localStorage.setItem("sababa-theme", darkMode ? "dark" : "light");
   }, [darkMode]);
 
-  // Close menus on route change
   useEffect(() => {
     setOpen(false);
     setUserMenuOpen(false);
   }, [location.pathname]);
 
-  const logout = async () => {
-    try {
-      await signOut(auth);
-      navigate("/");
-    } catch (error) {
-      console.error("Logout error:", error);
-    }
+  const logout = () => {
+    signOut(auth).then(() => navigate("/"));
     setUserMenuOpen(false);
   };
 
   const solid = !isHome || scrolled || open;
-
   const toggleClass = solid
     ? "border-[#e7dfd0] bg-[#fbf8f2] text-[#132236] hover:border-[#0f766e]"
     : "border-white/20 bg-white/10 text-white hover:border-white/60";
@@ -83,13 +73,16 @@ const NavBar = () => {
   return (
     <>
       <nav
-        className={`fixed inset-x-0 top-0 z-50 border-b transition duration-300 ${solid ? "border-[#e7dfd0]/80 bg-white/95 text-[#132236] shadow-sm backdrop-blur-xl" : "border-white/10 bg-transparent text-white"}`}
+        className={`fixed inset-x-0 top-0 z-50 border-b transition duration-300 ${
+          solid
+            ? "border-[#e7dfd0]/80 bg-white/95 text-[#132236] shadow-sm backdrop-blur-xl"
+            : "border-white/10 bg-transparent text-white"
+        }`}
       >
         <div className="mx-auto flex h-[76px] max-w-7xl items-center justify-between px-6 lg:px-10">
-          {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
             <span
-              className={`flex h-10 w-10 items-center justify-center ${solid ? "bg-[#132236] text-white" : "bg-white text-[#132236]"} rounded`}
+              className={`flex h-10 w-10 items-center justify-center ${solid ? "bg-[#132236] text-white" : "bg-white text-[#132236]"}`}
             >
               <FiMap className="text-xl" />
             </span>
@@ -105,7 +98,6 @@ const NavBar = () => {
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
           <ul className="hidden items-center gap-1 md:flex">
             {links.map((link) => (
               <li key={link.path}>
@@ -116,12 +108,15 @@ const NavBar = () => {
             ))}
           </ul>
 
-          {/* Desktop Right Side */}
           <div className="hidden items-center gap-3 md:flex">
             <button
-              onClick={() => setDarkMode((prev) => !prev)}
+              onClick={() => setDarkMode((value) => !value)}
               className={`flex h-10 w-10 items-center justify-center border text-lg transition ${toggleClass}`}
-              aria-label="Toggle dark mode"
+              aria-label={
+                darkMode ? "Switch to light mode" : "Switch to dark mode"
+              }
+              title={darkMode ? "Light mode" : "Dark mode"}
+              type="button"
             >
               {darkMode ? <FiSun /> : <FiMoon />}
             </button>
@@ -129,39 +124,42 @@ const NavBar = () => {
             {user ? (
               <div className="relative">
                 <button
-                  onClick={() => setUserMenuOpen((prev) => !prev)}
-                  className={`flex items-center gap-2 border px-4 py-2 text-sm font-bold transition ${solid ? "border-[#e7dfd0] bg-[#fbf8f2]" : "border-white/20 bg-white/10"}`}
+                  onClick={() => setUserMenuOpen((value) => !value)}
+                  className={`flex items-center gap-2 border px-4 py-2 text-sm font-bold transition ${
+                    solid
+                      ? "border-[#e7dfd0] bg-[#fbf8f2]"
+                      : "border-white/20 bg-white/10"
+                  }`}
                 >
                   {user.photoURL ? (
                     <img
                       src={user.photoURL}
-                      alt="User"
-                      className="h-7 w-7 rounded-full object-cover"
+                      alt=""
+                      className="h-7 w-7 object-cover"
                     />
                   ) : (
-                    <span className="flex h-7 w-7 items-center justify-center bg-[#0f766e] text-white text-xs font-bold rounded-full">
+                    <span className="flex h-7 w-7 items-center justify-center bg-[#0f766e] text-xs text-white">
                       {(user.displayName || user.email || "U")[0].toUpperCase()}
                     </span>
                   )}
-                  <span className="max-w-[140px] truncate">
-                    {user.displayName || user.email?.split("@")[0]}
+                  <span className="max-w-[120px] truncate">
+                    {user.displayName || user.email}
                   </span>
                   <FiChevronDown />
                 </button>
-
                 {userMenuOpen && (
-                  <div className="absolute right-0 mt-3 w-64 rounded-xl border border-[#e7dfd0] bg-white p-2 shadow-2xl">
+                  <div className="absolute right-0 mt-3 w-64 border border-[#e7dfd0] bg-white p-2 text-[#132236] shadow-2xl">
                     <div className="border-b border-[#e7dfd0] px-3 py-3">
-                      <p className="text-xs font-bold uppercase tracking-widest text-[#65758a]">
+                      <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#65758a]">
                         Signed in
                       </p>
-                      <p className="mt-1 truncate text-sm font-medium">
+                      <p className="mt-1 truncate text-sm font-bold">
                         {user.email}
                       </p>
                     </div>
                     <button
                       onClick={logout}
-                      className="mt-2 flex w-full items-center gap-2 px-3 py-3 text-left text-sm font-bold text-red-600 hover:bg-[#fbf8f2] rounded-lg"
+                      className="mt-2 flex w-full items-center gap-2 px-3 py-3 text-left text-sm font-bold text-[#d94f3d] hover:bg-[#fbf8f2]"
                     >
                       <FiLogOut /> Sign out
                     </button>
@@ -172,13 +170,13 @@ const NavBar = () => {
               <>
                 <Link
                   to="/login"
-                  className={`px-4 py-3 text-xs font-black uppercase tracking-widest ${solid ? "text-[#132236]" : "text-white"}`}
+                  className={`px-4 py-3 text-xs font-black uppercase tracking-[0.16em] ${solid ? "text-[#132236]" : "text-white"}`}
                 >
                   Sign in
                 </Link>
                 <Link
                   to="/register"
-                  className="rounded-full bg-[#f25f4c] px-5 py-3 text-xs font-black uppercase tracking-widest text-white hover:bg-[#d94f3d] transition"
+                  className="bg-[#f25f4c] px-5 py-3 text-xs font-black uppercase tracking-[0.16em] text-white transition hover:bg-[#d94f3d]"
                 >
                   Start Trip
                 </Link>
@@ -186,17 +184,26 @@ const NavBar = () => {
             )}
           </div>
 
-          {/* Mobile Menu Button */}
           <div className="flex items-center gap-2 md:hidden">
             <button
-              onClick={() => setDarkMode((prev) => !prev)}
+              onClick={() => setDarkMode((value) => !value)}
               className={`flex h-11 w-11 items-center justify-center border text-xl ${toggleClass}`}
+              aria-label={
+                darkMode ? "Switch to light mode" : "Switch to dark mode"
+              }
+              type="button"
             >
               {darkMode ? <FiSun /> : <FiMoon />}
             </button>
             <button
-              onClick={() => setOpen(!open)}
-              className={`flex h-11 w-11 items-center justify-center border text-xl ${solid ? "border-[#e7dfd0]" : "border-white/20"}`}
+              onClick={() => setOpen((value) => !value)}
+              className={`flex h-11 w-11 items-center justify-center border text-xl ${
+                solid
+                  ? "border-[#e7dfd0] text-[#132236]"
+                  : "border-white/20 text-white"
+              }`}
+              aria-label="Toggle navigation"
+              type="button"
             >
               {open ? <FiX /> : <FiMenu />}
             </button>
@@ -204,23 +211,46 @@ const NavBar = () => {
         </div>
       </nav>
 
-      {/* Mobile Menu */}
-      {open && (
-        <div className="fixed inset-0 z-40 bg-[#132236] pt-28 px-6 text-white md:hidden">
-          <div className="space-y-4">
-            {links.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className="block py-4 text-3xl font-black border-b border-white/10"
-                onClick={() => setOpen(false)}
-              >
-                {link.name}
-              </Link>
-            ))}
-          </div>
+      <div
+        className={`fixed inset-0 z-40 bg-[#132236] px-6 pt-28 text-white transition md:hidden ${open ? "translate-x-0" : "translate-x-full"}`}
+      >
+        <div className="space-y-2">
+          {links.map((link) => (
+            <Link
+              key={link.path}
+              to={link.path}
+              className="block border-b border-white/10 py-5 text-3xl font-black"
+            >
+              {link.name}
+            </Link>
+          ))}
         </div>
-      )}
+        <div className="mt-10 grid gap-3">
+          {user ? (
+            <button
+              onClick={logout}
+              className="border border-white/20 px-5 py-4 text-sm font-black uppercase tracking-[0.16em] text-[#f4c76b]"
+            >
+              Sign out
+            </button>
+          ) : (
+            <>
+              <Link
+                to="/login"
+                className="border border-white/20 px-5 py-4 text-center text-sm font-black uppercase tracking-[0.16em]"
+              >
+                Sign in
+              </Link>
+              <Link
+                to="/register"
+                className="bg-[#f25f4c] px-5 py-4 text-center text-sm font-black uppercase tracking-[0.16em]"
+              >
+                Start Trip
+              </Link>
+            </>
+          )}
+        </div>
+      </div>
     </>
   );
 };

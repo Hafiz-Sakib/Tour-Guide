@@ -4,7 +4,8 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./Components/Home/Home";
 import NavBar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
-
+import { BrowserRouter as Router } from "react-router-dom";
+import RequireAuth from "../src/Components/Auth/RequireAuth";
 import Services from "./Components/Services/Services";
 
 import Blogs from "./Components/Pages/Blogs";
@@ -14,7 +15,6 @@ import NotFound from "./Components/Pages/NotFound";
 
 import Login from "./Components/Auth/Login";
 import Registration from "./Components/Auth/Registration";
-import RequireAuth from "./Components/Auth/RequireAuth";
 
 import Booking from "./Components/Booking/Booking";
 
