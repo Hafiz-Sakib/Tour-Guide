@@ -63,7 +63,7 @@ const ExtraSection = ({ content, alternative }) => {
 
             <h2
               className="text-4xl md:text-5xl font-black leading-tight text-[#0d1f35] mb-6"
-              style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+              style={{ fontFamily: "var(--font-display)" }}
             >
               {content.title}
             </h2>

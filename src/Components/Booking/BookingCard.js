@@ -28,7 +28,7 @@ const BookingCard = ({ service }) => {
       <div className="p-7">
         <h3
           className="text-xl font-black leading-tight text-[#0d1f35] mb-3 line-clamp-2"
-          style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+          style={{ fontFamily: "var(--font-display)" }}
         >
           {name}
         </h3>

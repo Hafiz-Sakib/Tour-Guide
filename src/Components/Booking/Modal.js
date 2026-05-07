@@ -43,7 +43,7 @@ const Modal = ({ closeModal, service, travelers, date }) => {
 
           <h2
             className="text-3xl font-black tracking-tight text-[#0d1f35] mb-3"
-            style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+            style={{ fontFamily: "var(--font-display)" }}
           >
             Booking Request Received
           </h2>
@@ -56,7 +56,7 @@ const Modal = ({ closeModal, service, travelers, date }) => {
           <div className="mt-8 bg-[#f5f0e8] border border-[#e7dfd0] rounded-[20px] p-6 text-left">
             <p
               className="font-black text-[#0d1f35] mb-4 leading-tight"
-              style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+              style={{ fontFamily: "var(--font-display)" }}
             >
               {service?.name}
             </p>

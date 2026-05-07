@@ -121,7 +121,7 @@ const NavBar = () => {
             <div>
               <span
                 className="block text-[22px] font-black tracking-tight leading-none"
-                style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+                style={{ fontFamily: "var(--font-display)" }}
               >
                 Sababa
               </span>
@@ -301,7 +301,7 @@ const NavBar = () => {
               >
                 <span
                   className="text-3xl font-black tracking-tight"
-                  style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+                  style={{ fontFamily: "var(--font-display)" }}
                 >
                   {link.name}
                 </span>

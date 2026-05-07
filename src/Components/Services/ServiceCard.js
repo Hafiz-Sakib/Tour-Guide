@@ -48,7 +48,7 @@ const ServiceCard = ({ service, dark = false }) => {
             text-xl font-black leading-tight line-clamp-2 flex-1
             ${dark ? "text-white" : "text-[#0d1f35]"}
           `}
-            style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+            style={{ fontFamily: "var(--font-display)" }}
           >
             {name}
           </h3>

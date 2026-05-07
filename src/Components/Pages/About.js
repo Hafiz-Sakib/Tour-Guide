@@ -96,7 +96,7 @@ const About = () => {
           </p>
           <h1
             className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter leading-tight mb-8 animate-fade-up"
-            style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+            style={{ fontFamily: "var(--font-display)" }}
           >
             A travel agency built for calm,
             <br />
@@ -125,7 +125,7 @@ const About = () => {
             <div className="absolute bottom-8 left-8 bg-white rounded-2xl px-7 py-5 shadow-2xl border border-[#e7dfd0]">
               <p
                 className="text-5xl font-black text-[#0b6b62]"
-                style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+                style={{ fontFamily: "var(--font-display)" }}
               >
                 4.9
               </p>
@@ -141,7 +141,7 @@ const About = () => {
             </p>
             <h2
               className="text-4xl md:text-5xl font-black leading-tight text-[#0d1f35] mb-8"
-              style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+              style={{ fontFamily: "var(--font-display)" }}
             >
               Premium travel is not louder.
               <br />
@@ -171,7 +171,7 @@ const About = () => {
               </p>
               <h2
                 className="text-4xl md:text-5xl font-black text-white"
-                style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+                style={{ fontFamily: "var(--font-display)" }}
               >
                 Numbers that reflect real travel care.
               </h2>
@@ -231,7 +231,7 @@ const About = () => {
                 </p>
                 <p
                   className="text-5xl font-black mt-1"
-                  style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+                  style={{ fontFamily: "var(--font-display)" }}
                 >
                   {selected.value}
                 </p>
@@ -254,7 +254,7 @@ const About = () => {
             </p>
             <h2
               className="text-4xl md:text-5xl font-black leading-tight text-[#0d1f35]"
-              style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+              style={{ fontFamily: "var(--font-display)" }}
             >
               Details handled by people who know the ground.
             </h2>
@@ -292,7 +292,7 @@ const About = () => {
             </div>
             <h2
               className="text-4xl font-black"
-              style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+              style={{ fontFamily: "var(--font-display)" }}
             >
               Planning a special trip?
             </h2>

@@ -189,7 +189,7 @@ const Home = () => {
 
             <h1
               className="animate-fade-up text-5xl md:text-7xl lg:text-[84px] font-black leading-[1.03] tracking-tighter text-white mb-8"
-              style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+              style={{ fontFamily: "var(--font-display)" }}
             >
               Luxury journeys,
               <br />
@@ -265,7 +265,7 @@ const Home = () => {
                 </div>
                 <h3
                   className="text-2xl font-black mb-4 text-[#0d1f35]"
-                  style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+                  style={{ fontFamily: "var(--font-display)" }}
                 >
                   {pillar.title}
                 </h3>
@@ -301,7 +301,7 @@ const Home = () => {
                 </div>
                 <p
                   className="text-5xl font-black text-white mb-2 stat-number"
-                  style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+                  style={{ fontFamily: "var(--font-display)" }}
                 >
                   {s.number}
                 </p>
@@ -325,7 +325,7 @@ const Home = () => {
                 </p>
                 <h2
                   className="text-5xl md:text-6xl font-black leading-tight text-[#0d1f35]"
-                  style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+                  style={{ fontFamily: "var(--font-display)" }}
                 >
                   Where will your
                   <br />
@@ -462,7 +462,7 @@ const Home = () => {
               </p>
               <h2
                 className="text-4xl md:text-5xl font-black leading-tight text-[#0d1f35] mb-10"
-                style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+                style={{ fontFamily: "var(--font-display)" }}
               >
                 Build your perfect
                 <br />
@@ -653,7 +653,7 @@ const Home = () => {
               </p>
               <h2
                 className="text-5xl font-black text-white"
-                style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+                style={{ fontFamily: "var(--font-display)" }}
               >
                 Handpicked Journeys
               </h2>
@@ -693,7 +693,7 @@ const Home = () => {
               </p>
               <h2
                 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight text-[#0d1f35]"
-                style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+                style={{ fontFamily: "var(--font-display)" }}
               >
                 From idea to unforgettable journey.
               </h2>
@@ -741,7 +741,7 @@ const Home = () => {
           </div>
           <h2
             className="text-5xl md:text-6xl font-black tracking-tight mb-6"
-            style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+            style={{ fontFamily: "var(--font-display)" }}
           >
             Ready for a better-planned trip?
           </h2>

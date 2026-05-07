@@ -35,7 +35,13 @@ const Booking = () => {
     )
       .then((r) => r.json())
       .then((d) => {
-        setService(d.find((i) => String(i.id) === String(bookingId)) || null);
+        const foundService =
+          d.find((i) => String(i.id) === String(bookingId)) || null;
+
+        setService(foundService);
+
+        console.log(foundService);
+
         setLoading(false);
       })
       .catch(() => setLoading(false));
@@ -67,7 +73,7 @@ const Booking = () => {
         <div className="text-6xl mb-6">🗺️</div>
         <h1
           className="text-5xl font-black text-[#0d1f35] mb-4"
-          style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+          style={{ fontFamily: "var(--font-display)" }}
         >
           Package Not Found
         </h1>

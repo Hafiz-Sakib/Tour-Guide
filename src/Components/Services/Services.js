@@ -178,7 +178,7 @@ const Services = () => {
             <div className="text-5xl mb-6">🗺️</div>
             <p
               className="text-3xl font-black text-[#0d1f35] mb-4"
-              style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+              style={{ fontFamily: "var(--font-display)" }}
             >
               No matching packages found
             </p>
