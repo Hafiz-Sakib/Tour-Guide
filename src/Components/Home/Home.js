@@ -6,6 +6,7 @@ import {
   FiCalendar,
   FiCheckCircle,
   FiCompass,
+  FiShield,
 } from "react-icons/fi";
 import ServiceCard from "../Services/ServiceCard";
 import Review from "./Review";
