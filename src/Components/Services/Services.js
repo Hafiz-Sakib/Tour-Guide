@@ -18,15 +18,25 @@ const Services = () => {
   const gridRef = useRef(null);
 
   useEffect(() => {
-    fetch(
-      "https://raw.githubusercontent.com/Hafiz-Sakib/FakeData/main/FakeData.json",
-    )
-      .then((r) => r.json())
-      .then((d) => {
-        setServices(d);
+    const fetchServices = async () => {
+      try {
+        const res = await fetch(
+          "https://raw.githubusercontent.com/Hafiz-Sakib/FakeData/main/FakeData.json",
+        );
+
+        const data = await res.json();
+
+        console.table(data);
+
+        setServices(data);
+      } catch (error) {
+        console.error("Failed to fetch services:", error);
+      } finally {
         setLoading(false);
-      })
-      .catch(() => setLoading(false));
+      }
+    };
+
+    fetchServices();
   }, []);
 
   useEffect(() => {
