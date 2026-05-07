@@ -1,15 +1,24 @@
+// src/Components/Booking.js
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { FiArrowLeft, FiCalendar, FiCheck, FiClock, FiShield, FiStar, FiUsers } from "react-icons/fi";
+import {
+  FiArrowLeft,
+  FiCalendar,
+  FiCheck,
+  FiClock,
+  FiShield,
+  FiStar,
+  FiUsers,
+} from "react-icons/fi";
 import Modal from "./Modal";
 
 const inclusions = [
   "Dedicated trip coordinator",
-  "Vetted local guide",
+  "Vetted local guide & driver",
   "Flexible travel date request",
-  "Itinerary planning support",
-  "Safety and route briefing",
-  "24/7 assistance during travel",
+  "Detailed itinerary planning",
+  "Safety briefing & support",
+  "24/7 on-trip assistance",
 ];
 
 const Booking = () => {
@@ -22,10 +31,14 @@ const Booking = () => {
   const [formError, setFormError] = useState("");
 
   useEffect(() => {
-    fetch("https://raw.githubusercontent.com/Hafiz-Sakib/FakeData/main/FakeData.json")
-      .then((response) => response.json())
+    fetch(
+      "https://raw.githubusercontent.com/Hafiz-Sakib/FakeData/main/FakeData.json",
+    )
+      .then((res) => res.json())
       .then((data) => {
-        setService(data.find((item) => String(item.id) === String(bookingId)) || null);
+        setService(
+          data.find((item) => String(item.id) === String(bookingId)) || null,
+        );
         setLoading(false);
       })
       .catch(() => setLoading(false));
@@ -33,7 +46,7 @@ const Booking = () => {
 
   const confirmBooking = () => {
     if (!date) {
-      setFormError("Please select a preferred travel date.");
+      setFormError("Please select your preferred travel date.");
       return;
     }
     setFormError("");
@@ -42,127 +55,204 @@ const Booking = () => {
 
   if (loading) {
     return (
-      <main className="flex min-h-screen items-center justify-center bg-[#f6f2ea]">
-        <div className="h-12 w-12 animate-spin border-2 border-[#e7dfd0] border-t-[#0f766e]" />
+      <main className="min-h-screen flex items-center justify-center bg-[#f6f2ea]">
+        <div className="h-14 w-14 animate-spin border-4 border-[#e7dfd0] border-t-[#0f766e] rounded-full" />
       </main>
     );
   }
 
   if (!service) {
     return (
-      <main className="flex min-h-screen flex-col items-center justify-center bg-[#f6f2ea] px-6 text-center text-[#132236]">
-        <h1 className="text-4xl font-black">Package not found</h1>
-        <p className="mt-3 text-sm text-[#65758a]">The package you are looking for is no longer available.</p>
-        <Link to="/services" className="mt-8 bg-[#132236] px-7 py-4 text-xs font-black uppercase tracking-[0.16em] text-white">
-          Browse Packages
+      <main className="min-h-screen flex flex-col items-center justify-center bg-[#f6f2ea] px-6 text-center">
+        <h1 className="text-5xl font-black">Package Not Found</h1>
+        <p className="mt-4 text-[#65758a]">
+          Sorry, the tour you're looking for is no longer available.
+        </p>
+        <Link
+          to="/services"
+          className="mt-8 px-8 py-4 bg-[#132236] text-white rounded-2xl font-bold"
+        >
+          Browse All Packages
         </Link>
       </main>
     );
   }
 
-  const price = parseFloat(String(service.balance).replace(/[^0-9.]/g, "")) || 0;
-  const total = (price * travelers).toFixed(2);
+  const price =
+    parseFloat(String(service.balance).replace(/[^0-9.]/g, "")) || 0;
+  const total = (price * travelers).toFixed(0);
 
   return (
     <main className="min-h-screen bg-[#f6f2ea] pt-[76px] text-[#132236]">
-      <section className="mx-auto max-w-7xl px-6 py-12 lg:px-10">
-        <Link to="/services" className="mb-8 inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.16em] text-[#0f766e]">
-          <FiArrowLeft /> Back to packages
+      <section className="max-w-7xl mx-auto px-6 py-12 lg:px-10">
+        <Link
+          to="/services"
+          className="inline-flex items-center gap-2 text-sm font-bold text-[#0f766e] mb-8 hover:text-[#132236]"
+        >
+          ← Back to All Packages
         </Link>
 
-        <div className="grid gap-10 lg:grid-cols-[1fr_420px]">
+        <div className="grid lg:grid-cols-[1fr_420px] gap-12">
+          {/* Left Content */}
           <div>
-            <div className="relative overflow-hidden bg-[#132236]">
-              <img src={service.picture} alt={service.name} className="h-[460px] w-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#132236]/78 via-transparent to-transparent" />
-              <div className="absolute bottom-0 p-7 text-white">
-                <p className="text-xs font-black uppercase tracking-[0.18em] text-[#f4c76b]">Curated Package</p>
-                <h1 className="mt-3 text-5xl font-black tracking-tight">{service.name}</h1>
+            <div className="relative rounded-3xl overflow-hidden bg-[#132236] shadow-xl">
+              <img
+                src={service.picture}
+                alt={service.name}
+                className="w-full h-[480px] object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+              <div className="absolute bottom-0 p-8 text-white">
+                <p className="uppercase tracking-[0.2em] text-[#f4c76b] text-sm font-bold">
+                  Curated Experience
+                </p>
+                <h1 className="text-4xl font-black mt-2 leading-tight">
+                  {service.name}
+                </h1>
               </div>
             </div>
 
-            <div className="mt-8 grid gap-4 md:grid-cols-3">
+            {/* Highlights */}
+            <div className="mt-10 grid md:grid-cols-3 gap-6">
               {[
-                { icon: <FiStar />, label: "Rating", value: "4.9 guest score" },
-                { icon: <FiClock />, label: "Pace", value: "Flexible duration" },
-                { icon: <FiShield />, label: "Support", value: "Concierge assisted" },
-              ].map((item) => (
-                <div key={item.label} className="border border-[#e7dfd0] bg-white p-5">
-                  <div className="mb-3 text-2xl text-[#0f766e]">{item.icon}</div>
-                  <p className="text-xs font-black uppercase tracking-[0.14em] text-[#65758a]">{item.label}</p>
-                  <p className="mt-1 font-black">{item.value}</p>
+                {
+                  icon: <FiStar className="text-3xl" />,
+                  label: "Guest Rating",
+                  value: "4.9/5",
+                },
+                {
+                  icon: <FiClock className="text-3xl" />,
+                  label: "Duration",
+                  value: "Flexible",
+                },
+                {
+                  icon: <FiShield className="text-3xl" />,
+                  label: "Support",
+                  value: "24/7 Concierge",
+                },
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  className="border border-[#e7dfd0] bg-white p-6 rounded-3xl text-center"
+                >
+                  <div className="text-[#0f766e] mb-4">{item.icon}</div>
+                  <p className="font-black text-xl">{item.value}</p>
+                  <p className="text-sm text-[#65758a] mt-1">{item.label}</p>
                 </div>
               ))}
             </div>
 
-            <div className="mt-10 border border-[#e7dfd0] bg-white p-7">
-              <h2 className="text-3xl font-black tracking-tight">Trip overview</h2>
-              <p className="mt-4 text-sm leading-7 text-[#65758a]">{service.about}</p>
-              <div className="mt-8 grid gap-3 sm:grid-cols-2">
-                {inclusions.map((item) => (
-                  <p key={item} className="flex items-center gap-3 text-sm font-semibold text-[#65758a]">
-                    <span className="flex h-6 w-6 items-center justify-center bg-[#0f766e]/10 text-[#0f766e]">
-                      <FiCheck />
-                    </span>
-                    {item}
-                  </p>
-                ))}
+            {/* Trip Overview */}
+            <div className="mt-12 border border-[#e7dfd0] bg-white p-8 rounded-3xl">
+              <h2 className="text-3xl font-black mb-6">Trip Overview</h2>
+              <p className="text-[#65758a] leading-relaxed">{service.about}</p>
+
+              <div className="mt-10">
+                <h3 className="font-bold uppercase tracking-widest text-sm mb-5 text-[#0f766e]">
+                  What's Included
+                </h3>
+                <div className="grid sm:grid-cols-2 gap-4">
+                  {inclusions.map((item) => (
+                    <div key={item} className="flex items-start gap-3">
+                      <div className="mt-1 w-5 h-5 rounded bg-[#0f766e]/10 flex items-center justify-center text-[#0f766e]">
+                        <FiCheck size={14} />
+                      </div>
+                      <p className="text-sm text-[#65758a]">{item}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
 
-          <aside className="h-fit border border-[#e7dfd0] bg-white p-7 shadow-xl lg:sticky lg:top-24">
-            <p className="text-xs font-black uppercase tracking-[0.18em] text-[#65758a]">Starting from</p>
-            <p className="mt-2 text-4xl font-black text-[#f25f4c]">{service.balance}</p>
-            <p className="mt-1 text-sm text-[#65758a]">per traveler, final price confirmed by concierge</p>
+          {/* Booking Sidebar */}
+          <aside className="lg:sticky lg:top-24 h-fit">
+            <div className="border border-[#e7dfd0] bg-white rounded-3xl p-8 shadow-xl">
+              <p className="uppercase text-xs tracking-widest text-[#65758a]">
+                Starting from
+              </p>
+              <p className="text-5xl font-black text-[#f25f4c] mt-1">
+                {service.balance}
+              </p>
 
-            <div className="mt-8 space-y-5">
-              <div>
-                <label className="mb-2 flex items-center gap-2 text-xs font-black uppercase tracking-[0.14em] text-[#65758a]">
-                  <FiCalendar className="text-[#0f766e]" /> Preferred Date
-                </label>
-                <input
-                  type="date"
-                  value={date}
-                  min={new Date().toISOString().split("T")[0]}
-                  onChange={(event) => setDate(event.target.value)}
-                  className="w-full border border-[#e7dfd0] bg-[#fbf8f2] px-4 py-4 text-sm focus:border-[#0f766e] focus:outline-none"
-                />
-              </div>
-              <div>
-                <label className="mb-2 flex items-center gap-2 text-xs font-black uppercase tracking-[0.14em] text-[#65758a]">
-                  <FiUsers className="text-[#0f766e]" /> Travelers
-                </label>
-                <div className="flex items-center gap-4">
-                  <button onClick={() => setTravelers(Math.max(1, travelers - 1))} className="h-11 w-11 border border-[#e7dfd0] text-xl font-black">-</button>
-                  <span className="w-10 text-center text-xl font-black">{travelers}</span>
-                  <button onClick={() => setTravelers(Math.min(20, travelers + 1))} className="h-11 w-11 border border-[#e7dfd0] text-xl font-black">+</button>
+              <div className="mt-10 space-y-8">
+                <div>
+                  <label className="block text-xs font-black uppercase tracking-widest text-[#65758a] mb-3">
+                    Preferred Travel Date
+                  </label>
+                  <input
+                    type="date"
+                    value={date}
+                    min={new Date().toISOString().split("T")[0]}
+                    onChange={(e) => setDate(e.target.value)}
+                    className="w-full border border-[#e7dfd0] bg-[#fbf8f2] rounded-2xl px-5 py-4 focus:border-[#0f766e] outline-none"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-xs font-black uppercase tracking-widest text-[#65758a] mb-3">
+                    Number of Travelers
+                  </label>
+                  <div className="flex items-center bg-[#fbf8f2] rounded-2xl p-2">
+                    <button
+                      onClick={() => setTravelers(Math.max(1, travelers - 1))}
+                      className="w-12 h-12 text-3xl hover:bg-white rounded-xl"
+                    >
+                      -
+                    </button>
+                    <span className="flex-1 text-center text-4xl font-black">
+                      {travelers}
+                    </span>
+                    <button
+                      onClick={() => setTravelers(Math.min(20, travelers + 1))}
+                      className="w-12 h-12 text-3xl hover:bg-white rounded-xl"
+                    >
+                      +
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className="mt-7 border border-[#e7dfd0] bg-[#fbf8f2] p-5">
-              <div className="flex justify-between text-sm text-[#65758a]">
-                <span>{service.balance} x {travelers}</span>
-                <span>${total}</span>
+              <div className="mt-8 bg-[#fbf8f2] border border-[#e7dfd0] rounded-2xl p-6">
+                <div className="flex justify-between text-sm">
+                  <span>
+                    {service.balance} × {travelers}
+                  </span>
+                  <span className="font-bold">BDT {total}</span>
+                </div>
+                <div className="border-t border-[#e7dfd0] mt-4 pt-4 flex justify-between font-black text-lg">
+                  <span>Total Estimate</span>
+                  <span>BDT {total}</span>
+                </div>
               </div>
-              <div className="mt-3 flex justify-between border-t border-[#e7dfd0] pt-3 font-black">
-                <span>Estimated total</span>
-                <span>${total}</span>
-              </div>
+
+              {formError && (
+                <p className="text-red-600 text-sm mt-4">{formError}</p>
+              )}
+
+              <button
+                onClick={confirmBooking}
+                className="mt-8 w-full py-5 bg-[#f25f4c] hover:bg-[#d94f3d] text-white font-black uppercase tracking-widest rounded-2xl transition text-lg"
+              >
+                Confirm Booking Request
+              </button>
+
+              <p className="text-center text-xs text-[#65758a] mt-4">
+                No payment required at this stage
+              </p>
             </div>
-
-            {formError && <p className="mt-4 border border-[#f25f4c]/30 bg-[#f25f4c]/10 px-4 py-3 text-xs font-bold text-[#d94f3d]">{formError}</p>}
-
-            <button onClick={confirmBooking} className="mt-6 w-full bg-[#f25f4c] px-7 py-4 text-xs font-black uppercase tracking-[0.16em] text-white transition hover:bg-[#d94f3d]">
-              Request Booking
-            </button>
-            <p className="mt-3 text-center text-xs text-[#65758a]">No payment required for this request.</p>
           </aside>
         </div>
       </section>
 
-      {openModal && <Modal closeModal={() => setOpenModal(false)} service={service} travelers={travelers} date={date} />}
+      {openModal && (
+        <Modal
+          closeModal={() => setOpenModal(false)}
+          service={service}
+          travelers={travelers}
+          date={date}
+        />
+      )}
     </main>
   );
 };
