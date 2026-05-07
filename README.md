@@ -1,284 +1,122 @@
-# 🌿 WildBD — Premium Tour Guide Platform
+# 🌴 Sababa Tours - Premium Travel Agency
 
-A modern luxury travel and tour booking platform focused on showcasing the natural beauty of Bangladesh through immersive guided experiences.
+A modern, elegant, and luxurious travel website for **Sababa Tours** — a premium travel agency specializing in bespoke journeys across Bangladesh.
 
----
-
-# ✨ Live Website
-
-🔗 [Visit WildBD](https://tour-guide-553b5.web.app/)
+![Sababa Tours](https://sababa-tours.vercel.app/og-image.jpg)
 
 ---
 
-# 🖼️ Project Preview
+## 🌐 Live Demo
 
-![WildBD Preview](https://i.ibb.co/ph8ctSH/Fire-Shot-Capture-006-Sababa-Tours-tour-guide-553b5-web-app.png)
-
----
-
-# 🌍 About The Project
-
-WildBD is a fully responsive premium travel website built for a professional local tour guide service. The platform allows users to explore destinations, discover curated travel packages, authenticate securely, and book personalized tours across Bangladesh.
-
-The UI has been redesigned with a luxury eco-tourism aesthetic inspired by modern travel brands.
+**[Visit Sababa Tours](https://sababa-tours.vercel.app/)**
 
 ---
 
-# 🚀 Core Features
+## ✨ Features
 
-## 🏔️ Explore Destinations
-Users can browse stunning destinations including:
-
-- Bandarban
-- Rangamati
-- Khagrachari
-- Sitakundu
-- Cox's Bazar
-- Hill tracks & waterfalls
-
----
-
-## 📦 Premium Tour Packages
-Visitors can:
-
-- View detailed travel packages
-- Explore pricing & package information
-- Read package descriptions
-- Book tours directly
+- ⚡ Blazing fast performance with **Vite + React**
+- 🎨 Sophisticated luxury design with Tailwind CSS
+- 🗺️ **Interactive Live Trip Planner** with real-time pricing
+- 📱 Fully responsive & mobile-first design
+- 🔐 Firebase Authentication (Login & Registration)
+- 📬 Working Contact Form (Web3Forms)
+- 📖 Blog Section with Search & Category Filter
+- 🏞️ Beautiful Destination Showcases
+- ⭐ Professional Booking Flow
+- 🌟 Smooth animations and premium hover effects
+- 📊 Dynamic Statistics with scroll animations
 
 ---
 
-## 🔐 Authentication System
+## 🛠️ Technologies Used
 
-Users can authenticate using:
-
-- Google Login
-- GitHub Login
-- Email & Password Registration
-
-Authentication is powered by Firebase.
-
----
-
-## 👤 User Profile System
-
-After login/signup users can:
-
-- View profile picture in navbar
-- View display name
-- Logout securely
+| Technology       | Purpose            |
+| ---------------- | ------------------ |
+| React.js + Vite  | Frontend Framework |
+| Tailwind CSS     | Styling            |
+| React Router DOM | Routing            |
+| Firebase         | Authentication     |
+| Web3Forms        | Contact Form       |
+| React Icons      | Icons              |
 
 ---
 
-## 📅 Booking System
-
-Authenticated users can:
-
-- Book travel packages
-- Select travel details
-- Confirm reservations
-- View booking confirmation modal
-
----
-
-## 🖼️ Interactive Gallery
-
-Includes:
-
-- Destination image gallery
-- Lightbox image viewer
-- Category filtering
-- Responsive masonry layout
-
----
-
-## 📰 Interactive Blogs Page
-
-Modern blog experience featuring:
-
-- Live article search
-- Animated cards
-- FAQ accordion
-- Category filters
-- Glassmorphism UI
-- Responsive layout
-
----
-
-## 🌗 Dark / Light Theme Toggle
-
-Users can switch between:
-
-- Dark mode
-- Light mode
-
-Theme preference is preserved using local storage.
-
----
-
-## 📱 Fully Responsive
-
-Optimized for:
-
-- Mobile devices
-- Tablets
-- Laptops
-- Large desktop screens
-
----
-
-# 🎨 Design System
-
-The UI follows a luxury travel aesthetic using:
-
-- Forest green palette
-- Gold accents
-- Cream typography
-- Glassmorphism effects
-- Smooth hover animations
-- Premium spacing & layouts
-
----
-
-# 🛠️ Technologies Used
-
-## Frontend
-
-- React JS
-- React Router DOM
-- Tailwind CSS
-- React Icons
-- React Hot Toast
-
----
-
-## Authentication & Backend
-
-- Firebase Authentication
-
----
-
-## UI & UX
-
-- Glassmorphism
-- Responsive Design
-- CSS Animations
-- Modern Card Layouts
-
----
-
-# 📦 NPM Packages Used
+## 📂 Project Structure
 
 ```bash
-react
-react-dom
-react-router-dom
-firebase
-react-hot-toast
-react-icons
-react-firebase-hooks
-tailwindcss
-postcss
-autoprefixer
+sababa-tours/
+├── src/
+│   ├── Components/
+│   │   ├── Home/
+│   │   ├── Services/
+│   │   ├── About/
+│   │   ├── Blogs/
+│   │   ├── Contact/
+│   │   ├── Navbar/
+│   │   ├── Footer/
+│   │   └── UI/
+│   ├── Utilities/
+│   ├── Firebase.init.js
+│   ├── App.jsx
+│   └── main.jsx
+├── public/
+├── package.json
+├── tailwind.config.js
+└── README.md
+
+📍 Website Sections
+
+Home — Hero, Interactive Planner, Destinations, Stats
+Packages — All tours with search, filter & sort
+Journal — Travel blogs + FAQ
+About — Company story, values & metrics
+Contact — Concierge form + location
+Auth — Login & Registration
+
+
+⚙️ Installation & Setup
+1. Clone the Repository
+Bashgit clone https://github.com/yourusername/sababa-tours.git
+cd sababa-tours
+2. Install Dependencies
+Bashnpm install
+3. Run Locally
+Bashnpm run dev
+Open http://localhost:5173
+4. Build for Production
+Bashnpm run build
+
+🚀 Deployment
+This project is deployed on Vercel.
+<img src="https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=for-the-badge&#x26;logo=vercel&#x26;logoColor=white" alt="Deployed on Vercel">
+
+🤝 Contributing
+Contributions, issues, and feature requests are welcome!
+
+Fork the project
+Create your feature branch (git checkout -b feature/AmazingFeature)
+Commit your changes (git commit -m 'Add some AmazingFeature')
+Push to the branch (git push origin feature/AmazingFeature)
+Open a Pull Request
+
+
+📄 License
+Distributed under the MIT License. See LICENSE for more information.
+
+👨‍💻 Author
+Mohammad Hafizur Rahman
+Full-Stack Developer
+
+Location: Chittagong, Bangladesh
+Live Site: sababa-tours.vercel.app
+
+
+Made with ❤️ for exceptional travel experiences.
+
+How to Use:
+
+Copy all the content above
+Create a new file named README.md in your project root
+Paste the content
+Commit and push
 ```
-
----
-
-# 📂 Project Structure
-
-```bash
-src/
-│
-├── Components/
-│   ├── Auth/
-│   ├── Booking/
-│   ├── Contact/
-│   ├── Footer/
-│   ├── Gallery/
-│   ├── Home/
-│   ├── Navbar/
-│   ├── Pages/
-│   ├── Services/
-│   └── Utilities/
-│
-├── App.js
-├── index.js
-├── App.css
-└── Firebase.init.js
-```
-
----
-
-# ⚙️ Installation & Setup
-
-## Clone Repository
-
-```bash
-git clone https://github.com/your-username/wildbd.git
-```
-
----
-
-## Install Dependencies
-
-```bash
-npm install
-```
-
----
-
-## Start Development Server
-
-```bash
-npm start
-```
-
----
-
-# 🔥 Firebase Setup
-
-Create a `.env.local` file and add:
-
-```env
-REACT_APP_apiKey=YOUR_KEY
-REACT_APP_authDomain=YOUR_DOMAIN
-REACT_APP_projectId=YOUR_ID
-REACT_APP_storageBucket=YOUR_BUCKET
-REACT_APP_messagingSenderId=YOUR_SENDER_ID
-REACT_APP_appId=YOUR_APP_ID
-```
-
----
-
-# 📸 Image Sources
-
-Images are collected from:
-
-- Unsplash
-- RandomUser API
-
----
-
-# 🌟 Future Improvements
-
-Planned upgrades include:
-
-- Payment integration
-- Real booking database
-- Admin dashboard
-- User reviews
-- Wishlist system
-- Multi-language support
-- AI travel assistant
-
----
-
-# 👨‍💻 Developer
-
-Developed with ❤️ using React & Firebase.
-
----
-
-# 📄 License
-
-This project is licensed for educational and portfolio purposes.
