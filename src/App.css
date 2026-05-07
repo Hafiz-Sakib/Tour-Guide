@@ -73,3 +73,47 @@ html.dark nav img,
 html.dark footer img {
   filter: none;
 }
+
+.planner-shell,
+.planner-choice,
+.planner-control-panel {
+  border-radius: 0;
+}
+
+.planner-choice {
+  outline: 0 solid transparent;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+.planner-choice:focus-visible {
+  outline: 3px solid rgba(15, 118, 110, 0.28);
+  outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+  .planner-shell {
+    margin-inline: -0.5rem;
+  }
+}
+
+html.dark .planner-shell {
+  background-color: #101a2b !important;
+}
+
+html.dark .planner-control-panel {
+  background-color: #0b1424 !important;
+}
+
+html.dark .planner-choice:not(.bg-\[\#0f766e\]):not(.bg-\[\#132236\]) {
+  background-color: #101a2b !important;
+}
+
+.about-stat-card {
+  overflow-wrap: anywhere;
+}
+
+.about-stat-card:focus-visible {
+  outline: 3px solid rgba(244, 199, 107, 0.35);
+  outline-offset: 2px;
+}

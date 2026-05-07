@@ -1,11 +1,43 @@
 import { useState } from "react";
-import { FiMail, FiMapPin, FiPhone, FiSend } from "react-icons/fi";
+import { FiCheckCircle, FiMail, FiMapPin, FiPhone, FiSend, FiX } from "react-icons/fi";
 import toast from "react-hot-toast";
+
+const WEB3FORMS_ACCESS_KEY = "fa7f8ec7-a4a8-424b-8efd-9b6387755682";
+
+const SuccessModal = ({ onClose }) => (
+  <div className="fixed inset-0 z-[60] flex items-center justify-center bg-[#132236]/75 px-4 backdrop-blur-sm">
+    <div className="relative w-full max-w-md border border-[#e7dfd0] bg-white p-8 text-center shadow-2xl">
+      <button
+        onClick={onClose}
+        className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center border border-[#e7dfd0] text-[#65758a] transition hover:text-[#132236]"
+        type="button"
+        aria-label="Close success message"
+      >
+        <FiX />
+      </button>
+      <div className="mx-auto flex h-16 w-16 items-center justify-center bg-[#0f766e]/10 text-4xl text-[#0f766e]">
+        <FiCheckCircle />
+      </div>
+      <h3 className="mt-6 text-3xl font-black tracking-tight text-[#132236]">Message sent</h3>
+      <p className="mt-3 text-sm leading-7 text-[#65758a]">
+        Thanks for reaching out. Our travel desk will reply as soon as possible.
+      </p>
+      <button
+        onClick={onClose}
+        className="mt-7 w-full bg-[#132236] px-6 py-4 text-xs font-black uppercase tracking-[0.16em] text-white transition hover:bg-[#0f766e]"
+        type="button"
+      >
+        Close
+      </button>
+    </div>
+  </div>
+);
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
 
   const handleChange = (event) => {
     setForm({ ...form, [event.target.name]: event.target.value });
@@ -23,7 +55,7 @@ const Contact = () => {
     return nextErrors;
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const nextErrors = validate();
     if (Object.keys(nextErrors).length) {
@@ -32,11 +64,34 @@ const Contact = () => {
     }
     setErrors({});
     setLoading(true);
-    setTimeout(() => {
-      toast.success("Message sent. Our travel desk will reply within 24 hours.");
+
+    const payload = new FormData();
+    payload.append("access_key", WEB3FORMS_ACCESS_KEY);
+    payload.append("name", form.name);
+    payload.append("email", form.email);
+    payload.append("subject", form.subject || "New Sababa Tours Contact Form Submission");
+    payload.append("message", form.message);
+    payload.append("from_name", "Sababa Tours Website");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: payload,
+      });
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || "Unable to send message.");
+      }
+
+      setSuccess(true);
       setForm({ name: "", email: "", subject: "", message: "" });
+      toast.success("Message sent. Our travel desk will reply within 24 hours.");
+    } catch {
+      toast.error("Message could not be sent. Please try again.");
+    } finally {
       setLoading(false);
-    }, 900);
+    }
   };
 
   const inputClass = (field) =>
@@ -46,6 +101,8 @@ const Contact = () => {
 
   return (
     <main className="min-h-screen bg-[#f6f2ea] pt-[76px] text-[#132236]">
+      {success && <SuccessModal onClose={() => setSuccess(false)} />}
+
       <section className="relative overflow-hidden bg-[#132236] py-24 text-white">
         <img
           src="https://images.unsplash.com/photo-1534430480872-3498386e7856?w=1600&q=85"
