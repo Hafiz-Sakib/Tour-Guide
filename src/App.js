@@ -1,39 +1,55 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import Home from "./Components/HomePage/Home";
-// import NavBar from "./Components/NavBar/NavBar";
-import Footer from "./Components/Footer/Footer";
-import Services from "./Components/Services/Services";
-import Blogs from "./Components/Blogs/Blogs";
-import About from "./Components/About Me/About";
-import NotFound from "./Components/NotFound/NotFound";
-import Login from "./Components/Login/Login";
-import Registration from "./Components/Registration/Registration";
-import Booking from "./Components/Booking/Booking";
-import RequireAuth from "./Components/Auth/RequireAuth";
+
+import Home from "./Components/Home/Home";
 import NavBar from "./Components/Navbar/Navbar";
+import Footer from "./Components/Footer/Footer";
+
+import Services from "./Components/Services/Services";
+
+import Blogs from "./Components/Pages/Blogs";
+import About from "./Components/Pages/About";
+import Contact from "./Components/Pages/Contact";
+import NotFound from "./Components/Pages/NotFound";
+
+import Login from "./Components/Auth/Login";
+import Registration from "./Components/Auth/Registration";
+import RequireAuth from "./Components/Auth/RequireAuth";
+
+import Booking from "./Components/Booking/Booking";
 
 function App() {
   return (
     <div className="App">
       <NavBar />
+
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Services" element={<Services />} />
+
+        <Route path="/services" element={<Services />} />
+
+        <Route path="/blogs" element={<Blogs />} />
+
+        <Route path="/about" element={<About />} />
+
+        <Route path="/contact" element={<Contact />} />
+
+        <Route path="/login" element={<Login />} />
+
+        <Route path="/register" element={<Registration />} />
+
         <Route
-          path="/Booking/:BookingId"
+          path="/booking/:bookingId"
           element={
             <RequireAuth>
               <Booking />
             </RequireAuth>
           }
         />
-        <Route path="/Blogs" element={<Blogs />}></Route>
-        <Route path="/About" element={<About />}></Route>
-        <Route path="/Login" element={<Login />}></Route>
-        <Route path="/Registration" element={<Registration />}></Route>
-        <Route path="*" element={<NotFound />}></Route>
+
+        <Route path="*" element={<NotFound />} />
       </Routes>
+
       <Footer />
     </div>
   );

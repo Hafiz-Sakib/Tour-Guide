@@ -1,9 +1,17 @@
 import React from "react";
 
-const Button = (props) => {
+const Button = ({ children, variant = "primary", className = "", ...props }) => {
+  const base = "inline-flex items-center gap-2 font-bold tracking-wider uppercase text-xs transition-all duration-300 rounded-full";
+
+  const variants = {
+    primary: "px-7 py-3 bg-gradient-to-r from-[#c9a84c] to-[#f0d080] text-[#0a1628] hover:shadow-lg hover:shadow-[#c9a84c]/30 hover:-translate-y-0.5",
+    outline: "px-7 py-3 border-2 border-[#c9a84c] text-[#c9a84c] hover:bg-[#c9a84c] hover:text-[#0a1628]",
+    ghost: "px-7 py-3 text-white/70 hover:text-white border border-white/20 hover:border-white/50",
+  };
+
   return (
-    <button className="mt-2 bg-indigo-600 text-white font-[Poppins] py-2 px-6 rounded md:ml-4 hover:bg-indigo-600 duration-500">
-      {props.children}
+    <button className={`${base} ${variants[variant] || variants.primary} ${className}`} {...props}>
+      {children}
     </button>
   );
 };

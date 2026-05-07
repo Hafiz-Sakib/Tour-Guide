@@ -1,6 +1,75 @@
-body {
-  font-family: "Poppins", sans-serif;
+html {
+  color-scheme: light;
 }
-.App {
-  font-family: "Poppins", sans-serif;
+
+html.dark {
+  color-scheme: dark;
+  background: #070d19;
+}
+
+html.dark body,
+html.dark .App {
+  background: #070d19;
+}
+
+html.dark main,
+html.dark .bg-\[\#f6f2ea\],
+html.dark .bg-\[\#fbf8f2\] {
+  background-color: #070d19 !important;
+  color: #e6edf7 !important;
+}
+
+html.dark .bg-white,
+html.dark .bg-white\/95 {
+  background-color: #101a2b !important;
+  color: #e6edf7 !important;
+}
+
+html.dark .bg-\[\#132236\] {
+  background-color: #050a14 !important;
+}
+
+html.dark .text-\[\#132236\],
+html.dark .text-\[\#65758a\] {
+  color: #e6edf7 !important;
+}
+
+html.dark .text-\[\#65758a\],
+html.dark .text-\[\#65758a\]\/60,
+html.dark .text-\[\#65758a\]\/68,
+html.dark .text-\[\#65758a\]\/72 {
+  color: #9fb0c8 !important;
+}
+
+html.dark .border-\[\#e7dfd0\],
+html.dark .border-\[\#e7dfd0\]\/80 {
+  border-color: rgba(159, 176, 200, 0.22) !important;
+}
+
+html.dark input,
+html.dark textarea,
+html.dark select {
+  background-color: #0b1424 !important;
+  border-color: rgba(159, 176, 200, 0.28) !important;
+  color: #e6edf7 !important;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: rgba(159, 176, 200, 0.68) !important;
+}
+
+html.dark .shadow-sm,
+html.dark .shadow-xl,
+html.dark .shadow-2xl {
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.38) !important;
+}
+
+html.dark img {
+  filter: saturate(0.92) brightness(0.86);
+}
+
+html.dark nav img,
+html.dark footer img {
+  filter: none;
 }

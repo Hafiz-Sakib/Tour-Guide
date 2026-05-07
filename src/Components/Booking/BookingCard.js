@@ -1,75 +1,30 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { FiStar, FiArrowRight } from "react-icons/fi";
 
-const BookingCard = (props) => {
-  const { name, balance, picture } = props.service;
+const BookingCard = ({ service }) => {
+  const { name, balance, picture, id } = service;
+
   return (
-    <div className="mt-24">
-      <div className="max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-        <a href="/">
-          <img className="p-8 rounded-t-lg" src={picture} alt="productimage" />
-        </a>
-        <div className="px-5 pb-5">
-          <a href="/">
-            <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
-              {name}
-            </h5>
-          </a>
-          <div className="flex items-center mt-2.5 mb-5">
-            <svg
-              className="w-5 h-5 text-yellow-300"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-            </svg>
-            <svg
-              className="w-5 h-5 text-yellow-300"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-            </svg>
-            <svg
-              className="w-5 h-5 text-yellow-300"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-            </svg>
-            <svg
-              className="w-5 h-5 text-yellow-300"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-            </svg>
-            <svg
-              className="w-5 h-5 text-yellow-300"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-            </svg>
-            <span className="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">
-              5.0
-            </span>
-          </div>
-          <div className="flex justify-between items-center">
-            <span className="text-3xl font-bold text-gray-900 dark:text-white">
-              {balance}
-            </span>
-            <a
-              href="/"
-              className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            >
-              Add to cart
-            </a>
-          </div>
+    <div className="group bg-white rounded-2xl overflow-hidden border border-[#e8e0d0] hover:border-[#c9a84c]/40 hover:shadow-xl hover:shadow-[#c9a84c]/10 transition-all duration-500 hover:-translate-y-1" style={{fontFamily: "'DM Sans', system-ui, sans-serif"}}>
+      <div className="overflow-hidden aspect-video relative">
+        <img src={picture} alt={name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+      </div>
+      <div className="p-6">
+        <div className="flex gap-0.5 mb-3">
+          {[1,2,3,4,5].map(i => <FiStar key={i} className="w-3.5 h-3.5" style={{fill:"#c9a84c",color:"#c9a84c"}} />)}
+          <span className="text-xs text-[#0a1628]/40 ml-1.5">5.0</span>
+        </div>
+        <h5 className="text-xl font-black text-[#0a1628] mb-3" style={{fontFamily: "'Playfair Display', Georgia, serif"}}>{name}</h5>
+        <div className="flex items-center justify-between mt-4">
+          <span className="text-2xl font-black text-[#c9a84c]" style={{fontFamily: "'Playfair Display', Georgia, serif"}}>{balance}</span>
+          <Link
+            to={`/booking/${id}`}
+            className="inline-flex items-center gap-1.5 px-5 py-2.5 bg-[#0a1628] text-white text-xs font-black tracking-wider uppercase rounded-full hover:bg-[#c9a84c] hover:text-[#0a1628] transition-all duration-300"
+          >
+            Book Now <FiArrowRight className="w-3 h-3" />
+          </Link>
         </div>
       </div>
     </div>

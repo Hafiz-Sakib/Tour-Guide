@@ -4,19 +4,41 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-import "tw-elements";
+import { Toaster } from "react-hot-toast";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <App />
+
+      <Toaster
+        position="top-right"
+        toastOptions={{
+          style: {
+            fontFamily: "'DM Sans', sans-serif",
+            fontSize: "0.875rem",
+            borderRadius: "4px",
+            background: "#0d2818",
+            color: "#f8f3ec",
+          },
+          success: {
+            iconTheme: {
+              primary: "#5aaa78",
+              secondary: "#f8f3ec",
+            },
+          },
+          error: {
+            iconTheme: {
+              primary: "#e4a63a",
+              secondary: "#f8f3ec",
+            },
+          },
+        }}
+      />
     </BrowserRouter>
-    ,
-  </React.StrictMode>
+  </React.StrictMode>,
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

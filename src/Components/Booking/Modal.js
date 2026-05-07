@@ -1,52 +1,43 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import { HiOutlineCheckCircle } from "react-icons/hi";
+import { FiArrowRight, FiCalendar, FiCheckCircle, FiUsers, FiX } from "react-icons/fi";
 
-const Modal = ({ closeModal }) => {
+const Modal = ({ closeModal, service, travelers, date }) => {
+  const formattedDate = date
+    ? new Date(date).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })
+    : "To be confirmed";
+
   return (
-    <div>
-      <div
-        id="popup-modal"
-        tabindex="-1"
-        className="overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 md:inset-0 h-modal md:h-full justify-center items-center backdrop-blur-sm"
-        aria-hidden="true"
-      >
-        <div className="relative p-4 w-full max-w-md h-full md:h-auto">
-          <div className="relative bg-white rounded-lg shadow-2xl shadow-gray-900 dark:bg-gray-900">
-            <button
-              type="button"
-              onClick={closeModal}
-              className="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
-              data-modal-toggle="popup-modal"
-            >
-              <svg
-                className="w-5 h-5"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#132236]/76 p-4 backdrop-blur-sm">
+      <div className="relative w-full max-w-md border border-[#e7dfd0] bg-white shadow-2xl">
+        <button onClick={closeModal} className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center border border-[#e7dfd0] text-[#65758a]" aria-label="Close">
+          <FiX />
+        </button>
+        <div className="p-8 pt-12 text-center">
+          <div className="mx-auto flex h-16 w-16 items-center justify-center bg-[#0f766e]/10 text-4xl text-[#0f766e]">
+            <FiCheckCircle />
+          </div>
+          <h2 className="mt-6 text-3xl font-black tracking-tight text-[#132236]">Request received</h2>
+          <p className="mt-3 text-sm leading-7 text-[#65758a]">
+            Our travel desk will review availability and contact you with the next step.
+          </p>
+
+          <div className="mt-7 border border-[#e7dfd0] bg-[#fbf8f2] p-5 text-left">
+            <p className="font-black text-[#132236]">{service?.name}</p>
+            <p className="mt-3 flex items-center gap-2 text-sm text-[#65758a]">
+              <FiCalendar className="text-[#0f766e]" /> {formattedDate}
+            </p>
+            <p className="mt-2 flex items-center gap-2 text-sm text-[#65758a]">
+              <FiUsers className="text-[#0f766e]" /> {travelers} traveler{travelers > 1 ? "s" : ""}
+            </p>
+          </div>
+
+          <div className="mt-7 grid gap-3 sm:grid-cols-2">
+            <button onClick={closeModal} className="border border-[#e7dfd0] px-5 py-4 text-xs font-black uppercase tracking-[0.16em] text-[#132236]">
+              Close
             </button>
-            <div className="p-6 text-center">
-              <HiOutlineCheckCircle className="mx-auto mb-4 w-44 h-44 text-green-700 dark:text-green-700"></HiOutlineCheckCircle>
-              <h3 className="mb-5 text-2xl font-normal text-blue-700">
-                Your Booking Have been Received,Thank You!
-              </h3>
-              <Link to={"/"}>
-                <button
-                  data-modal-toggle="popup-modal"
-                  type="button"
-                  className="text-white bg-blue-600  focus:ring-4 focus:outline-none font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2"
-                >
-                  Back to Home
-                </button>
-              </Link>
-            </div>
+            <Link to="/" className="inline-flex items-center justify-center gap-2 bg-[#132236] px-5 py-4 text-xs font-black uppercase tracking-[0.16em] text-white">
+              Home <FiArrowRight />
+            </Link>
           </div>
         </div>
       </div>
