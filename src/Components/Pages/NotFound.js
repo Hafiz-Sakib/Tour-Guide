@@ -1,17 +1,29 @@
+// src/Components/NotFound/NotFound.js
 import { Link } from "react-router-dom";
 import { FiArrowLeft, FiMapPin } from "react-icons/fi";
 
 const NotFound = () => (
-  <main className="flex min-h-screen items-center justify-center bg-[#132236] px-6 pt-[76px] text-center text-white">
-    <div className="max-w-xl">
-      <FiMapPin className="mx-auto mb-6 text-5xl text-[#f4c76b]" />
-      <p className="text-xs font-black uppercase tracking-[0.22em] text-[#f4c76b]">404</p>
-      <h1 className="mt-4 text-5xl font-black tracking-tight">This route is off the itinerary.</h1>
-      <p className="mt-5 text-sm leading-7 text-white/65">
-        The page you are looking for is unavailable. Return to the home page and continue planning your trip.
+  <main className="min-h-screen bg-[#132236] flex items-center justify-center px-6 pt-[76px] text-white text-center">
+    <div className="max-w-lg">
+      <FiMapPin className="mx-auto text-7xl text-[#f4c76b] mb-8" />
+
+      <p className="text-[#f4c76b] uppercase tracking-[0.3em] text-sm font-bold mb-4">
+        404 — Off Route
       </p>
-      <Link to="/" className="mt-8 inline-flex items-center gap-2 bg-[#f25f4c] px-7 py-4 text-xs font-black uppercase tracking-[0.16em] text-white">
-        <FiArrowLeft /> Back Home
+
+      <h1 className="text-5xl md:text-6xl font-black tracking-tighter leading-tight mb-6">
+        This route is off the itinerary.
+      </h1>
+
+      <p className="text-white/70 text-lg mb-10">
+        The page you're looking for doesn't exist or has been moved.
+      </p>
+
+      <Link
+        to="/"
+        className="inline-flex items-center gap-3 bg-[#f25f4c] hover:bg-white hover:text-[#132236] px-10 py-5 rounded-full font-black uppercase tracking-widest transition-all"
+      >
+        <FiArrowLeft /> Back to Home
       </Link>
     </div>
   </main>
