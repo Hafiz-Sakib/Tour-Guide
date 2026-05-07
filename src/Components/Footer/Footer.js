@@ -1,6 +1,6 @@
 // src/Components/Footer/Footer.js
 import { Link } from "react-router-dom";
-import { FiArrowRight, FiMail, FiMapPin, FiPhone } from "react-icons/fi";
+import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
 import {
   FaFacebookF,
   FaInstagram,
@@ -47,7 +47,9 @@ const Footer = () => {
               ].map((social) => (
                 <a
                   key={social.label}
-                  href="#"
+                  href="sample-link" // Replace with actual URLs
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={social.label}
                   className="w-11 h-11 flex items-center justify-center border border-white/20 rounded-2xl text-white/70 hover:border-[#f4c76b] hover:text-[#f4c76b] transition-all hover:-translate-y-1"
                 >
