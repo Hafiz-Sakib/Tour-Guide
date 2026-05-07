@@ -4,7 +4,6 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./Components/Home/Home";
 import NavBar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
-import { BrowserRouter as Router } from "react-router-dom";
 import RequireAuth from "../src/Components/Auth/RequireAuth";
 import Services from "./Components/Services/Services";
 
