@@ -484,3 +484,16 @@ html.dark .planner-choice:not(.active) {
   outline: 2px solid var(--gold);
   outline-offset: 3px;
 }
+.label-premium {
+  font-family: var(--font-body);
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.22em;
+
+  font-size: 0.72rem;
+
+  font-weight: 700;
+
+  opacity: 0.82;
+}
