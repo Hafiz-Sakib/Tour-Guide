@@ -446,10 +446,10 @@ const Home = () => {
 
               {/* Floating badge */}
               <div className="absolute -bottom-6 -right-4 glass-sand rounded-2xl px-6 py-4 shadow-xl border border-[#c9a84c]/20 animate-float">
-                <p className="text-xs text-[#5a6a7e] uppercase tracking-widest font-bold">
+                <p className="text-xs text-slate-900 uppercase tracking-widest font-bold">
                   Best For
                 </p>
-                <p className="font-black text-[#0d1f35] mt-0.5">
+                <p className="font-black text-white mt-0.5">
                   {destinations[selectedDest].bestFor}
                 </p>
               </div>
@@ -512,7 +512,7 @@ const Home = () => {
                         ${
                           selectedStyle === i
                             ? "border-[#c9a84c] bg-[#c9a84c]/6 shadow-md"
-                            : "border-[#e7dfd0] hover:border-[#c9a84c]/40 hover:bg-[#f5f0e8]"
+                            : "border-[#e7dfd0] hover:border-[#c9a84c]/40 hover: transition-all duration-400 card-premium"
                         }
                       `}
                     >
@@ -706,10 +706,10 @@ const Home = () => {
               {process.map((step, i) => (
                 <div
                   key={i}
-                  className="group flex gap-6 p-7 rounded-[24px] border border-[#e7dfd0] hover:border-[#c9a84c]/30 hover:bg-[#f5f0e8] transition-all duration-400 card-premium"
+                  className="group flex gap-6 p-7 rounded-[24px] border border-[#e7dfd0] hover:border-[#c9a84c]/30 hover: transition-all duration-400 card-premium"
                 >
                   <div
-                    className="shrink-0 w-12 h-12 rounded-2xl bg-[#0d1f35] text-white flex items-center justify-center font-black text-lg group-hover:bg-[#c9a84c] group-hover:text-[#0d1f35] transition-all duration-400"
+                    className="shrink-0 w-12 h-12 rounded-2xl text-white flex items-center justify-center font-black text-lg group-hover:bg-[#c9a84c] group-hover:text-[#0d1f35] transition-all duration-400"
                     style={{
                       fontFamily: "'Cormorant Garamond', Georgia, serif",
                     }}
