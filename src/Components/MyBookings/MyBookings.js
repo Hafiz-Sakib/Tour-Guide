@@ -1,8 +1,10 @@
+// src/Components/MyBookings.js
 import { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../Firebase.init";
 import { FiCalendar, FiUsers, FiClock } from "react-icons/fi";
 import toast from "react-hot-toast";
+import { API_BASE_URL } from "../../config"; // ← Add this
 
 const MyBookings = () => {
   const [user] = useAuthState(auth);
@@ -18,7 +20,7 @@ const MyBookings = () => {
     const fetchBookings = async () => {
       try {
         const response = await fetch(
-          `http://localhost:5000/api/bookings/user/${user.uid}`,
+          `${API_BASE_URL}/api/bookings/user/${user.uid}`,
         );
         const data = await response.json();
         setBookings(data);
