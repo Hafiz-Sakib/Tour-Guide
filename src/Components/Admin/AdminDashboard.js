@@ -66,6 +66,43 @@ const Spinner = () => (
   </div>
 );
 
+// ─── Reusable Field Component (Fixed) ───────────────────────────────────────
+const Field = ({
+  label,
+  k,
+  value,
+  onChange,
+  placeholder,
+  textarea = false,
+  required = false,
+}) => (
+  <div className="flex flex-col gap-1">
+    <label className="text-xs font-semibold text-[#5a6a7e] uppercase tracking-wide">
+      {label}
+      {required && <span className="text-red-500 ml-0.5">*</span>}
+    </label>
+    {textarea ? (
+      <textarea
+        key={k}
+        rows={3}
+        value={value}
+        onChange={onChange}
+        placeholder={placeholder}
+        className="border border-[#e7dfd0] rounded-xl px-3 py-2 text-sm outline-none focus:border-[#0b6b62] resize-none"
+      />
+    ) : (
+      <input
+        key={k}
+        type="text"
+        value={value}
+        onChange={onChange}
+        placeholder={placeholder}
+        className="border border-[#e7dfd0] rounded-xl px-3 py-2 text-sm outline-none focus:border-[#0b6b62]"
+      />
+    )}
+  </div>
+);
+
 // ─── Booking Detail Drawer ────────────────────────────────────────────────────
 const BookingDrawer = ({ booking: b, onClose, onUpdate, onDelete }) => {
   if (!b) return null;
@@ -93,7 +130,6 @@ const BookingDrawer = ({ booking: b, onClose, onUpdate, onDelete }) => {
           <button
             onClick={onClose}
             className="p-2 rounded-xl hover:bg-[#f5f0e8] text-[#5a6a7e]"
-            aria-label="Close"
           >
             <FiX size={18} />
           </button>
@@ -156,11 +192,18 @@ const EMPTY_SERVICE = {
 };
 
 const ServiceModal = ({ initial, onClose, onSave }) => {
-  const [form, setForm] = useState(initial ?? EMPTY_SERVICE);
+  const [form, setForm] = useState(EMPTY_SERVICE);
   const [saving, setSaving] = useState(false);
   const isEdit = !!initial?._id;
 
-  const set = (k, v) => setForm((f) => ({ ...f, [k]: v }));
+  // Sync when editing existing service
+  useEffect(() => {
+    setForm(initial ?? EMPTY_SERVICE);
+  }, [initial]);
+
+  const handleChange = (k) => (e) => {
+    setForm((prev) => ({ ...prev, [k]: e.target.value }));
+  };
 
   const handleSave = async () => {
     if (!form.name || !form.about || !form.balance || !form.picture) {
@@ -173,37 +216,6 @@ const ServiceModal = ({ initial, onClose, onSave }) => {
     await onSave(form);
     setSaving(false);
   };
-
-  const Field = ({
-    label,
-    k,
-    placeholder,
-    textarea = false,
-    required = false,
-  }) => (
-    <div className="flex flex-col gap-1">
-      <label className="text-xs font-semibold text-[#5a6a7e] uppercase tracking-wide">
-        {label}
-        {required && <span className="text-red-500 ml-0.5">*</span>}
-      </label>
-      {textarea ? (
-        <textarea
-          rows={3}
-          value={form[k]}
-          onChange={(e) => set(k, e.target.value)}
-          placeholder={placeholder}
-          className="border border-[#e7dfd0] rounded-xl px-3 py-2 text-sm outline-none focus:border-[#0b6b62] resize-none"
-        />
-      ) : (
-        <input
-          value={form[k]}
-          onChange={(e) => set(k, e.target.value)}
-          placeholder={placeholder}
-          className="border border-[#e7dfd0] rounded-xl px-3 py-2 text-sm outline-none focus:border-[#0b6b62]"
-        />
-      )}
-    </div>
-  );
 
   return (
     <>
@@ -218,7 +230,6 @@ const ServiceModal = ({ initial, onClose, onSave }) => {
             <button
               onClick={onClose}
               className="p-2 rounded-xl hover:bg-[#f5f0e8] text-[#5a6a7e]"
-              aria-label="Close"
             >
               <FiX size={18} />
             </button>
@@ -248,12 +259,16 @@ const ServiceModal = ({ initial, onClose, onSave }) => {
             <Field
               label="Service Name"
               k="name"
+              value={form.name}
+              onChange={handleChange("name")}
               placeholder="e.g. Cox's Bazar Beach Tour"
               required
             />
             <Field
               label="Description"
               k="about"
+              value={form.about}
+              onChange={handleChange("about")}
               placeholder="A short description of the tour…"
               textarea
               required
@@ -262,22 +277,40 @@ const ServiceModal = ({ initial, onClose, onSave }) => {
               <Field
                 label="Price"
                 k="balance"
+                value={form.balance}
+                onChange={handleChange("balance")}
                 placeholder="e.g. BDT 4,500"
                 required
               />
-              <Field label="Duration" k="duration" placeholder="e.g. 3 Days" />
+              <Field
+                label="Duration"
+                k="duration"
+                value={form.duration}
+                onChange={handleChange("duration")}
+                placeholder="e.g. 3 Days"
+              />
             </div>
             <div className="grid grid-cols-2 gap-3">
-              <Field label="Category" k="category" placeholder="e.g. Beach" />
+              <Field
+                label="Category"
+                k="category"
+                value={form.category}
+                onChange={handleChange("category")}
+                placeholder="e.g. Beach"
+              />
               <Field
                 label="Location"
                 k="location"
+                value={form.location}
+                onChange={handleChange("location")}
                 placeholder="e.g. Cox's Bazar"
               />
             </div>
             <Field
               label="Image URL"
               k="picture"
+              value={form.picture}
+              onChange={handleChange("picture")}
               placeholder="https://images.unsplash.com/…"
               required
             />
@@ -312,7 +345,7 @@ const ServiceModal = ({ initial, onClose, onSave }) => {
 const ServicesPanel = () => {
   const [services, setServices] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [modal, setModal] = useState(null); // null | "add" | serviceObj
+  const [modal, setModal] = useState(null);
   const [search, setSearch] = useState("");
 
   const fetchServices = useCallback(async () => {
@@ -381,7 +414,6 @@ const ServicesPanel = () => {
 
   return (
     <div>
-      {/* Stats row */}
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-5">
         <StatCard label="Total Services" value={services.length} />
         <StatCard
@@ -396,7 +428,6 @@ const ServicesPanel = () => {
         />
       </div>
 
-      {/* Toolbar */}
       <div className="flex flex-wrap items-center gap-3 mb-5">
         <div className="flex items-center gap-2 bg-white border border-[#e7dfd0] rounded-xl px-3 py-2 flex-1 min-w-[180px]">
           <FiSearch size={15} className="text-[#5a6a7e]" />
@@ -424,13 +455,11 @@ const ServicesPanel = () => {
         <button
           onClick={fetchServices}
           className="flex items-center gap-2 px-4 py-2.5 border border-[#e7dfd0] bg-white rounded-xl hover:bg-[#f5f0e8] text-sm font-semibold text-[#5a6a7e]"
-          aria-label="Refresh"
         >
           <FiRefreshCw size={15} />
         </button>
       </div>
 
-      {/* Grid */}
       {loading ? (
         <Spinner />
       ) : filtered.length === 0 ? (
@@ -450,7 +479,6 @@ const ServicesPanel = () => {
               key={s._id}
               className="bg-white border border-[#e7dfd0] rounded-2xl overflow-hidden group hover:border-[#c9a84c]/40 hover:shadow-lg transition-all duration-300"
             >
-              {/* Image */}
               <div className="aspect-video bg-[#f5f0e8] overflow-hidden relative">
                 {s.picture ? (
                   <img
@@ -464,14 +492,13 @@ const ServicesPanel = () => {
                   </div>
                 )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-                <span className="absolute top-3 left-3 bg-white/90 backdrop-blur text-[#0d1f35] text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+                <span className="absolute top-3 left-3 bg-white backdrop-blur text-[#0d1f35] text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">
                   {s.category || "General"}
                 </span>
                 <span className="absolute bottom-3 right-3 bg-white/90 backdrop-blur text-[#e85d45] text-xs font-bold px-3 py-1 rounded-full">
                   {s.balance}
                 </span>
               </div>
-              {/* Info */}
               <div className="p-4">
                 <h3 className="font-bold text-[#0d1f35] text-sm mb-1 line-clamp-1">
                   {s.name}
@@ -483,17 +510,16 @@ const ServicesPanel = () => {
                   <span>📍 {s.location || "Bangladesh"}</span>
                   <span>⏱ {s.duration || "Flexible"}</span>
                 </div>
-                {/* Actions */}
                 <div className="flex gap-2 pt-3 border-t border-[#f0ebe2]">
                   <button
                     onClick={() => setModal(s)}
-                    className="flex-1 flex items-center justify-center gap-1.5 py-2 rounded-xl border border-[#e7dfd0] text-xs font-semibold text-[#0d1f35] hover:bg-[#f5f0e8] transition-colors"
+                    className="flex-1 flex items-center justify-center gap-1.5 py-2 rounded-xl border border-[#e7dfd0] text-xs font-semibold text-[#0d1f35] hover:bg-red-500"
                   >
                     <FiEdit2 size={13} /> Edit
                   </button>
                   <button
                     onClick={() => handleDelete(s._id)}
-                    className="flex-1 flex items-center justify-center gap-1.5 py-2 rounded-xl border border-red-100 text-xs font-semibold text-red-600 hover:bg-red-50 transition-colors"
+                    className="flex-1 flex items-center justify-center gap-1.5 py-2 rounded-xl border border-red-100 text-xs font-semibold text-red-600 hover:bg-red-50"
                   >
                     <FiTrash2 size={13} /> Delete
                   </button>
@@ -504,7 +530,6 @@ const ServicesPanel = () => {
         </div>
       )}
 
-      {/* Modal */}
       {modal && (
         <ServiceModal
           initial={modal === "add" ? null : modal}
@@ -610,7 +635,6 @@ const BookingsPanel = () => {
 
   return (
     <div>
-      {/* Stats */}
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 mb-6">
         <StatCard label="Total" value={bookings.length} />
         <StatCard
@@ -635,7 +659,6 @@ const BookingsPanel = () => {
         />
       </div>
 
-      {/* Toolbar */}
       <div className="flex flex-wrap items-center gap-3 mb-4">
         <div className="flex items-center gap-2 bg-white border border-[#e7dfd0] rounded-xl px-3 py-2 flex-1 min-w-[180px]">
           <FiSearch size={15} className="text-[#5a6a7e]" />
@@ -654,6 +677,7 @@ const BookingsPanel = () => {
             </button>
           )}
         </div>
+
         <div className="flex gap-2 flex-wrap">
           {STATUSES.map((s) => (
             <button
@@ -678,6 +702,7 @@ const BookingsPanel = () => {
             </button>
           ))}
         </div>
+
         <select
           value={sort}
           onChange={(e) => {
@@ -691,16 +716,15 @@ const BookingsPanel = () => {
           <option value="amount-desc">Highest amount</option>
           <option value="amount-asc">Lowest amount</option>
         </select>
+
         <button
           onClick={fetchBookings}
           className="flex items-center gap-2 px-4 py-2.5 border border-[#e7dfd0] bg-white rounded-xl hover:bg-[#f5f0e8] text-sm font-semibold text-[#5a6a7e]"
-          aria-label="Refresh"
         >
           <FiRefreshCw size={15} />
         </button>
       </div>
 
-      {/* Table */}
       <div className="bg-white rounded-3xl border border-[#e7dfd0] overflow-hidden">
         {loading ? (
           <Spinner />
@@ -746,7 +770,7 @@ const BookingsPanel = () => {
                     <tr
                       key={b._id}
                       onClick={() => setSelected(b)}
-                      className="border-b border-[#f0ebe2] hover:bg-[#f9f7f3] cursor-pointer transition-colors"
+                      className="border-b border-[#f0ebe2] hover:bg-slate-800 cursor-pointer transition-colors"
                     >
                       <td
                         className="px-5 py-4 font-semibold text-sm text-[#0d1f35] max-w-[160px] truncate"
@@ -782,7 +806,6 @@ const BookingsPanel = () => {
                           {b.status !== "confirmed" && (
                             <button
                               onClick={() => updateStatus(b._id, "confirmed")}
-                              title="Confirm"
                               className="p-1.5 rounded-lg text-green-600 hover:bg-green-50"
                             >
                               <FiCheckCircle size={17} />
@@ -791,7 +814,6 @@ const BookingsPanel = () => {
                           {b.status !== "cancelled" && (
                             <button
                               onClick={() => updateStatus(b._id, "cancelled")}
-                              title="Cancel"
                               className="p-1.5 rounded-lg text-yellow-600 hover:bg-yellow-50"
                             >
                               <FiXCircle size={17} />
@@ -799,7 +821,6 @@ const BookingsPanel = () => {
                           )}
                           <button
                             onClick={() => deleteBooking(b._id)}
-                            title="Delete"
                             className="p-1.5 rounded-lg text-red-500 hover:bg-red-50"
                           >
                             <FiTrash2 size={17} />
@@ -814,7 +835,6 @@ const BookingsPanel = () => {
           </div>
         )}
 
-        {/* Pagination */}
         {!loading && filtered.length > PER_PAGE && (
           <div className="flex items-center justify-between px-5 py-3 border-t border-[#e7dfd0] text-xs text-[#5a6a7e]">
             <span>
@@ -888,7 +908,6 @@ const AdminDashboard = () => {
   return (
     <main className="min-h-screen bg-[#f5f0e8] pt-[76px] pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
-        {/* Header */}
         <div className="flex flex-wrap items-center justify-between gap-4 py-8">
           <div>
             <h1 className="text-3xl font-black text-[#0d1f35]">
@@ -901,7 +920,6 @@ const AdminDashboard = () => {
           </div>
         </div>
 
-        {/* Tab bar */}
         <div className="flex gap-1 bg-white border border-[#e7dfd0] rounded-2xl p-1 mb-6 w-fit">
           {TABS.map((t) => (
             <button
@@ -918,7 +936,6 @@ const AdminDashboard = () => {
           ))}
         </div>
 
-        {/* Active panel */}
         {tab === "bookings" ? <BookingsPanel /> : <ServicesPanel />}
       </div>
     </main>

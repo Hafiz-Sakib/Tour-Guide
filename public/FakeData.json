@@ -1,66 +1,1826 @@
 [
   {
-    "id": "6260e0b16775b28aadab607e",
+    "id": "7260e0b16775b28aadab6071",
     "index": 0,
-    "balance": "$200",
-    "picture": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-    "name": "Nilgiri Hill",
-    "about": "Located at the south-eastern part of Chittagong hill tracts between the Bangladesh and India border, Maithaijama Haphong is the sixth-highest peak of Bangladesh. However it is not officially recognized according to the Bangladesh government."
+    "balance": "$370",
+    "picture": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1170&q=80",
+    "name": "Cox's Bazar Beach",
+    "about": "Cox's Bazar is the world's longest natural sea beach stretching over 120 kilometers along the Bay of Bengal. Visitors enjoy dramatic sunsets, fresh seafood, the famous marine drive, and exciting coastal adventures throughout the year."
   },
   {
-    "id": "6260e0b19b58656f5322945b",
+    "id": "7260e0b16775b28aadab6072",
     "index": 1,
-    "balance": "$180",
-    "picture": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-    "name": "Saka Haphong Hill",
-    "about": "Rama Manikya Haphong/Aiyang Tlang is another mountain found in Bangladesh nearing the Bangladesh–Myanmar border Van Rausang Bawm from the local 'Bawm ethnic community', Dalian headman Para of 'Remakri' Mouja and there is many things to explore here  "
+    "balance": "$530",
+    "picture": "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1170&q=80",
+    "name": "Saint Martin Island",
+    "about": "Saint Martin Island is the only coral island in Bangladesh, known for its turquoise water, coconut palm groves, and peaceful beaches. Snorkeling around the coral reef at low tide reveals a vibrant underwater world perfect for sea lovers."
   },
   {
-    "id": "6260e0b158dec32f472bf43d",
+    "id": "7260e0b16775b28aadab6073",
     "index": 2,
-    "balance": "$385",
-    "picture": "https://images.unsplash.com/photo-1469362102473-8622cfb973cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1219&q=80",
-    "name": "Zow Tlang Thanci",
-    "about": "Zow Tlang or Reang Haphong is a peak in the Mowdok range located at 21°40′23″N 92°36′16″E on the border with Myanmar. Its peak is at an altitude of 1,022 metres (3,353 ft). According to Bangla Trek, it is the second-highest peak in the Bangladesh.Its Awsome Place to Visit Here."
+    "balance": "$650",
+    "picture": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1170&q=80",
+    "name": "Sundarbans",
+    "about": "The Sundarbans is the largest mangrove forest in the world and a UNESCO World Heritage Site, home to the Royal Bengal Tiger, spotted deer, and hundreds of bird species. Boat cruises weave through labyrinthine tidal rivers and dense mangrove canopy."
   },
   {
-    "id": "6260e0b19aacd869f33e9b5e",
+    "id": "7260e0b16775b28aadab6074",
     "index": 3,
-    "balance": "$252",
-    "picture": "https://images.unsplash.com/photo-1594717527389-a590b56e8d0a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-    "name": "Jogi Haphong Hill",
-    "about": "Thingdawlte Tlang is a significant peak of Bangladesh. This peak is the highest point of 'lawmbok Row' range and possible seventh-highest of the country. In December 2012 a local explorer Fahim Hasan of  summitted the peak of Thingdawlte Tlang."
+    "balance": "$420",
+    "picture": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1170&q=80",
+    "name": "Sajek Valley",
+    "about": "Perched at 1,800 ft in the Chittagong Hill Tracts, Sajek Valley greets visitors with rolling clouds, indigenous Chakma and Lusai culture, and unforgettable sunrise views above the mist-filled valleys."
   },
   {
-    "id": "6260e0b1086ad293418144cd",
+    "id": "7260e0b16775b28aadab6075",
     "index": 4,
-    "balance": "$380",
-    "picture": "https://images.unsplash.com/photo-1463288889890-a56b2853c40f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
-    "name": "Keokradong Hill",
-    "about": "Mukhra Thuthai Haphong is a significant border peak of Bangladesh, situated at the southern most part of Belaichori of Rangamati Hill District. In April 2013, Fahim Hasan of BD Explorer summited and measured this peak for the first time.In December 2012, a local explorer Fahim Hasan of BD Explorer summitted the peak of Kreikung."
+    "balance": "$410",
+    "picture": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1170&q=80",
+    "name": "Tanguar Haor",
+    "about": "Tanguar Haor is a unique Ramsar wetland ecosystem in Sunamganj famous for boat travel, migratory birds, and crystal-clear water during monsoon season. Vast open water reflecting the sky makes it one of the most relaxing nature escapes in Bangladesh."
   },
   {
-    "id": "6260e0b1077be655fe596834",
+    "id": "7260e0b16775b28aadab6076",
     "index": 5,
-    "balance": "$450",
-    "picture": "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=841&q=80",
-    "name": "Bandarban Hill",
-    "about": "Kreikung Taung is a significant peak of Bangladesh. This peak is the second highest point of 'Lawmbok Row' range and possibly the eleventh-highest in the country. In December 2012, a local explorer Fahim Hasan of BD Explorer summitted  Kreikung."
+    "balance": "$290",
+    "picture": "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1170&q=80",
+    "name": "Ratargul Swamp Forest",
+    "about": "Ratargul is the only freshwater swamp forest in Bangladesh, located in Sylhet. During the rainy season the entire forest submerges and visitors glide through by wooden boat among emerald-green canopy and ghostly submerged tree trunks."
   },
   {
-    "id": "6260e0b15e79f79413e7390f",
+    "id": "7260e0b16775b28aadab6077",
     "index": 6,
-    "balance": "$600",
-    "picture": "https://images.unsplash.com/photo-1542202229-7d93c33f5d07?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-    "name": "Lusai Pahar",
-    "about": "Kapital/Capital is a distinctive, beautiful and very eye-catching peak on the Politai range near Thaikeng para. This flat mountain top was once used as a hideout by a separatist group from Mizoram. They declared this mountaintop as their temporary capital of free."
+    "balance": "$275",
+    "picture": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1170&q=80",
+    "name": "Jaflong",
+    "about": "Jaflong is situated on the India border in Sylhet, famous for its crystal-clear Piyain river and scenic stone-collection beds. The surrounding Khasia tribal hills create stunning layered scenery that attracts thousands of tourists every year."
   },
   {
-    "id": "6260e0b176354d9b7648ecc3",
+    "id": "7260e0b16775b28aadab6078",
     "index": 7,
+    "balance": "$295",
+    "picture": "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1170&q=80",
+    "name": "Tea Gardens Sylhet",
+    "about": "Rolling carpets of bright green tea bushes stretch endlessly across the Sylhet landscape. Nature walks through the gardens reveal workers hand-picking leaves and the sweet scent of fresh tea fills the peaceful surrounding air."
+  },
+  {
+    "id": "7260e0b16775b28aadab6079",
+    "index": 8,
+    "balance": "$450",
+    "picture": "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1170&q=80",
+    "name": "Bandarban Hill",
+    "about": "Bandarban is the gateway hill district offering lush green mountain ranges, peaceful tribal villages, and serene rivers. It serves as the base for trekkers heading to Bangladesh's highest and most remote Himalayan foothills."
+  },
+  {
+    "id": "7260e0b16775b28aadab6080",
+    "index": 9,
+    "balance": "$390",
+    "picture": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1170&q=80",
+    "name": "Nilachal Bandarban",
+    "about": "Known as the Darjeeling of Bangladesh, Nilachal hilltop sits above the clouds at dawn. The panoramic view of Bandarban town wrapped in morning mist with mountain ranges stretching in every direction is an unforgettable sight for visitors."
+  },
+  {
+    "id": "7260e0b16775b28aadab6081",
+    "index": 10,
+    "balance": "$590",
+    "picture": "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&w=1170&q=80",
+    "name": "Nafakhum Waterfall",
+    "about": "Nafakhum is considered one of the most powerful and scenic waterfalls in Bangladesh. The adventurous multi-day trek through hills, rivers, and remote Bawm tribal villages to reach Nafakhum is itself a legendary journey worth every step."
+  },
+  {
+    "id": "7260e0b16775b28aadab6082",
+    "index": 11,
+    "balance": "$330",
+    "picture": "https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=1170&q=80",
+    "name": "Boga Lake",
+    "about": "Boga Lake is a natural lake of volcanic origin nestled high in the Bandarban hills at 1,246 ft altitude. Adventure lovers trek through mountain paths to enjoy the serene turquoise lake surrounded by dense forest and indigenous tribal culture."
+  },
+  {
+    "id": "7260e0b16775b28aadab6083",
+    "index": 12,
+    "balance": "$620",
+    "picture": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=1170&q=80",
+    "name": "Debotakhum",
+    "about": "Debotakhum is a mysterious narrow canyon carved through rock by the Sangu river in Bandarban. Visitors wade through cold chest-deep water and travel by boat through pitch-dark tunnels to reach a hidden chamber — a truly thrilling natural adventure."
+  },
+  {
+    "id": "7260e0b16775b28aadab6084",
+    "index": 13,
+    "balance": "$380",
+    "picture": "https://images.unsplash.com/photo-1463288889890-a56b2853c40f?auto=format&fit=crop&w=1170&q=80",
+    "name": "Keokradong Hill",
+    "about": "Once considered the highest peak of Bangladesh, Keokradong stands at 1,230 m in the Bandarban range. The summit offers sweeping panoramic views across the border hill ranges stretching into Myanmar, rewarding trekkers with an extraordinary vista."
+  },
+  {
+    "id": "7260e0b16775b28aadab6085",
+    "index": 14,
+    "balance": "$500",
+    "picture": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1170&q=80",
+    "name": "Nilgiri Hill",
+    "about": "Nilgiri at 2,200 ft is often wrapped in thick clouds and mist throughout the year. The hilltop resort gives visitors the rare sensation of sleeping above the clouds with misty mountain ranges visible in every direction at sunrise."
+  },
+  {
+    "id": "7260e0b16775b28aadab6086",
+    "index": 15,
+    "balance": "$470",
+    "picture": "https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1170&q=80",
+    "name": "Patenga Sea Beach",
+    "about": "Patenga Sea Beach in Chattogram is popular for breezy evening sea views, street food, and nearby naval base attractions. It is one of the most visited urban beaches in Bangladesh offering easy access from the city center."
+  },
+  {
+    "id": "7260e0b16775b28aadab6087",
+    "index": 16,
+    "balance": "$350",
+    "picture": "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1170&q=80",
+    "name": "Himchari",
+    "about": "Himchari National Park sits just south of Cox's Bazar. A seasonal waterfall cascades down forested green hills directly to the beach below, creating a striking contrast of dense jungle meeting the open sea — a unique natural spectacle."
+  },
+  {
+    "id": "7260e0b16775b28aadab6088",
+    "index": 17,
+    "balance": "$460",
+    "picture": "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=1170&q=80",
+    "name": "Kuakata Sea Beach",
+    "about": "Kuakata is one of the rare beaches in South Asia where both sunrise and sunset can be witnessed from the same spot. It is also famous for its Buddhist temples, Rakhain tribal heritage, and calm peaceful travel atmosphere."
+  },
+  {
+    "id": "7260e0b16775b28aadab6089",
+    "index": 18,
+    "balance": "$245",
+    "picture": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1170&q=80",
+    "name": "Madhabkunda Waterfall",
+    "about": "One of the largest and most picturesque waterfalls in Bangladesh, located in Moulvibazar, Sylhet. The 162-ft cascade surrounded by rocky hillsides and tea-garden greenery remains mesmerizing and accessible throughout the year."
+  },
+  {
+    "id": "7260e0b16775b28aadab6090",
+    "index": 19,
+    "balance": "$265",
+    "picture": "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=1170&q=80",
+    "name": "Hamham Waterfall",
+    "about": "Hamham is a multi-tiered waterfall hidden deep inside the Rajkandi reserve forest of Moulvibazar. The jungle trek through dense canopy adds to its mystique. The raw natural beauty and remote location make it a favourite for adventure seekers."
+  },
+  {
+    "id": "7260e0b16775b28aadab6091",
+    "index": 20,
+    "balance": "$340",
+    "picture": "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1170&q=80",
+    "name": "Bisnakandi",
+    "about": "Where two rivers meet at the foot of the Meghalaya hills in Sylhet, Bisnakandi dazzles with crystal-clear water rushing over smooth stone beds. The surrounding mountain panorama becomes especially magical and vibrant during the monsoon season."
+  },
+  {
+    "id": "7260e0b16775b28aadab6092",
+    "index": 21,
+    "balance": "$280",
+    "picture": "https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?auto=format&fit=crop&w=1170&q=80",
+    "name": "Lalakhal",
+    "about": "Lalakhal is famous for its striking blue-green river water that flows from the Jaintia hills on the India border through Sylhet. Boat rides past tea gardens and rubber plantations along the river banks provide deeply relaxing scenery."
+  },
+  {
+    "id": "7260e0b16775b28aadab6093",
+    "index": 22,
+    "balance": "$295",
+    "picture": "https://images.unsplash.com/photo-1542202229-7d93c33f5d07?auto=format&fit=crop&w=1170&q=80",
+    "name": "Alutila Cave",
+    "about": "Alutila natural cave is a 350-metre underground tunnel carved through a hillside in Khagrachari. Visitors wade through a shallow stream in near-total darkness using torches to navigate — a unique and thrilling natural wonder of the Chittagong Hill Tracts."
+  },
+  {
+    "id": "7260e0b16775b28aadab6094",
+    "index": 23,
+    "balance": "$480",
+    "picture": "https://images.unsplash.com/photo-1469362102473-8622cfb973cd?auto=format&fit=crop&w=1170&q=80",
+    "name": "Saka Haphong Hill",
+    "about": "Located near the Bangladesh–Myanmar border, Saka Haphong is among the highest peaks in the country. The multi-day expedition through remote Bawm tribal villages of Remakri Mouja is a legendary adventure for seasoned trekkers."
+  },
+  {
+    "id": "7260e0b16775b28aadab6095",
+    "index": 24,
+    "balance": "$385",
+    "picture": "https://images.unsplash.com/photo-1594717527389-a590b56e8d0a?auto=format&fit=crop&w=1170&q=80",
+    "name": "Jogi Haphong Hill",
+    "about": "Jogi Haphong is a significant peak in the Lawmbok Row range of the Chittagong Hill Tracts. Remote, pristine, and demanding, it was first summited in late 2012 and attracts only the most dedicated hillwalkers in Bangladesh."
+  },
+  {
+    "id": "7260e0b16775b28aadab6096",
+    "index": 25,
+    "balance": "$600",
+    "picture": "https://images.unsplash.com/photo-1542202229-7d93c33f5d07?auto=format&fit=crop&w=1170&q=80",
+    "name": "Lusai Pahar",
+    "about": "Lusai Pahar borders Mizoram, India, and is historically significant — its flat mountain top was once declared a temporary capital by a separatist group. The sweeping border-range plateau views and dense surrounding forests make it truly extraordinary."
+  },
+  {
+    "id": "7260e0b16775b28aadab6097",
+    "index": 26,
     "balance": "$800",
-    "picture": "https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80",
+    "picture": "https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=1170&q=80",
     "name": "Afiakum Jhorna",
-    "about": "Taung Prai, a very beautiful dome-shaped mountain at Reng Tlang border range is the most south-eastern border peak of Rangamati district. It is also the last major peak at Reng Tlang range inside our border. View seen from the top is mind-blowing. "
+    "about": "Afiakum is one of the most remote and pristine waterfalls in Bangladesh, requiring a challenging multi-day jungle trek through Bandarban. The reward is a powerful cascade tumbling into a clear pool surrounded by completely untouched wilderness."
+  },
+  {
+    "id": "7260e0b16775b28aadab6098",
+    "index": 27,
+    "balance": "$385",
+    "picture": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1170&q=80",
+    "name": "Zow Tlang Thanci",
+    "about": "Zow Tlang is located at the Myanmar border in the Mowdok range at an altitude of 1,022 metres. It is considered the second-highest peak in Bangladesh. The border-range trek offers breathtaking cross-border panoramic views across three countries."
+  },
+  {
+    "id": "7260e0b16775b28aadab6099",
+    "index": 28,
+    "balance": "$310",
+    "picture": "https://images.unsplash.com/photo-1585409677983-0f6c41ca9c3b?auto=format&fit=crop&w=1170&q=80",
+    "name": "Lalbagh Fort",
+    "about": "Lalbagh Fort is a 17th-century Mughal fort complex in Old Dhaka, built by Mughal Prince Muhammad Azam in 1678. The fort contains the shrine of Bibi Pari, a mosque, and an audience hall surrounded by beautiful Mughal gardens."
+  },
+  {
+    "id": "7260e0b16775b28aadab6100",
+    "index": 29,
+    "balance": "$150",
+    "picture": "https://images.unsplash.com/photo-1609766857584-8e0a6babb692?auto=format&fit=crop&w=1170&q=80",
+    "name": "Ahsan Manzil",
+    "about": "Ahsan Manzil, the Pink Palace, served as the official residential palace of the Nawabs of Dhaka. Built in 1872, this iconic pink building now operates as a national museum displaying Nawab-era artifacts and royal furnishings."
+  },
+  {
+    "id": "7260e0b16775b28aadab6101",
+    "index": 30,
+    "balance": "$200",
+    "picture": "https://images.unsplash.com/photo-1562690868-60bbe7293e94?auto=format&fit=crop&w=1170&q=80",
+    "name": "Star Mosque Dhaka",
+    "about": "Star Mosque in Old Dhaka is adorned with thousands of star-shaped mosaic tiles in stunning blue and white. Built in the early 19th century, it remains one of the most beautifully decorated mosques in all of Bangladesh."
+  },
+  {
+    "id": "7260e0b16775b28aadab6102",
+    "index": 31,
+    "balance": "$180",
+    "picture": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1170&q=80",
+    "name": "Curzon Hall Dhaka",
+    "about": "Curzon Hall is a magnificent colonial-era building in Dhaka, built in 1904 during the British Raj. It blends Mughal and European architectural styles beautifully and now serves as the Faculty of Science of Dhaka University."
+  },
+  {
+    "id": "7260e0b16775b28aadab6103",
+    "index": 32,
+    "balance": "$220",
+    "picture": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1170&q=80",
+    "name": "National Memorial Savar",
+    "about": "The National Memorial at Savar commemorates the martyrs of the 1971 Liberation War. Seven triangular towers of varying heights rise dramatically from a reflecting pool, symbolizing the stages of the independence movement."
+  },
+  {
+    "id": "7260e0b16775b28aadab6104",
+    "index": 33,
+    "balance": "$130",
+    "picture": "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?auto=format&fit=crop&w=1170&q=80",
+    "name": "Dhaka University Campus",
+    "about": "Dhaka University, established in 1921, has a lush green campus with colonial-era architecture, spreading banyan trees, and historic buildings. The campus played a central role in Bangladesh's language movement and independence struggle."
+  },
+  {
+    "id": "7260e0b16775b28aadab6105",
+    "index": 34,
+    "balance": "$260",
+    "picture": "https://images.unsplash.com/photo-1568454537842-d933259bb258?auto=format&fit=crop&w=1170&q=80",
+    "name": "Buriganga River Cruise",
+    "about": "The Buriganga River flows along the western edge of Dhaka and has been the city's lifeline for centuries. Evening river cruises on traditional wooden boats offer a unique perspective of Old Dhaka's bustling ghats and riverside life."
+  },
+  {
+    "id": "7260e0b16775b28aadab6106",
+    "index": 35,
+    "balance": "$175",
+    "picture": "https://images.unsplash.com/photo-1601134467661-3d775b999c8b?auto=format&fit=crop&w=1170&q=80",
+    "name": "Hatirjheel Lake Dhaka",
+    "about": "Hatirjheel is a large urban lake integrated with a modern walkway, bridge network, and amphitheater in the heart of Dhaka. Evening lighting transforms this recreational area into a beautiful glittering cityscape reflection."
+  },
+  {
+    "id": "7260e0b16775b28aadab6107",
+    "index": 36,
+    "balance": "$320",
+    "picture": "https://images.unsplash.com/photo-1585082378977-6c68e2f4e7ad?auto=format&fit=crop&w=1170&q=80",
+    "name": "Panam City Narayanganj",
+    "about": "Panam City is an ancient merchant town near Sonargaon in Narayanganj, featuring over 50 crumbling but magnificent colonial-era merchant mansions. The atmospheric ruins and cobbled lanes make it one of the most hauntingly beautiful heritage sites in Bangladesh."
+  },
+  {
+    "id": "7260e0b16775b28aadab6108",
+    "index": 37,
+    "balance": "$190",
+    "picture": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1170&q=80",
+    "name": "Sonargaon Folk Art Museum",
+    "about": "Sonargaon Folk Art and Craft Museum preserves centuries of Bengali artisan traditions. Set in the ancient capital of Bengal, the museum displays traditional muslin, pottery, woodcraft, and folk art in a beautifully restored heritage complex."
+  },
+  {
+    "id": "7260e0b16775b28aadab6109",
+    "index": 38,
+    "balance": "$230",
+    "picture": "https://images.unsplash.com/photo-1574236170878-2d68c2f5b0a5?auto=format&fit=crop&w=1170&q=80",
+    "name": "Mahasthangarh",
+    "about": "Mahasthangarh in Bogra is the oldest known archaeological site in Bangladesh, dating back to the 3rd century BC. The ancient citadel of the Mauryan period features ruins, a museum, and sacred ponds visited by pilgrims of multiple faiths."
+  },
+  {
+    "id": "7260e0b16775b28aadab6110",
+    "index": 39,
+    "balance": "$210",
+    "picture": "https://images.unsplash.com/photo-1533929736458-ca588d08c8be?auto=format&fit=crop&w=1170&q=80",
+    "name": "Paharpur Buddhist Monastery",
+    "about": "The Somapura Mahavihara in Paharpur is a UNESCO World Heritage Site and one of the greatest Buddhist monasteries in South Asia, built in the 8th century by the Pala dynasty. The vast monastery complex once housed over 1,000 Buddhist monks."
+  },
+  {
+    "id": "7260e0b16775b28aadab6111",
+    "index": 40,
+    "balance": "$280",
+    "picture": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1170&q=80",
+    "name": "Sixty Dome Mosque Bagerhat",
+    "about": "The Sixty Dome Mosque in Bagerhat is a UNESCO World Heritage Site, built in the 15th century by Khan Jahan Ali. This extraordinary terracotta mosque with 60 pillars and 77 domes is the largest medieval mosque in Bangladesh."
+  },
+  {
+    "id": "7260e0b16775b28aadab6112",
+    "index": 41,
+    "balance": "$195",
+    "picture": "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1170&q=80",
+    "name": "Khan Jahan Ali Tomb Bagerhat",
+    "about": "The mausoleum of Khan Jahan Ali, the legendary saint and ruler who built Khalifatabad, stands majestically in Bagerhat. The sacred pond surrounding the tomb is inhabited by enormous friendly crocodiles considered to be divine guardians."
+  },
+  {
+    "id": "7260e0b16775b28aadab6113",
+    "index": 42,
+    "balance": "$360",
+    "picture": "https://images.unsplash.com/photo-1455156218388-5e61b526818b?auto=format&fit=crop&w=1170&q=80",
+    "name": "Rangamati Lake",
+    "about": "Kaptai Lake in Rangamati is the largest man-made lake in Bangladesh, created by the Kaptai Dam in 1960. Boat rides across the vast turquoise lake surrounded by forested hills and indigenous Chakma villages are breathtakingly scenic."
+  },
+  {
+    "id": "7260e0b16775b28aadab6114",
+    "index": 43,
+    "balance": "$310",
+    "picture": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1170&q=80",
+    "name": "Hanging Bridge Rangamati",
+    "about": "The Hanging Bridge of Rangamati is an iconic 335-metre suspension bridge stretching over Kaptai Lake connecting two hills. It is one of the longest pedestrian hanging bridges in Bangladesh and a beloved symbol of the Rangamati hill district."
+  },
+  {
+    "id": "7260e0b16775b28aadab6115",
+    "index": 44,
+    "balance": "$275",
+    "picture": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1170&q=80",
+    "name": "Chakma Raja Bari",
+    "about": "The Chakma Raja Bari is the royal palace of the Chakma King in Rangamati, situated on a hillock above Kaptai Lake. The palace reflects indigenous Chakma culture and offers insight into the royal traditions of the Chittagong Hill Tracts."
+  },
+  {
+    "id": "7260e0b16775b28aadab6116",
+    "index": 45,
+    "balance": "$340",
+    "picture": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1170&q=80",
+    "name": "Shuvolong Waterfall",
+    "about": "Shuvolong Waterfall cascades dramatically down a forested cliff into Kaptai Lake in Rangamati. The waterfall is accessible only by boat across the lake, making the journey itself a scenic adventure through glittering blue-green waters."
+  },
+  {
+    "id": "7260e0b16775b28aadab6117",
+    "index": 46,
+    "balance": "$290",
+    "picture": "https://images.unsplash.com/photo-1441580080658-9979ef8d8f82?auto=format&fit=crop&w=1170&q=80",
+    "name": "Foy's Lake Chattogram",
+    "about": "Foy's Lake is a man-made lake in Pahartali, Chattogram, surrounded by natural forested hills. Created in 1924 during the British era, it now hosts an amusement park, cable car rides, and picnic spots making it a popular family destination."
+  },
+  {
+    "id": "7260e0b16775b28aadab6118",
+    "index": 47,
+    "balance": "$180",
+    "picture": "https://images.unsplash.com/photo-1565117531952-f1aa11baf43f?auto=format&fit=crop&w=1170&q=80",
+    "name": "Ethnological Museum Chattogram",
+    "about": "The Ethnological Museum in Chattogram is the only museum of its kind in South Asia, displaying the cultural heritage, costumes, crafts, and lifestyle of 28 ethnic communities living in the Chittagong Hill Tracts region."
+  },
+  {
+    "id": "7260e0b16775b28aadab6119",
+    "index": 48,
+    "balance": "$430",
+    "picture": "https://images.unsplash.com/photo-1488085061387-422e29b40080?auto=format&fit=crop&w=1170&q=80",
+    "name": "Moheshkhali Island",
+    "about": "Moheshkhali is a tidal island off the coast of Cox's Bazar, famous for the hilltop Adinath Hindu temple dedicated to Lord Shiva. The island blends natural beauty with spiritual heritage and traditional fishing community life."
+  },
+  {
+    "id": "7260e0b16775b28aadab6120",
+    "index": 49,
+    "balance": "$520",
+    "picture": "https://images.unsplash.com/photo-1501963422762-3d89bd989568?auto=format&fit=crop&w=1170&q=80",
+    "name": "Inani Beach",
+    "about": "Inani Beach is a pristine rocky and coral beach located 32 km south of Cox's Bazar. Unlike the main beach, Inani features dramatic rock formations exposed at low tide, making it one of the most photogenic beaches in Bangladesh."
+  },
+  {
+    "id": "7260e0b16775b28aadab6121",
+    "index": 50,
+    "balance": "$355",
+    "picture": "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=1170&q=80",
+    "name": "Teknaf Wildlife Sanctuary",
+    "about": "Teknaf Wildlife Sanctuary is the southernmost wildlife reserve in Bangladesh, stretching along the Naf River bordering Myanmar. Dense mixed evergreen forest shelters Asian elephants, leopard cats, and many endemic bird species."
+  },
+  {
+    "id": "7260e0b16775b28aadab6122",
+    "index": 51,
+    "balance": "$440",
+    "picture": "https://images.unsplash.com/photo-1470770903676-69b98201ea1c?auto=format&fit=crop&w=1170&q=80",
+    "name": "Rema-Kalenga Wildlife Sanctuary",
+    "about": "Rema-Kalenga in Habiganj is Bangladesh's largest mixed evergreen forest sanctuary. Trails wind through dense jungle inhabited by hoolock gibbons, barking deer, pythons, and over 167 bird species in a rich wildlife haven."
+  },
+  {
+    "id": "7260e0b16775b28aadab6123",
+    "index": 52,
+    "balance": "$260",
+    "picture": "https://images.unsplash.com/photo-1459156212016-c812468e2115?auto=format&fit=crop&w=1170&q=80",
+    "name": "Lawachara National Park",
+    "about": "Lawachara National Park in Moulvibazar is a tropical moist deciduous forest and home to the critically endangered western hoolock gibbon. The park also shelters slow loris, spotted deer, and over 246 bird species within its lush canopy."
+  },
+  {
+    "id": "7260e0b16775b28aadab6124",
+    "index": 53,
+    "balance": "$315",
+    "picture": "https://images.unsplash.com/photo-1547036967-23d11aacaee0?auto=format&fit=crop&w=1170&q=80",
+    "name": "Bhawal National Park",
+    "about": "Bhawal National Park in Gazipur is the largest national park near Dhaka, offering a welcome natural escape for city residents. The sal forest with meandering trails, picnic spots, and a deer breeding center attracts urban nature lovers year-round."
+  },
+  {
+    "id": "7260e0b16775b28aadab6125",
+    "index": 54,
+    "balance": "$370",
+    "picture": "https://images.unsplash.com/photo-1433360405326-e50f909805b3?auto=format&fit=crop&w=1170&q=80",
+    "name": "Barind Tract Rajshahi",
+    "about": "The Barind Tract in Rajshahi is a unique elevated plateau famous for its mango orchards stretching endlessly in every direction. During mango season, the landscape transforms into a fragrant paradise of ripening Fazli, Langra, and Himsagar mangoes."
+  },
+  {
+    "id": "7260e0b16775b28aadab6126",
+    "index": 55,
+    "balance": "$290",
+    "picture": "https://images.unsplash.com/photo-1426604966848-d7adac402bff?auto=format&fit=crop&w=1170&q=80",
+    "name": "Padma River Rajshahi",
+    "about": "The Padma River at Rajshahi offers magnificent evening views as the mighty river glows golden during sunset. River cruises reveal sandbanks, migratory birds, and the unique lifestyle of fishing communities along Bangladesh's most iconic river."
+  },
+  {
+    "id": "7260e0b16775b28aadab6127",
+    "index": 56,
+    "balance": "$220",
+    "picture": "https://images.unsplash.com/photo-1536599524557-5f784dd53282?auto=format&fit=crop&w=1170&q=80",
+    "name": "Varendra Research Museum",
+    "about": "Varendra Research Museum in Rajshahi, established in 1910, is the oldest museum in Bangladesh. It houses an extraordinary collection of ancient Hindu, Buddhist, and Jain sculptures, coins, manuscripts, and archaeological artifacts from across Bengal."
+  },
+  {
+    "id": "7260e0b16775b28aadab6128",
+    "index": 57,
+    "balance": "$175",
+    "picture": "https://images.unsplash.com/photo-1580181288416-f9ab56f0f5cd?auto=format&fit=crop&w=1170&q=80",
+    "name": "Puthia Temple Complex",
+    "about": "Puthia in Rajshahi contains the largest concentration of historical Hindu temples in Bangladesh. The 19th-century temple complex includes five large temples of varying architectural styles, surrounded by large ponds and ornate terracotta work."
+  },
+  {
+    "id": "7260e0b16775b28aadab6129",
+    "index": 58,
+    "balance": "$250",
+    "picture": "https://images.unsplash.com/photo-1516912481808-3406841bd33c?auto=format&fit=crop&w=1170&q=80",
+    "name": "Natore Rajbari",
+    "about": "Natore Rajbari is a grand palace complex of the Natore Raj family, who were powerful zamindars during the Mughal and British periods. The expansive grounds with multiple palaces, ponds, and gardens tell the story of Bengal's aristocratic past."
+  },
+  {
+    "id": "7260e0b16775b28aadab6130",
+    "index": 59,
+    "balance": "$195",
+    "picture": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1170&q=80",
+    "name": "Chalan Beel",
+    "about": "Chalan Beel is the largest wetland in the northwest of Bangladesh, spanning across Natore, Pabna, and Sirajganj districts. During monsoon it transforms into a vast inland sea supporting enormous freshwater fisheries and migratory waterfowl."
+  },
+  {
+    "id": "7260e0b16775b28aadab6131",
+    "index": 60,
+    "balance": "$305",
+    "picture": "https://images.unsplash.com/photo-1484291470158-b8f8d608850d?auto=format&fit=crop&w=1170&q=80",
+    "name": "Jamuna Bridge",
+    "about": "The Jamuna Multipurpose Bridge, spanning 4.8 km over the Jamuna River, is one of the longest bridges in the world. The dramatic river crossing with views of the vast Jamuna braided river system stretching to the horizon is a remarkable sight."
+  },
+  {
+    "id": "7260e0b16775b28aadab6132",
+    "index": 61,
+    "balance": "$165",
+    "picture": "https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=1170&q=80",
+    "name": "Baraigram Haor",
+    "about": "Baraigram Haor in Natore is a beautiful seasonal wetland that blooms with pink water lilies during autumn. Local fishermen glide silently through the lily-covered waters on shallow wooden boats creating serene and picturesque scenes."
+  },
+  {
+    "id": "7260e0b16775b28aadab6133",
+    "index": 62,
+    "balance": "$285",
+    "picture": "https://images.unsplash.com/photo-1518098268026-4e89f1a2cd8e?auto=format&fit=crop&w=1170&q=80",
+    "name": "Meghna River Chandpur",
+    "about": "The meeting point of the Meghna, Padma, and Dakatia rivers in Chandpur is one of the most dramatic river confluences in Asia. The vast open water dotted with fishing boats and river dolphins makes for a magnificent natural spectacle."
+  },
+  {
+    "id": "7260e0b16775b28aadab6134",
+    "index": 63,
+    "balance": "$240",
+    "picture": "https://images.unsplash.com/photo-1519895709776-a1a985f3f8be?auto=format&fit=crop&w=1170&q=80",
+    "name": "Comilla Kotila Mura",
+    "about": "Kotila Mura in Comilla is an ancient Buddhist archaeological site containing stupas and monasteries dating back to the 7th century. The hilltop location provides panoramic views over the surrounding plains of the Comilla Valley."
+  },
+  {
+    "id": "7260e0b16775b28aadab6135",
+    "index": 64,
+    "balance": "$200",
+    "picture": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1170&q=80",
+    "name": "Mainamati Archaeological Site",
+    "about": "Mainamati in Comilla is one of Bangladesh's most significant archaeological sites, containing the remains of Buddhist monasteries and temples from the 7th to 12th centuries. The on-site museum displays golden artifacts, coins, and terracotta art."
+  },
+  {
+    "id": "7260e0b16775b28aadab6136",
+    "index": 65,
+    "balance": "$270",
+    "picture": "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&w=1170&q=80",
+    "name": "Fenchuganj Tea Garden",
+    "about": "Fenchuganj in Sylhet is surrounded by rolling tea estates that carpet the hills in vivid green. The gardens are best visited during the plucking season when rows of women workers in colorful saris harvest the fragrant leaves in morning mist."
+  },
+  {
+    "id": "7260e0b16775b28aadab6137",
+    "index": 66,
+    "balance": "$490",
+    "picture": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1170&q=80",
+    "name": "Srimangal Tea Capital",
+    "about": "Srimangal in Moulvibazar is famously called the Tea Capital of Bangladesh, surrounded by the highest concentration of tea gardens in the country. The town is also the starting point for treks into Lawachara forest and the seven-layer tea experience."
+  },
+  {
+    "id": "7260e0b16775b28aadab6138",
+    "index": 67,
+    "balance": "$230",
+    "picture": "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1170&q=80",
+    "name": "Hail Haor Moulvibazar",
+    "about": "Hail Haor is a scenic wetland in Moulvibazar that serves as a major wintering ground for migratory birds from Siberia and Central Asia. During winter, thousands of ducks, teals, and geese fill the vast water surface creating a spectacular natural show."
+  },
+  {
+    "id": "7260e0b16775b28aadab6139",
+    "index": 68,
+    "balance": "$310",
+    "picture": "https://images.unsplash.com/photo-1441580080658-9979ef8d8f82?auto=format&fit=crop&w=1170&q=80",
+    "name": "Baikka Beel Bird Sanctuary",
+    "about": "Baikka Beel in Srimangal is a community-protected wetland renowned for exceptional birdwatching. Over 200 species of resident and migratory birds have been recorded here, including the rare bronze-winged jacana and purple swamphen."
+  },
+  {
+    "id": "7260e0b16775b28aadab6140",
+    "index": 69,
+    "balance": "$195",
+    "picture": "https://images.unsplash.com/photo-1534430480872-3498386e7856?auto=format&fit=crop&w=1170&q=80",
+    "name": "Madhabpur Lake Habiganj",
+    "about": "Madhabpur Lake in Habiganj is a stunning emerald-green lake enclosed entirely within a working tea garden. The combination of the vivid lake water and surrounding rows of perfectly trimmed tea bushes creates a uniquely beautiful and photogenic landscape."
+  },
+  {
+    "id": "7260e0b16775b28aadab6141",
+    "index": 70,
+    "balance": "$355",
+    "picture": "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=1170&q=80",
+    "name": "Bichanakandi Stone River",
+    "about": "Bichanakandi in Sylhet is a remote stone-bed river at the foot of Indian hills where two rivers merge. The transparent water flowing over smooth boulders with cascading hill streams and mountain backdrop creates an otherworldly serene atmosphere."
+  },
+  {
+    "id": "7260e0b16775b28aadab6142",
+    "index": 71,
+    "balance": "$420",
+    "picture": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1170&q=80",
+    "name": "Khadimpur Tea Garden Sylhet",
+    "about": "Khadimpur tea garden near Sylhet city is one of the oldest and most accessible tea estates in Bangladesh. Visitors enjoy morning walks along rows of tea bushes with views of purple hills on the horizon and the refreshing smell of fresh tea leaves."
+  },
+  {
+    "id": "7260e0b16775b28aadab6143",
+    "index": 72,
+    "balance": "$340",
+    "picture": "https://images.unsplash.com/photo-1505993597083-3bd19fb75e57?auto=format&fit=crop&w=1170&q=80",
+    "name": "Panighat Sylhet",
+    "about": "Panighat is a scenic riverbank near Sylhet where the turquoise Surma river flows beneath lush green hills dotted with tea gardens. The riverside path flanked by bamboo groves and rolling estates makes for a particularly refreshing morning walk."
+  },
+  {
+    "id": "7260e0b16775b28aadab6144",
+    "index": 73,
+    "balance": "$260",
+    "picture": "https://images.unsplash.com/photo-1426604966848-d7adac402bff?auto=format&fit=crop&w=1170&q=80",
+    "name": "Hazrat Shah Jalal Shrine",
+    "about": "The shrine of Hazrat Shah Jalal in Sylhet is one of the most revered Islamic pilgrimage sites in Bangladesh, visited by hundreds of thousands of devotees each year. The sacred complex with its ancient mosque, tombs, and ritual fish pond is deeply atmospheric."
+  },
+  {
+    "id": "7260e0b16775b28aadab6145",
+    "index": 74,
+    "balance": "$185",
+    "picture": "https://images.unsplash.com/photo-1518098268026-4e89f1a2cd8e?auto=format&fit=crop&w=1170&q=80",
+    "name": "Osmani Museum Sylhet",
+    "about": "The Osmani Museum in Sylhet is dedicated to General M.A.G. Osmani, the supreme commander of the Bangladesh Liberation War forces in 1971. The museum preserves personal artifacts, military memorabilia, and documents from the independence struggle."
+  },
+  {
+    "id": "7260e0b16775b28aadab6146",
+    "index": 75,
+    "balance": "$445",
+    "picture": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1170&q=80",
+    "name": "Thingdawlte Tlang",
+    "about": "Thingdawlte Tlang is one of the highest peaks in Bangladesh's Lawmbok Row range in the Chittagong Hill Tracts. The summit was reached for the first time by explorer Fahim Hasan in December 2012, offering breathtaking views of the surrounding ranges."
+  },
+  {
+    "id": "7260e0b16775b28aadab6147",
+    "index": 76,
+    "balance": "$510",
+    "picture": "https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=1170&q=80",
+    "name": "Taung Prai Border Peak",
+    "about": "Taung Prai is a beautiful dome-shaped mountain at the Reng Tlang border range, the most south-eastern border peak of Rangamati district. The view seen from the top across three countries is described by climbers as absolutely mind-blowing."
+  },
+  {
+    "id": "7260e0b16775b28aadab6148",
+    "index": 77,
+    "balance": "$365",
+    "picture": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1170&q=80",
+    "name": "Thanchi Sangu River",
+    "about": "The Sangu river at Thanchi in Bandarban carves through dramatic gorges and remote tribal villages inaccessible by road. Boat journeys along this wild river past Marma and Murung communities offer the most authentic adventure into Bangladesh's deepest wilderness."
+  },
+  {
+    "id": "7260e0b16775b28aadab6149",
+    "index": 78,
+    "balance": "$480",
+    "picture": "https://images.unsplash.com/photo-1469362102473-8622cfb973cd?auto=format&fit=crop&w=1170&q=80",
+    "name": "Remakri Waterfall Bandarban",
+    "about": "Remakri Waterfall near Thanchi in Bandarban is a spectacular multi-step cascade on the Sangu river tributary. The waterfall is a key waypoint on the famous trekking route to Nafakhum and Amiakhum, surrounded by untouched primary jungle."
+  },
+  {
+    "id": "7260e0b16775b28aadab6150",
+    "index": 79,
+    "balance": "$430",
+    "picture": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1170&q=80",
+    "name": "Amiakhum Waterfall",
+    "about": "Amiakhum in Bandarban is considered one of the most beautiful hidden waterfalls in Bangladesh. Accessible only after a grueling jungle trek and river crossing, this isolated cascade rewards adventurers with pristine natural beauty far from civilization."
+  },
+  {
+    "id": "7260e0b16775b28aadab6151",
+    "index": 80,
+    "balance": "$310",
+    "picture": "https://images.unsplash.com/photo-1458668383970-8ddd3927deed?auto=format&fit=crop&w=1170&q=80",
+    "name": "Chimbuk Hill Bandarban",
+    "about": "Chimbuk is a scenic hilltop at 2,500 ft in Bandarban district, famous for its clouds rolling over the hilltop and views of tribal villages perched on surrounding peaks. The Mro tribal village near the summit offers a fascinating cultural experience."
+  },
+  {
+    "id": "7260e0b16775b28aadab6152",
+    "index": 81,
+    "balance": "$275",
+    "picture": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1170&q=80",
+    "name": "Meghla Parjatan Bandarban",
+    "about": "Meghla Parjatan Complex in Bandarban town features a small lake, cable car ride over the hills, hanging bridges, and a mini zoo. Positioned on rolling hilltops, it offers accessible natural scenery for families visiting the Bandarban area."
+  },
+  {
+    "id": "7260e0b16775b28aadab6153",
+    "index": 82,
+    "balance": "$195",
+    "picture": "https://images.unsplash.com/photo-1501426026826-31c667bdf23d?auto=format&fit=crop&w=1170&q=80",
+    "name": "Swarna Temple Bandarban",
+    "about": "The Golden Temple or Buddha Dhatu Jadi near Bandarban town is the largest Buddhist temple in Bangladesh, built in traditional Burmese style. The hilltop golden pagoda surrounded by serene gardens is a major pilgrimage site for Bangladeshi Buddhists."
+  },
+  {
+    "id": "7260e0b16775b28aadab6154",
+    "index": 83,
+    "balance": "$350",
+    "picture": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1170&q=80",
+    "name": "Raikhali Eco Park Rangamati",
+    "about": "Raikhali Eco Park is a scenic hilltop forest park overlooking Kaptai Lake in Rangamati. Visitors enjoy forest trails, hanging bridges over ravines, and stunning lake views while learning about the indigenous flora and fauna of the Chittagong Hill Tracts."
+  },
+  {
+    "id": "7260e0b16775b28aadab6155",
+    "index": 84,
+    "balance": "$290",
+    "picture": "https://images.unsplash.com/photo-1441580080658-9979ef8d8f82?auto=format&fit=crop&w=1170&q=80",
+    "name": "Dighinala Khagrachari",
+    "about": "Dighinala in Khagrachari is surrounded by natural streams, forested hills, and indigenous Tripura tribal villages. The remote Tinapat waterfall trek through bamboo jungle and the refreshing natural swimming holes make it a hidden gem of the hill tracts."
+  },
+  {
+    "id": "7260e0b16775b28aadab6156",
+    "index": 85,
+    "balance": "$320",
+    "picture": "https://images.unsplash.com/photo-1458668383970-8ddd3927deed?auto=format&fit=crop&w=1170&q=80",
+    "name": "Mahalchhari Khagrachari",
+    "about": "Mahalchhari in Khagrachari is a peaceful hill district sub-town surrounded by forested ranges and the scenic Chengi river. Boat trips along the Chengi river past Chakma and Marma villages reveal traditional riverside life rarely seen by outside visitors."
+  },
+  {
+    "id": "7260e0b16775b28aadab6157",
+    "index": 86,
+    "balance": "$430",
+    "picture": "https://images.unsplash.com/photo-1542202229-7d93c33f5d07?auto=format&fit=crop&w=1170&q=80",
+    "name": "Sajek Rumlam Pond",
+    "about": "The Rumlam Pond near Sajek is a naturally formed high-altitude lake surrounded by rolling misty hills. The crystal-clear reflective water mirrors the surrounding clouds and peaks, creating one of the most serene and photogenic scenes in Rangamati."
+  },
+  {
+    "id": "7260e0b16775b28aadab6158",
+    "index": 87,
+    "balance": "$365",
+    "picture": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1170&q=80",
+    "name": "Barkal Rangamati",
+    "about": "Barkal is a remote upazila in Rangamati accessible only by boat across Kaptai Lake. The journey through open lake waters passing forested hills and indigenous fishing villages is an adventure in itself, and the untouched landscapes reward patient travelers."
+  },
+  {
+    "id": "7260e0b16775b28aadab6159",
+    "index": 88,
+    "balance": "$280",
+    "picture": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1170&q=80",
+    "name": "Satla Beel Barisal",
+    "about": "Satla Beel in Barisal is a vast freshwater wetland surrounded by villages built on earthen mounds above the water level. During monsoon the beel transforms into an inland ocean where local people travel entirely by boat through a landscape of submerged trees."
+  },
+  {
+    "id": "7260e0b16775b28aadab6160",
+    "index": 89,
+    "balance": "$245",
+    "picture": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1170&q=80",
+    "name": "Floating Guava Market Barisal",
+    "about": "The floating guava market in Swarupkati, Barisal, is a unique spectacle held every morning on the river. Hundreds of boats loaded with fresh guavas gather at dawn to trade, creating a vibrant floating marketplace unlike anything seen elsewhere in Bangladesh."
+  },
+  {
+    "id": "7260e0b16775b28aadab6161",
+    "index": 90,
+    "balance": "$310",
+    "picture": "https://images.unsplash.com/photo-1519895709776-a1a985f3f8be?auto=format&fit=crop&w=1170&q=80",
+    "name": "Vimruli Floating Market",
+    "about": "Vimruli in Jhalokathi is home to one of Bangladesh's most famous floating markets where river merchants trade vegetables, fruits, and spices directly from boats. The early morning market buzz on the narrow canal is a vibrant and culturally rich experience."
+  },
+  {
+    "id": "7260e0b16775b28aadab6162",
+    "index": 91,
+    "balance": "$360",
+    "picture": "https://images.unsplash.com/photo-1501963422762-3d89bd989568?auto=format&fit=crop&w=1170&q=80",
+    "name": "Perojpur Canal Network",
+    "about": "The vast canal network of Pirojpur district in Barisal division is the most extensive inland waterway system in Bangladesh. Houseboat journeys through narrow canals flanked by banana groves, coconut palms, and village life offer an utterly unique Bangladesh experience."
+  },
+  {
+    "id": "7260e0b16775b28aadab6163",
+    "index": 92,
+    "balance": "$285",
+    "picture": "https://images.unsplash.com/photo-1518098268026-4e89f1a2cd8e?auto=format&fit=crop&w=1170&q=80",
+    "name": "Char Kukri Mukri Island",
+    "about": "Char Kukri-Mukri is a remote island in the Bay of Bengal in Bhola district, famous for spotted deer, wild boar, and migratory birds inhabiting its dense mangrove forest. The boat journey across open sea to reach this wild island is an adventure in itself."
+  },
+  {
+    "id": "7260e0b16775b28aadab6164",
+    "index": 93,
+    "balance": "$420",
+    "picture": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1170&q=80",
+    "name": "Bhola Island",
+    "about": "Bhola is the largest island district in Bangladesh, surrounded by the Meghna and Tetulia rivers. The island's wide river beaches, local fish markets, and rural river culture provide a genuinely off-the-beaten-path perspective on Bangladesh's river delta life."
+  },
+  {
+    "id": "7260e0b16775b28aadab6165",
+    "index": 94,
+    "balance": "$175",
+    "picture": "https://images.unsplash.com/photo-1562690868-60bbe7293e94?auto=format&fit=crop&w=1170&q=80",
+    "name": "Patuakhali Sea Beach",
+    "about": "Patuakhali in Barisal division faces the Bay of Bengal and features wild, undeveloped sea beaches rarely visited by tourists. The wide sandy shores backed by mangrove patches and coconut stands offer a peaceful and uncrowded coastal experience."
+  },
+  {
+    "id": "7260e0b16775b28aadab6166",
+    "index": 95,
+    "balance": "$390",
+    "picture": "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1170&q=80",
+    "name": "Swatch of No Ground",
+    "about": "The Swatch of No Ground is a unique underwater canyon in the Bay of Bengal off Kuakata coast. This deep oceanic trench is home to Irrawaddy dolphins, spinner dolphins, and occasionally blue whales, making it one of Asia's finest cetacean hotspots."
+  },
+  {
+    "id": "7260e0b16775b28aadab6167",
+    "index": 96,
+    "balance": "$330",
+    "picture": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1170&q=80",
+    "name": "Dublar Char Sundarbans",
+    "about": "Dublar Char is a remote island inside the Sundarbans where thousands of fishermen gather annually during the Ras Purnima festival. The temporary fishing community that forms on this wild mangrove island creates one of Bangladesh's most extraordinary cultural spectacles."
+  },
+  {
+    "id": "7260e0b16775b28aadab6168",
+    "index": 97,
+    "balance": "$260",
+    "picture": "https://images.unsplash.com/photo-1533929736458-ca588d08c8be?auto=format&fit=crop&w=1170&q=80",
+    "name": "Hiron Point Sundarbans",
+    "about": "Hiron Point in the Sundarbans is one of the best locations for Royal Bengal Tiger spotting. The wooden watchtower overlooking tidal rivers and dense mangrove forest offers patient wildlife watchers a real chance to witness tigers coming to drink at dusk."
+  },
+  {
+    "id": "7260e0b16775b28aadab6169",
+    "index": 98,
+    "balance": "$315",
+    "picture": "https://images.unsplash.com/photo-1455156218388-5e61b526818b?auto=format&fit=crop&w=1170&q=80",
+    "name": "Katka Beach Sundarbans",
+    "about": "Katka in the Sundarbans is a pristine wild beach and forest area where the forest meets the sea. Spotted deer graze openly on the beach at dawn, wild boar roam the forest edge, and crocodiles bask on the mudflats in a truly untouched wilderness scene."
+  },
+  {
+    "id": "7260e0b16775b28aadab6170",
+    "index": 99,
+    "balance": "$280",
+    "picture": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1170&q=80",
+    "name": "Kochikhali Tiger Point",
+    "about": "Kochikhali Tiger Point at Mandarbaria in the Sundarbans is a popular wildlife watching location where the forest patrol boats anchor for tiger spotting. The dense canopy and tidal rivers here are prime habitat for the elusive Bengal tiger."
+  },
+  {
+    "id": "7260e0b16775b28aadab6171",
+    "index": 100,
+    "balance": "$195",
+    "picture": "https://images.unsplash.com/photo-1536599524557-5f784dd53282?auto=format&fit=crop&w=1170&q=80",
+    "name": "Jessore Jessore Road",
+    "about": "The famous Jessore Road is lined with magnificent ancient banyan and rain trees that create a breathtaking green tunnel stretching kilometres in both directions. The road was immortalized by Allen Ginsberg's poem during the 1971 Bangladesh Liberation War."
+  },
+  {
+    "id": "7260e0b16775b28aadab6172",
+    "index": 101,
+    "balance": "$230",
+    "picture": "https://images.unsplash.com/photo-1580181288416-f9ab56f0f5cd?auto=format&fit=crop&w=1170&q=80",
+    "name": "Michael Madhusudan Memorial Jessore",
+    "about": "The birthplace and memorial of Michael Madhusudan Datta, the pioneer of modern Bengali literature, is located in Sagordari, Jessore. The riverside village setting and restored ancestral home offer insight into the life of Bengal's greatest 19th-century poet."
+  },
+  {
+    "id": "7260e0b16775b28aadab6173",
+    "index": 102,
+    "balance": "$260",
+    "picture": "https://images.unsplash.com/photo-1516912481808-3406841bd33c?auto=format&fit=crop&w=1170&q=80",
+    "name": "Mujibnagar Meherpur",
+    "about": "Mujibnagar in Meherpur is the historic site where Bangladesh's first government was sworn in on April 17, 1971 under a mango grove. The memorial complex with the iconic sculptural tableau commemorating this founding moment is a deeply moving patriotic site."
+  },
+  {
+    "id": "7260e0b16775b28aadab6174",
+    "index": 103,
+    "balance": "$180",
+    "picture": "https://images.unsplash.com/photo-1568454537842-d933259bb258?auto=format&fit=crop&w=1170&q=80",
+    "name": "Rabindranath Tagore Kuthibari Kushtia",
+    "about": "The Kuthibari of Rabindranath Tagore in Shilaidaha, Kushtia, is where the Nobel laureate lived and wrote many celebrated works while managing family estates. The restored riverside mansion and tranquil gardens reflect his deep connection to rural Bengal."
+  },
+  {
+    "id": "7260e0b16775b28aadab6175",
+    "index": 104,
+    "balance": "$215",
+    "picture": "https://images.unsplash.com/photo-1584449185692-0cc7bd576083?auto=format&fit=crop&w=1170&q=80",
+    "name": "Lalon Shah Shrine Kushtia",
+    "about": "The shrine of Lalon Shah in Chheuria, Kushtia, is a major pilgrimage destination for followers of the Baul mystic tradition. The annual festival draws thousands of Baul singers who gather to perform devotional folk music celebrating Lalon's spiritual philosophy."
+  },
+  {
+    "id": "7260e0b16775b28aadab6176",
+    "index": 105,
+    "balance": "$290",
+    "picture": "https://images.unsplash.com/photo-1574236170878-2d68c2f5b0a5?auto=format&fit=crop&w=1170&q=80",
+    "name": "Hardinge Bridge Pabna",
+    "about": "The Hardinge Bridge over the Padma River at Paksey, Pabna, is the longest railway bridge in Bangladesh at 1.8 km, built in 1915 during British rule. The old iron lattice bridge with its elegant Victorian engineering is a beloved national heritage structure."
+  },
+  {
+    "id": "7260e0b16775b28aadab6177",
+    "index": 106,
+    "balance": "$155",
+    "picture": "https://images.unsplash.com/photo-1562690868-60bbe7293e94?auto=format&fit=crop&w=1170&q=80",
+    "name": "Rajshahi Silk Village",
+    "about": "The silk weaving villages around Rajshahi are famous for producing the finest Rajshahi silk in Bangladesh. Watching master weavers at their handlooms produce shimmering silk fabric using centuries-old techniques is a fascinating artisan cultural experience."
+  },
+  {
+    "id": "7260e0b16775b28aadab6178",
+    "index": 107,
+    "balance": "$200",
+    "picture": "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?auto=format&fit=crop&w=1170&q=80",
+    "name": "Gaur Mosque Complex Rajshahi",
+    "about": "The ancient Darasbari Mosque in Chapai Nawabganj near Rajshahi is one of the finest examples of 15th-century Bengal Sultanate architecture. The massive terracotta mosque with multiple domes and ornate brickwork stands on the historical Gaur-Bengal border."
+  },
+  {
+    "id": "7260e0b16775b28aadab6179",
+    "index": 108,
+    "balance": "$310",
+    "picture": "https://images.unsplash.com/photo-1601134467661-3d775b999c8b?auto=format&fit=crop&w=1170&q=80",
+    "name": "Sona Mosque Chapai Nawabganj",
+    "about": "Sona Mosque or the Golden Mosque in Chapai Nawabganj is a 15th-century Sultanate-era mosque with an extraordinary gilded interior. The ornate terracotta facade and multi-domed roof represent the pinnacle of medieval Bengali Islamic architecture."
+  },
+  {
+    "id": "7260e0b16775b28aadab6180",
+    "index": 109,
+    "balance": "$175",
+    "picture": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1170&q=80",
+    "name": "Tetulia Panchagarh",
+    "about": "Tetulia in Panchagarh is the northernmost point of Bangladesh from where the snow-capped Himalayan peaks including Kanchenjunga are visible on clear winter mornings. This rare sight of the Himalayas from Bangladesh soil makes Tetulia uniquely special."
+  },
+  {
+    "id": "7260e0b16775b28aadab6181",
+    "index": 110,
+    "balance": "$220",
+    "picture": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1170&q=80",
+    "name": "Ramsagar National Park Dinajpur",
+    "about": "Ramsagar in Dinajpur is home to the largest man-made reservoir in Bangladesh, built by Raja Ram Nath in the 18th century. The vast rectangular lake surrounded by ancient trees now forms the centerpiece of a national park popular for picnics and nature walks."
+  },
+  {
+    "id": "7260e0b16775b28aadab6182",
+    "index": 111,
+    "balance": "$185",
+    "picture": "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1170&q=80",
+    "name": "Kantajew Temple Dinajpur",
+    "about": "Kantajew Temple in Dinajpur, built in the 18th century by Maharaja Pran Nath, is the finest example of terracotta temple architecture in Bangladesh. Every surface of this nine-spired Hindu temple is covered with intricate terracotta panels depicting mythological scenes."
+  },
+  {
+    "id": "7260e0b16775b28aadab6183",
+    "index": 112,
+    "balance": "$250",
+    "picture": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1170&q=80",
+    "name": "Tajhat Palace Rangpur",
+    "about": "Tajhat Palace in Rangpur is an outstanding example of 19th-century Indo-European architecture, built by a zamindar of Rajput origin. The grand palace with its ornate marble staircases and Venetian glass windows now operates as a regional museum."
+  },
+  {
+    "id": "7260e0b16775b28aadab6184",
+    "index": 113,
+    "balance": "$195",
+    "picture": "https://images.unsplash.com/photo-1471078617419-d5d6b4cdb9b7?auto=format&fit=crop&w=1170&q=80",
+    "name": "Pirganj Tobacco Fields Rangpur",
+    "about": "The tobacco fields and vegetable gardens of the Rangpur char islands turn golden during winter harvest season. Boat trips to the mid-river char islands reveal a fascinating seasonal farming community living entirely on vast river sandbanks."
+  },
+  {
+    "id": "7260e0b16775b28aadab6185",
+    "index": 114,
+    "balance": "$230",
+    "picture": "https://images.unsplash.com/photo-1574236170878-2d68c2f5b0a5?auto=format&fit=crop&w=1170&q=80",
+    "name": "Haripur Thakurgaon",
+    "about": "Haripur in Thakurgaon is home to the stunning Haripur Archaeological Site featuring medieval Hindu temples and stone sculptures. The tranquil countryside setting with seasonal mustard fields turning the landscape brilliant yellow in winter is extraordinarily beautiful."
+  },
+  {
+    "id": "7260e0b16775b28aadab6186",
+    "index": 115,
+    "balance": "$210",
+    "picture": "https://images.unsplash.com/photo-1533929736458-ca588d08c8be?auto=format&fit=crop&w=1170&q=80",
+    "name": "Gobindaganj Gaibandha",
+    "about": "The Santhals and other indigenous communities of Gobindaganj in Gaibandha maintain ancient tribal traditions in their villages. Cultural tourism experiences including traditional dance, hand-painted houses, and rice beer ceremonies offer fascinating insights into indigenous Bengali life."
+  },
+  {
+    "id": "7260e0b16775b28aadab6187",
+    "index": 116,
+    "balance": "$160",
+    "picture": "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1170&q=80",
+    "name": "Teesta River Lalmonirhat",
+    "about": "The Teesta River at Lalmonirhat forms magnificent braided channels across vast sandbars on the Bangladesh-India border. The dramatic river landscape with its shifting channels, migratory birds, and remote char villages is completely unlike anywhere else in Bangladesh."
+  },
+  {
+    "id": "7260e0b16775b28aadab6188",
+    "index": 117,
+    "balance": "$275",
+    "picture": "https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=1170&q=80",
+    "name": "Singra National Park Natore",
+    "about": "Singra National Park is a sal and mixed deciduous forest in Natore that shelters rhesus macaques, jungle cats, pythons, and pangolins. The forest provides city dwellers from nearby Rajshahi with a valuable accessible natural escape."
+  },
+  {
+    "id": "7260e0b16775b28aadab6189",
+    "index": 118,
+    "balance": "$290",
+    "picture": "https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?auto=format&fit=crop&w=1170&q=80",
+    "name": "Dolphin Watching Chandpur",
+    "about": "The Meghna river at Chandpur and Bhola is one of the last remaining habitats of the critically endangered Ganges river dolphin. Early morning boat trips at dawn offer real chances of spotting these rare blind river dolphins surfacing in the golden morning light."
+  },
+  {
+    "id": "7260e0b16775b28aadab6190",
+    "index": 119,
+    "balance": "$340",
+    "picture": "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1170&q=80",
+    "name": "Char Islands Brahmaputra",
+    "about": "The char islands of the Brahmaputra river in Jamalpur and Mymensingh form and disappear with the river's whims. Communities living on these temporary islands maintain a unique way of life, moving their entire villages as the river shifts each year."
+  },
+  {
+    "id": "7260e0b16775b28aadab6191",
+    "index": 120,
+    "balance": "$175",
+    "picture": "https://images.unsplash.com/photo-1426604966848-d7adac402bff?auto=format&fit=crop&w=1170&q=80",
+    "name": "Muktagacha Mymensingh",
+    "about": "Muktagacha in Mymensingh is famous for its ancient zamindar palaces, temple complexes, and the legendary Muktagacha sandesh sweet. The crumbling Muktagacha Rajbari surrounded by overgrown gardens is an atmospheric heritage site."
+  },
+  {
+    "id": "7260e0b16775b28aadab6192",
+    "index": 121,
+    "balance": "$250",
+    "picture": "https://images.unsplash.com/photo-1458668383970-8ddd3927deed?auto=format&fit=crop&w=1170&q=80",
+    "name": "Susang Durgapur Netrokona",
+    "about": "Susang Durgapur in Netrokona sits at the foot of the Meghalaya hills where crystal-clear Someswari river flows from India. The clear mountain river, ancient Bijoypur clay mines with cobalt blue deposits, and indigenous Garo tribal culture make it remarkable."
+  },
+  {
+    "id": "7260e0b16775b28aadab6193",
+    "index": 122,
+    "balance": "$320",
+    "picture": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1170&q=80",
+    "name": "Someswari River Netrokona",
+    "about": "The Someswari river at Durgapur flows clear turquoise from the Indian hills, flowing over white sandy beds. During dry season the crystal water and surrounding Garo hills form an otherworldly backdrop perfect for swimming and nature photography."
+  },
+  {
+    "id": "7260e0b16775b28aadab6194",
+    "index": 123,
+    "balance": "$195",
+    "picture": "https://images.unsplash.com/photo-1433360405326-e50f909805b3?auto=format&fit=crop&w=1170&q=80",
+    "name": "Bijoypur Clay Mines Netrokona",
+    "about": "The Bijoypur clay mines in Netrokona are famous for their unique cobalt blue and white clay, used by local potters for centuries. The striking blue pools and clay deposits surrounded by Garo hills create a surreal and visually dramatic landscape."
+  },
+  {
+    "id": "7260e0b16775b28aadab6195",
+    "index": 124,
+    "balance": "$280",
+    "picture": "https://images.unsplash.com/photo-1501963422762-3d89bd989568?auto=format&fit=crop&w=1170&q=80",
+    "name": "Khaliajuri Haor Netrokona",
+    "about": "Khaliajuri haor in Netrokona transforms into an inland sea during monsoon season that stretches to the horizon in every direction. Boat journeys across the vast open water surrounded only by sky and water, with submerged forests and floating villages, are extraordinary."
+  },
+  {
+    "id": "7260e0b16775b28aadab6196",
+    "index": 125,
+    "balance": "$360",
+    "picture": "https://images.unsplash.com/photo-1471078617419-d5d6b4cdb9b7?auto=format&fit=crop&w=1170&q=80",
+    "name": "Hakaluki Haor Sylhet",
+    "about": "Hakaluki Haor is the largest haor in Bangladesh, spanning Moulvibazar and Sylhet districts. During winter this vast wetland hosts hundreds of thousands of migratory ducks, geese, and wading birds making it one of Asia's greatest birdwatching destinations."
+  },
+  {
+    "id": "7260e0b16775b28aadab6197",
+    "index": 126,
+    "balance": "$215",
+    "picture": "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1170&q=80",
+    "name": "Shahporan Dargah Sylhet",
+    "about": "The dargah of Hazrat Shah Poran, nephew of Hazrat Shah Jalal, is a revered Islamic shrine in Sylhet. The peaceful complex beside the Surma river with its ancient banyan trees and hundreds of sacred fish in the adjacent pond is a calming spiritual retreat."
+  },
+  {
+    "id": "7260e0b16775b28aadab6198",
+    "index": 127,
+    "balance": "$300",
+    "picture": "https://images.unsplash.com/photo-1458668383970-8ddd3927deed?auto=format&fit=crop&w=1170&q=80",
+    "name": "Tamabil Border Sylhet",
+    "about": "Tamabil on the India border in Sylhet offers dramatic views of waterfalls tumbling directly from the sheer Meghalaya cliff face on the Indian side. The border crossing point is one of the most scenically dramatic land borders anywhere in South Asia."
+  },
+  {
+    "id": "7260e0b16775b28aadab6199",
+    "index": 128,
+    "balance": "$240",
+    "picture": "https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?auto=format&fit=crop&w=1170&q=80",
+    "name": "Beanibazar Sylhet",
+    "about": "Beanibazar in Sylhet is a river town surrounded by tea gardens, haors, and canal networks. The blend of open wetlands, working tea estates, and river life makes this lesser-known corner of Sylhet a quietly beautiful destination for explorers."
+  },
+  {
+    "id": "7260e0b16775b28aadab6200",
+    "index": 129,
+    "balance": "$355",
+    "picture": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1170&q=80",
+    "name": "Maijdee Noakhali",
+    "about": "Maijdee in Noakhali is a peaceful coastal district town near the Bay of Bengal that serves as a base for exploring the remote char islands forming in the delta. The nearby Niribili beach and Gandhi Ashram are key cultural and natural attractions."
+  },
+  {
+    "id": "7260e0b16775b28aadab6201",
+    "index": 130,
+    "balance": "$290",
+    "picture": "https://images.unsplash.com/photo-1484291470158-b8f8d608850d?auto=format&fit=crop&w=1170&q=80",
+    "name": "Gandhi Ashram Noakhali",
+    "about": "Mahatma Gandhi's ashram at Jayag, Noakhali, is a historic memorial of the great leader's stay during the 1946 communal riots when he walked across the district to restore peace. The serene ashram with its prayer hall and cottage remains an important place of pilgrimage."
+  },
+  {
+    "id": "7260e0b16775b28aadab6202",
+    "index": 131,
+    "balance": "$195",
+    "picture": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1170&q=80",
+    "name": "Sandwip Island Chattogram",
+    "about": "Sandwip is a large island in the Bay of Bengal off Chattogram, with wide wild beaches on its western shore. The island has a rich history of Portuguese and Mughal-era settlements, and its lighthouse on the southern tip is a landmark visible far out at sea."
+  },
+  {
+    "id": "7260e0b16775b28aadab6203",
+    "index": 132,
+    "balance": "$320",
+    "picture": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1170&q=80",
+    "name": "Sitakunda Eco Park",
+    "about": "Sitakunda Eco Park in Chattogram is built around a natural hill with streams, waterfalls, and forest trails. The Chandranath Hills temple complex perched on the summit is a major Hindu pilgrimage site visited during Shiva Chaturdashi festival."
+  },
+  {
+    "id": "7260e0b16775b28aadab6204",
+    "index": 133,
+    "balance": "$265",
+    "picture": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1170&q=80",
+    "name": "Mirsharai Waterfalls",
+    "about": "Mirsharai in Chattogram is home to several hidden waterfalls including Khoiyachora and Napittachora, accessible through scenic rice paddy fields and bamboo forests. These multi-step cascades surrounded by green hills are spectacular during the rainy season."
+  },
+  {
+    "id": "7260e0b16775b28aadab6205",
+    "index": 134,
+    "balance": "$340",
+    "picture": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1170&q=80",
+    "name": "Kaptai Lake Boating",
+    "about": "Kaptai Lake offers some of the finest boating experiences in Bangladesh, with routes passing indigenous fishing villages, flooded forests, and dramatic hill scenery. Sunrise boat trips when mist rises from the calm lake surface are particularly magical experiences."
+  },
+  {
+    "id": "7260e0b16775b28aadab6206",
+    "index": 135,
+    "balance": "$210",
+    "picture": "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&w=1170&q=80",
+    "name": "Naniarchar Rangamati",
+    "about": "Naniarchar in Rangamati is a remote upazila surrounded by forested hills and Kaptai Lake tributaries. The Shib Hari Dhara temple complex built by Buddhist and Hindu communities sits dramatically on a lakeside hilltop with sweeping water views."
+  },
+  {
+    "id": "7260e0b16775b28aadab6207",
+    "index": 136,
+    "balance": "$280",
+    "picture": "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1170&q=80",
+    "name": "Fatikchari Chattogram",
+    "about": "Fatikchari in Chattogram is home to several beautiful natural waterfalls, rubber plantations, and indigenous Tripura tribal villages. The Dhamtua waterfall flowing through dense jungle and the tribal villages with traditional bamboo houses are fascinating to explore."
+  },
+  {
+    "id": "7260e0b16775b28aadab6208",
+    "index": 137,
+    "balance": "$390",
+    "picture": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1170&q=80",
+    "name": "Lama Bandarban",
+    "about": "Lama in Bandarban is a quiet hill town surrounded by rubber plantations and forested ranges. The scenic Matamuhuri river flowing through Lama is perfect for rafting, and the surrounding hills shelter numerous hidden waterfalls discovered only in recent years."
+  },
+  {
+    "id": "7260e0b16775b28aadab6209",
+    "index": 138,
+    "balance": "$450",
+    "picture": "https://images.unsplash.com/photo-1458668383970-8ddd3927deed?auto=format&fit=crop&w=1170&q=80",
+    "name": "Matamuhuri River Bandarban",
+    "about": "The Matamuhuri river in Bandarban is one of the clearest and most pristine rivers in Bangladesh, flowing from Myanmar through dense primary jungle. Kayaking and camping expeditions along its upper reaches pass through gorges and indigenous villages."
+  },
+  {
+    "id": "7260e0b16775b28aadab6210",
+    "index": 139,
+    "balance": "$310",
+    "picture": "https://images.unsplash.com/photo-1501426026826-31c667bdf23d?auto=format&fit=crop&w=1170&q=80",
+    "name": "Alikadam Bandarban",
+    "about": "Alikadam in southern Bandarban is a remote forest frontier town bordering Myanmar. The Matamuhuri Wildlife Sanctuary nearby protects Asian elephants, tigers, and clouded leopards in one of Bangladesh's last great tracts of intact primary hill forest."
+  },
+  {
+    "id": "7260e0b16775b28aadab6211",
+    "index": 140,
+    "balance": "$370",
+    "picture": "https://images.unsplash.com/photo-1542202229-7d93c33f5d07?auto=format&fit=crop&w=1170&q=80",
+    "name": "Naikhongchhari Bandarban",
+    "about": "Naikhongchhari is the southernmost upazila of Bandarban district, nestled against the Myanmar border. The remote Bawm, Mro, and Chakma tribal villages here maintain ancient traditions and the surrounding landscape of pristine river valleys is breathtaking."
+  },
+  {
+    "id": "7260e0b16775b28aadab6212",
+    "index": 141,
+    "balance": "$425",
+    "picture": "https://images.unsplash.com/photo-1469362102473-8622cfb973cd?auto=format&fit=crop&w=1170&q=80",
+    "name": "Rowangchhari Bandarban",
+    "about": "Rowangchhari in Bandarban offers access to the Sangu river upper reaches and the magnificent Regntlang waterfall. The local Bawm tribal market held weekly is a rare opportunity to witness traditional barter and indigenous crafts of Bangladesh's hill peoples."
+  },
+  {
+    "id": "7260e0b16775b28aadab6213",
+    "index": 142,
+    "balance": "$295",
+    "picture": "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1170&q=80",
+    "name": "Teknaf Peninsula",
+    "about": "The Teknaf Peninsula is the southernmost tip of mainland Bangladesh, a narrow strip of land between the Bay of Bengal and the Naf river bordering Myanmar. The peninsula has pristine beaches, mangrove forests, and the gateway ferry to Saint Martin Island."
+  },
+  {
+    "id": "7260e0b16775b28aadab6214",
+    "index": 143,
+    "balance": "$260",
+    "picture": "https://images.unsplash.com/photo-1519895709776-a1a985f3f8be?auto=format&fit=crop&w=1170&q=80",
+    "name": "Dulahazara Safari Park",
+    "about": "Dulahazara Safari Park near Cox's Bazar is the largest safari park in Bangladesh, home to Asian elephants, Bengal tigers, lions, hippos, and hundreds of wildlife species. The park allows open vehicle safari drives through large naturalistic enclosures."
+  },
+  {
+    "id": "7260e0b16775b28aadab6215",
+    "index": 144,
+    "balance": "$200",
+    "picture": "https://images.unsplash.com/photo-1534430480872-3498386e7856?auto=format&fit=crop&w=1170&q=80",
+    "name": "Sonadia Island Cox's Bazar",
+    "about": "Sonadia Island near Moheshkhali is a pristine mangrove and beach island in Cox's Bazar designated as an ecologically critical area. The island's undeveloped beaches, vast mudflats hosting millions of migratory shorebirds, and intact mangrove are exceptional."
+  },
+  {
+    "id": "7260e0b16775b28aadab6216",
+    "index": 145,
+    "balance": "$350",
+    "picture": "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&w=1170&q=80",
+    "name": "Chera Dip Saint Martin",
+    "about": "Chera Dip is a small rocky island attached to Saint Martin by a sandbar that disappears at high tide. The exposed coral platform, crystal water, and isolation from the mainland create a Robinson Crusoe atmosphere unique among Bangladesh's coastal destinations."
+  },
+  {
+    "id": "7260e0b16775b28aadab6217",
+    "index": 146,
+    "balance": "$185",
+    "picture": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1170&q=80",
+    "name": "Kala Pahad Mymensingh",
+    "about": "Kala Pahad or Black Mountain is a forested hill near Haluaghat in Mymensingh that marks the frontier with Meghalaya, India. The forested slopes shelter rare orchids, and Garo tribal villages dot the hillside with their distinctive bamboo architecture."
+  },
+  {
+    "id": "7260e0b16775b28aadab6218",
+    "index": 147,
+    "balance": "$320",
+    "picture": "https://images.unsplash.com/photo-1518098268026-4e89f1a2cd8e?auto=format&fit=crop&w=1170&q=80",
+    "name": "Boro Lekha Moulvibazar",
+    "about": "Boro Lekha Waterfall in Moulvibazar is one of the tallest single-drop waterfalls in Bangladesh, hidden within dense forest. The trek through tea garden paths and jungle trails to reach this thundering cascade is a rewarding half-day adventure."
+  },
+  {
+    "id": "7260e0b16775b28aadab6219",
+    "index": 148,
+    "balance": "$260",
+    "picture": "https://images.unsplash.com/photo-1471078617419-d5d6b4cdb9b7?auto=format&fit=crop&w=1170&q=80",
+    "name": "Rajkandi Reserve Forest",
+    "about": "Rajkandi Reserve Forest in Moulvibazar is a dense tropical forest connecting with Indian forests. It shelters wildlife including elephants, leopards, and hoolock gibbons, and provides the rugged forested backdrop for the Hamham and Shatachora waterfall treks."
+  },
+  {
+    "id": "7260e0b16775b28aadab6220",
+    "index": 149,
+    "balance": "$310",
+    "picture": "https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=1170&q=80",
+    "name": "Sreemangal Rubber Garden",
+    "about": "The rubber gardens of Sreemangal in Moulvibazar are a lesser-known but fascinating complement to its famous tea estates. Rows of tall rubber trees with their characteristic tapping cuts and collection cups create an atmospheric and photogenic forest landscape."
+  },
+  {
+    "id": "7260e0b16775b28aadab6221",
+    "index": 150,
+    "balance": "$380",
+    "picture": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1170&q=80",
+    "name": "Dhanshiri River Sylhet",
+    "about": "The Dhanshiri river in Sylhet flows through a valley of tea gardens and rice paddies creating a peaceful pastoral landscape. The river is famous for its role in the tea industry water supply and makes a beautiful subject for morning photography walks."
+  },
+  {
+    "id": "7260e0b16775b28aadab6222",
+    "index": 151,
+    "balance": "$225",
+    "picture": "https://images.unsplash.com/photo-1458668383970-8ddd3927deed?auto=format&fit=crop&w=1170&q=80",
+    "name": "Satgaon Mosque Narsingdi",
+    "about": "The ancient Satgaon Mosque near Narsingdi is a perfectly preserved 17th-century Mughal-era mosque with fine terracotta ornamentation. The riverside village setting and the atmospheric crumbling Mughal compound around the mosque make it a memorable heritage visit."
+  },
+  {
+    "id": "7260e0b16775b28aadab6223",
+    "index": 152,
+    "balance": "$190",
+    "picture": "https://images.unsplash.com/photo-1562690868-60bbe7293e94?auto=format&fit=crop&w=1170&q=80",
+    "name": "Baliati Palace Manikganj",
+    "about": "Baliati Palace in Manikganj is one of the finest zamindar palaces in Bangladesh, a sprawling 200-year-old complex with multiple buildings, a Durga temple, and a large pond. The crumbling but atmospheric heritage buildings span four distinct architectural periods."
+  },
+  {
+    "id": "7260e0b16775b28aadab6224",
+    "index": 153,
+    "balance": "$210",
+    "picture": "https://images.unsplash.com/photo-1568454537842-d933259bb258?auto=format&fit=crop&w=1170&q=80",
+    "name": "Teota Palace Manikganj",
+    "about": "Teota Palace in Manikganj is a romantic crumbling 18th-century zamindar mansion set in a large overgrown garden beside the Kaliganga river. The partially restored Durga temple and riverside setting create a hauntingly beautiful heritage atmosphere."
+  },
+  {
+    "id": "7260e0b16775b28aadab6225",
+    "index": 154,
+    "balance": "$170",
+    "picture": "https://images.unsplash.com/photo-1601134467661-3d775b999c8b?auto=format&fit=crop&w=1170&q=80",
+    "name": "Wari-Bateshwar Narsingdi",
+    "about": "Wari-Bateshwar in Narsingdi is a 2,500-year-old archaeological site, the oldest urban settlement discovered in Bangladesh. Excavations have revealed city walls, coins, beads, and structural remains of a sophisticated ancient Bengali trading city."
+  },
+  {
+    "id": "7260e0b16775b28aadab6226",
+    "index": 155,
+    "balance": "$245",
+    "picture": "https://images.unsplash.com/photo-1574236170878-2d68c2f5b0a5?auto=format&fit=crop&w=1170&q=80",
+    "name": "Sona Masjid Gaur",
+    "about": "The historic site of Gaur, straddling the Bangladesh-India border in Chapai Nawabganj, was once the magnificent capital of the Bengal Sultanate. The remaining mosques, gateways, and ruins speak to a period when Gaur was one of Asia's greatest medieval cities."
+  },
+  {
+    "id": "7260e0b16775b28aadab6227",
+    "index": 156,
+    "balance": "$195",
+    "picture": "https://images.unsplash.com/photo-1516912481808-3406841bd33c?auto=format&fit=crop&w=1170&q=80",
+    "name": "Firingee Bazaar Chattogram",
+    "about": "Firingee Bazaar or the Antique Market of Old Chattogram is a fascinating bazaar dealing in centuries-old bronze statues, colonial-era furniture, tribal artifacts, and Mughal coins. The crumbling colonial-era warehouses surrounding the market add to its unique atmosphere."
+  },
+  {
+    "id": "7260e0b16775b28aadab6228",
+    "index": 157,
+    "balance": "$230",
+    "picture": "https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=1170&q=80",
+    "name": "Banshkhali Sea Beach",
+    "about": "Banshkhali in Chattogram has a long undeveloped sea beach stretching past fishing villages and salt pans. The beach is rarely visited by outsiders and offers an authentic experience of traditional coastal fishing culture far from tourist infrastructure."
+  },
+  {
+    "id": "7260e0b16775b28aadab6229",
+    "index": 158,
+    "balance": "$275",
+    "picture": "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=1170&q=80",
+    "name": "Anwara Beach Chattogram",
+    "about": "Anwara Beach south of Chattogram is a wild undeveloped stretch of coast backed by green hills where the Karnaphuli river meets the Bay of Bengal. The beach attracts only local visitors and retains an unspoiled character lost at more commercialized beaches."
+  },
+  {
+    "id": "7260e0b16775b28aadab6230",
+    "index": 159,
+    "balance": "$310",
+    "picture": "https://images.unsplash.com/photo-1441580080658-9979ef8d8f82?auto=format&fit=crop&w=1170&q=80",
+    "name": "Karnaphuli River Chattogram",
+    "about": "The Karnaphuli river flowing through Chattogram is the lifeline of Bangladesh's main port city. River ferries crossing the Karnaphuli at dusk, with cargo ships, fishing trawlers, and traditional wooden boats all sharing the busy waterway, create spectacular scenes."
+  },
+  {
+    "id": "7260e0b16775b28aadab6231",
+    "index": 160,
+    "balance": "$185",
+    "picture": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1170&q=80",
+    "name": "Shamsher Gazi Barrack",
+    "about": "The Shamsher Gazi palace ruins in Feni district are the dramatic remains of a legendary 18th-century local chieftain's fortress. The massive brick walls and overgrown moat surrounded by thick vegetation create an adventurous and atmospheric ruin exploration."
+  },
+  {
+    "id": "7260e0b16775b28aadab6232",
+    "index": 161,
+    "balance": "$220",
+    "picture": "https://images.unsplash.com/photo-1533929736458-ca588d08c8be?auto=format&fit=crop&w=1170&q=80",
+    "name": "Muhurighat Feni",
+    "about": "Muhurighat at the confluence of the Muhuri and Feni rivers is famous for flocks of migratory birds descending on its vast mudflats during winter. The river mouth habitat attracts enormous flocks of sandpipers, terns, and herons to the tidal wetlands."
+  },
+  {
+    "id": "7260e0b16775b28aadab6233",
+    "index": 162,
+    "balance": "$340",
+    "picture": "https://images.unsplash.com/photo-1459156212016-c812468e2115?auto=format&fit=crop&w=1170&q=80",
+    "name": "Mahamaya Lake Mirsharai",
+    "about": "Mahamaya Lake is a large man-made reservoir in Mirsharai, Chattogram, created by damming a valley between forested hills. The scenic lake surrounded by green hillsides and walking trails along the dam top is a popular day trip from Chattogram city."
+  },
+  {
+    "id": "7260e0b16775b28aadab6234",
+    "index": 163,
+    "balance": "$260",
+    "picture": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=1170&q=80",
+    "name": "Shuknachara Tea Estate Habiganj",
+    "about": "Shuknachara tea estate in Chunarughat, Habiganj, is one of the oldest colonial-era tea gardens in Bangladesh. The estate with its Victorian-era manager's bungalow, manicured tea rows, and connecting forest with hoolock gibbons calling at dawn is deeply evocative."
+  },
+  {
+    "id": "7260e0b16775b28aadab6235",
+    "index": 164,
+    "balance": "$295",
+    "picture": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1170&q=80",
+    "name": "Raghunandan Hill Brahmanbaria",
+    "about": "Raghunandan Hill in Brahmanbaria is a sacred forested hilltop with ancient Hindu temples dedicated to Shiva. The hill is especially vibrant during the Shiva Chaturdashi festival when thousands of pilgrims climb the steps through the forest to the summit."
+  },
+  {
+    "id": "7260e0b16775b28aadab6236",
+    "index": 165,
+    "balance": "$175",
+    "picture": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1170&q=80",
+    "name": "Titas River Brahmanbaria",
+    "about": "The Titas river in Brahmanbaria inspired Adwaita Mallaborman's celebrated novel about the fishing community's river life. Today boat trips on the Titas reveal traditional fishing villages, water hyacinth meadows, and a gentler pace of life tied entirely to the river."
+  },
+  {
+    "id": "7260e0b16775b28aadab6237",
+    "index": 166,
+    "balance": "$215",
+    "picture": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1170&q=80",
+    "name": "Meghna Ghat Narayanganj",
+    "about": "The Meghna River ghat at Narayanganj is a major river port where enormous wooden cargo ships are built and launched using techniques unchanged for centuries. Watching master shipbuilders hand-shape massive river vessels from timber is a fascinating living craft tradition."
+  },
+  {
+    "id": "7260e0b16775b28aadab6238",
+    "index": 167,
+    "balance": "$285",
+    "picture": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1170&q=80",
+    "name": "Biswa Ijtema Grounds Tongi",
+    "about": "The Biswa Ijtema at Tongi, Gazipur, is the second-largest Islamic gathering in the world after Hajj, drawing over 4 million Muslims annually for three days of prayer. The extraordinary spectacle of millions gathered peacefully on the Turag riverbank is unforgettable."
+  },
+  {
+    "id": "7260e0b16775b28aadab6239",
+    "index": 168,
+    "balance": "$155",
+    "picture": "https://images.unsplash.com/photo-1584449185692-0cc7bd576083?auto=format&fit=crop&w=1170&q=80",
+    "name": "National Martyrs Memorial Savar",
+    "about": "The Jatiyo Smriti Soudho at Savar is Bangladesh's most important national monument, commemorating the 3 million martyrs of the 1971 Liberation War. The soaring concrete towers rising from a reflecting pool are a deeply moving tribute to the nation's sacrifice."
+  },
+  {
+    "id": "7260e0b16775b28aadab6240",
+    "index": 169,
+    "balance": "$200",
+    "picture": "https://images.unsplash.com/photo-1562690868-60bbe7293e94?auto=format&fit=crop&w=1170&q=80",
+    "name": "Bangladesh National Museum Dhaka",
+    "about": "The Bangladesh National Museum in Dhaka houses over 83,000 historical artifacts spanning ancient, medieval, and modern periods. Its collections of Pala bronzes, Mughal manuscripts, Liberation War memorabilia, and traditional folk art tell the complete story of Bangladesh."
+  },
+  {
+    "id": "7260e0b16775b28aadab6241",
+    "index": 170,
+    "balance": "$175",
+    "picture": "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?auto=format&fit=crop&w=1170&q=80",
+    "name": "Liberation War Museum Dhaka",
+    "about": "The Liberation War Museum in Dhaka is Bangladesh's most important historical museum, dedicated to the 1971 war of independence. Powerful photo archives, personal testimonies, and artifacts from both the genocide and resistance movement make this a deeply moving institution."
+  },
+  {
+    "id": "7260e0b16775b28aadab6242",
+    "index": 171,
+    "balance": "$240",
+    "picture": "https://images.unsplash.com/photo-1568454537842-d933259bb258?auto=format&fit=crop&w=1170&q=80",
+    "name": "Baldha Garden Dhaka",
+    "about": "Baldha Garden in Wari, Old Dhaka, is one of the oldest private botanical gardens in South Asia, established in 1909. The 3.3-acre garden contains over 18,000 rare plant species from around the world and remains a serene green oasis in the heart of old Dhaka."
+  },
+  {
+    "id": "7260e0b16775b28aadab6243",
+    "index": 172,
+    "balance": "$165",
+    "picture": "https://images.unsplash.com/photo-1601134467661-3d775b999c8b?auto=format&fit=crop&w=1170&q=80",
+    "name": "Dhakeshwari Temple Dhaka",
+    "about": "Dhakeshwari National Temple in Dhaka is the most sacred Hindu temple in Bangladesh and the national temple of Bangladeshi Hindus. The ancient temple complex dedicated to Goddess Dhakeshwari is believed to be the origin of the city's name."
+  },
+  {
+    "id": "7260e0b16775b28aadab6244",
+    "index": 173,
+    "balance": "$190",
+    "picture": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1170&q=80",
+    "name": "Armenian Church Dhaka",
+    "about": "The Church of the Holy Resurrection in Armanitola, Dhaka, built in 1781, is one of the oldest Armenian churches in Asia. The elegant colonial church with its serene graveyard and shady trees offers a quiet refuge from the surrounding bustle of old Dhaka."
+  },
+  {
+    "id": "7260e0b16775b28aadab6245",
+    "index": 174,
+    "balance": "$210",
+    "picture": "https://images.unsplash.com/photo-1516912481808-3406841bd33c?auto=format&fit=crop&w=1170&q=80",
+    "name": "Ruplal House Dhaka",
+    "about": "Ruplal House in Old Dhaka is a magnificent 19th-century merchant mansion with ornate European neoclassical facade decorated with terracotta reliefs, Corinthian columns, and elaborate iron balconies, now slowly crumbling into the riverside embankment."
+  },
+  {
+    "id": "7260e0b16775b28aadab6246",
+    "index": 175,
+    "balance": "$145",
+    "picture": "https://images.unsplash.com/photo-1574236170878-2d68c2f5b0a5?auto=format&fit=crop&w=1170&q=80",
+    "name": "Shakhari Bazaar Dhaka",
+    "about": "Shakhari Bazaar in Old Dhaka is a narrow 400-year-old street entirely dedicated to the Hindu conch-shell craftsmen community. The alleyway of ancient narrow-fronted houses with craftsmen at work producing traditional bangles is a rare surviving slice of Mughal Dhaka."
+  },
+  {
+    "id": "7260e0b16775b28aadab6247",
+    "index": 176,
+    "balance": "$160",
+    "picture": "https://images.unsplash.com/photo-1562690868-60bbe7293e94?auto=format&fit=crop&w=1170&q=80",
+    "name": "Nawabpur Road Old Dhaka",
+    "about": "Nawabpur Road in Old Dhaka is the historic commercial artery of the Nawab quarter, lined with crumbling but ornate 19th-century merchant buildings. The road remains a bustling bazaar for electrical goods and hardware while retaining remarkable architectural heritage."
+  },
+  {
+    "id": "7260e0b16775b28aadab6248",
+    "index": 177,
+    "balance": "$195",
+    "picture": "https://images.unsplash.com/photo-1568454537842-d933259bb258?auto=format&fit=crop&w=1170&q=80",
+    "name": "Karwan Bazaar Fish Market",
+    "about": "Karwan Bazaar wholesale fish market in Dhaka operates from midnight to dawn when the nation's largest collection of freshwater fish arrives from rivers across Bangladesh. The pre-dawn activity with hundreds of species of fish is a fascinating cultural spectacle."
+  },
+  {
+    "id": "7260e0b16775b28aadab6249",
+    "index": 178,
+    "balance": "$280",
+    "picture": "https://images.unsplash.com/photo-1471078617419-d5d6b4cdb9b7?auto=format&fit=crop&w=1170&q=80",
+    "name": "Chandrima Udyan Dhaka",
+    "about": "Chandrima Udyan is a large public garden in Dhaka's Sher-e-Bangla Nagar area featuring an artificial lake, walking paths, and the tomb of President Ziaur Rahman. The spacious green park provides a welcome breathing space in the heart of the capital."
+  },
+  {
+    "id": "7260e0b16775b28aadab6250",
+    "index": 179,
+    "balance": "$220",
+    "picture": "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&w=1170&q=80",
+    "name": "Dhanmondi Lake Dhaka",
+    "about": "Dhanmondi Lake in the heart of residential Dhaka is a 2.5 km urban lake flanked by walkways, cafes, and the historic Bangabandhu Memorial Museum. The lake becomes especially vibrant at evening when Dhaka residents gather to walk, jog, and socialize."
+  },
+  {
+    "id": "7260e0b16775b28aadab6251",
+    "index": 180,
+    "balance": "$250",
+    "picture": "https://images.unsplash.com/photo-1533929736458-ca588d08c8be?auto=format&fit=crop&w=1170&q=80",
+    "name": "Bangabandhu Memorial Museum Dhaka",
+    "about": "The Bangabandhu Sheikh Mujibur Rahman Memorial Museum in Dhanmondi preserves the historic house where Bangladesh's founding father was assassinated on August 15, 1975. The carefully preserved rooms and personal belongings make for a deeply moving and important visit."
+  },
+  {
+    "id": "7260e0b16775b28aadab6252",
+    "index": 181,
+    "balance": "$170",
+    "picture": "https://images.unsplash.com/photo-1458668383970-8ddd3927deed?auto=format&fit=crop&w=1170&q=80",
+    "name": "Baitul Mukarram Mosque Dhaka",
+    "about": "Baitul Mukarram, the national mosque of Bangladesh in central Dhaka, is modeled on the Kaaba and can accommodate 30,000 worshippers. The bold modernist architecture by architect Abdur Rashid Bhuiyan makes it one of the most architecturally significant mosques in South Asia."
+  },
+  {
+    "id": "7260e0b16775b28aadab6253",
+    "index": 182,
+    "balance": "$225",
+    "picture": "https://images.unsplash.com/photo-1565117531952-f1aa11baf43f?auto=format&fit=crop&w=1170&q=80",
+    "name": "National Botanical Garden Mirpur",
+    "about": "The Bangladesh National Botanical Garden in Mirpur, Dhaka, covers 205 acres of planted collections of trees, shrubs, orchids, and aquatic plants. The garden's Japanese garden section, rose garden, and large lake make it a popular weekend destination for families."
+  },
+  {
+    "id": "7260e0b16775b28aadab6254",
+    "index": 183,
+    "balance": "$195",
+    "picture": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1170&q=80",
+    "name": "Dhaka Zoo Mirpur",
+    "about": "Dhaka Zoo in Mirpur is the national zoo of Bangladesh, home to over 2,000 animals representing 191 species including Bengal tigers, Asian lions, elephants, hippos, and the rare white tiger. The large lake inside the zoo adds to its pleasant naturalistic setting."
+  },
+  {
+    "id": "7260e0b16775b28aadab6255",
+    "index": 184,
+    "balance": "$240",
+    "picture": "https://images.unsplash.com/photo-1580181288416-f9ab56f0f5cd?auto=format&fit=crop&w=1170&q=80",
+    "name": "Phantasialand Gazipur",
+    "about": "The Fantasy Kingdom amusement park in Ashulia near Gazipur is the largest theme park in Bangladesh, featuring water rides, roller coasters, a heritage park with replicas of historical monuments, and the Heritage Park with traditional rural Bangladesh exhibits."
+  },
+  {
+    "id": "7260e0b16775b28aadab6256",
+    "index": 185,
+    "balance": "$315",
+    "picture": "https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?auto=format&fit=crop&w=1170&q=80",
+    "name": "Jahangirnagar University Campus",
+    "about": "Jahangirnagar University campus in Savar is famous for its beautiful winter migratory birds. Thousands of pochards, pintails, and shovelers arrive at the campus lakes each November to December from Siberia, creating one of Bangladesh's finest accessible birdwatching spots."
+  },
+  {
+    "id": "7260e0b16775b28aadab6257",
+    "index": 186,
+    "balance": "$280",
+    "picture": "https://images.unsplash.com/photo-1501963422762-3d89bd989568?auto=format&fit=crop&w=1170&q=80",
+    "name": "Purbachal New Town Lake",
+    "about": "The vast lake network of Purbachal New Town east of Dhaka is a newly developed recreational corridor featuring waterfront promenades, parks, and cycling trails. The expansive water bodies reflect the sky beautifully and provide a modern green escape from Dhaka city."
+  },
+  {
+    "id": "7260e0b16775b28aadab6258",
+    "index": 187,
+    "balance": "$190",
+    "picture": "https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=1170&q=80",
+    "name": "Rajarbagh Police Lines Dhaka",
+    "about": "The Rajarbagh Police Lines in Dhaka is where Bangladesh Police members heroically resisted the Pakistani Army on the night of March 25-26, 1971. The memorial site within the police compound marks the very spot where the armed resistance to the genocide began."
+  },
+  {
+    "id": "7260e0b16775b28aadab6259",
+    "index": 188,
+    "balance": "$260",
+    "picture": "https://images.unsplash.com/photo-1584449185692-0cc7bd576083?auto=format&fit=crop&w=1170&q=80",
+    "name": "Ekushey Book Fair Dhaka",
+    "about": "The Amar Ekushey Book Fair held annually on the Dhaka University grounds throughout February is the largest book fair in South Asia. The month-long literary festival celebrating the Language Movement martyrs draws millions of book lovers and is central to Bengali cultural identity."
+  },
+  {
+    "id": "7260e0b16775b28aadab6260",
+    "index": 189,
+    "balance": "$175",
+    "picture": "https://images.unsplash.com/photo-1516912481808-3406841bd33c?auto=format&fit=crop&w=1170&q=80",
+    "name": "Jamdani Weaving Village Narayanganj",
+    "about": "The Jamdani weaving villages of Rupganj in Narayanganj produce the UNESCO-listed Jamdani muslin, the world's finest hand-woven cotton fabric. Watching master weavers create intricate geometric patterns on traditional pit looms producing fabric of extraordinary delicacy is a genuine privilege."
+  },
+  {
+    "id": "7260e0b16775b28aadab6261",
+    "index": 190,
+    "balance": "$220",
+    "picture": "https://images.unsplash.com/photo-1458668383970-8ddd3927deed?auto=format&fit=crop&w=1170&q=80",
+    "name": "Pogose School Dhaka",
+    "about": "The historic Pogose School in Wari, Old Dhaka, is one of the oldest English-medium schools in Bangladesh, founded in 1873. The school's Victorian-era building with its distinctive red-brick facade and shady courtyard is a fine example of colonial educational architecture."
+  },
+  {
+    "id": "7260e0b16775b28aadab6262",
+    "index": 191,
+    "balance": "$345",
+    "picture": "https://images.unsplash.com/photo-1471078617419-d5d6b4cdb9b7?auto=format&fit=crop&w=1170&q=80",
+    "name": "Sunamganj Haor",
+    "about": "The haor basin of Sunamganj is the most spectacular wetland landscape in Bangladesh, transforming into a vast inland sea during monsoon from April to October. Boats navigate between submerged homesteads, over drowned paddy fields, and through channels between bamboo groves."
+  },
+  {
+    "id": "7260e0b16775b28aadab6263",
+    "index": 192,
+    "balance": "$285",
+    "picture": "https://images.unsplash.com/photo-1426604966848-d7adac402bff?auto=format&fit=crop&w=1170&q=80",
+    "name": "Takerghat Sunamganj",
+    "about": "Takerghat in Sunamganj is a remote stone quarry settlement at the foot of the Meghalaya hills where stone boats are loaded on a dramatically beautiful turquoise-blue river. The white limestone hills and vivid water create a surreal and extraordinary natural landscape."
+  },
+  {
+    "id": "7260e0b16775b28aadab6264",
+    "index": 193,
+    "balance": "$310",
+    "picture": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1170&q=80",
+    "name": "Yadukata Sunamganj",
+    "about": "Yadukata in Sunamganj sits at the base of an enormous waterfall dropping from the Meghalayan plateau directly into Bangladesh. The roaring cascade plunging from a sheer cliff face is visible from a great distance and creates a constant mist of cool spray."
+  },
+  {
+    "id": "7260e0b16775b28aadab6265",
+    "index": 194,
+    "balance": "$255",
+    "picture": "https://images.unsplash.com/photo-1459156212016-c812468e2115?auto=format&fit=crop&w=1170&q=80",
+    "name": "Shiman Tila Sunamganj",
+    "about": "Shiman Tila or Border Hill in Sunamganj is a sacred hilltop sacred to the Hajong tribal community. The hill provides panoramic views over the vast haor basin below and the Indian hills above, offering one of the most dramatic landscape contrasts in Bangladesh."
+  },
+  {
+    "id": "7260e0b16775b28aadab6266",
+    "index": 195,
+    "balance": "$190",
+    "picture": "https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=1170&q=80",
+    "name": "Nikli Haor Kishoreganj",
+    "about": "Nikli Haor in Kishoreganj is a beautiful wetland famous for its vast floating beds of lotus and water lilies that bloom spectacularly from August to October. Boat trips through the flower-covered water with traditional fishermen casting nets are profoundly peaceful."
+  },
+  {
+    "id": "7260e0b16775b28aadab6267",
+    "index": 196,
+    "balance": "$230",
+    "picture": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1170&q=80",
+    "name": "Itna Haor Kishoreganj",
+    "about": "The haor area around Itna in Kishoreganj becomes a vast open sea during monsoon connecting dozens of wetland basins. The Austagram area with its traditional boat-building industry and fishing communities reveals a way of life completely adapted to the annual flood cycle."
+  },
+  {
+    "id": "7260e0b16775b28aadab6268",
+    "index": 197,
+    "balance": "$275",
+    "picture": "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1170&q=80",
+    "name": "Sreenagar Munshiganj",
+    "about": "Sreenagar in Munshiganj is famous for its vast summer strawberry and vegetable farms that supply Dhaka's markets. The flat agricultural landscape surrounding Sreenagar and its riverside ghats on the Dhaleswari river make for peaceful rural day trips from Dhaka."
+  },
+  {
+    "id": "7260e0b16775b28aadab6269",
+    "index": 198,
+    "balance": "$205",
+    "picture": "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=1170&q=80",
+    "name": "Idrakpur Fort Munshiganj",
+    "about": "Idrakpur Fort in Munshiganj is a 17th-century Mughal river fort built to protect Dhaka from Magh and Portuguese pirates. The compact but well-preserved circular fort with its bastions, moat, and underground passage is one of Bangladesh's most complete Mughal military structures."
+  },
+  {
+    "id": "7260e0b16775b28aadab6270",
+    "index": 199,
+    "balance": "$320",
+    "picture": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1170&q=80",
+    "name": "Aricha Ghat Manikganj",
+    "about": "Aricha Ghat on the Padma-Jamuna confluence in Manikganj is one of the most dramatic river ghats in Bangladesh. The powerful confluence of two of Asia's mightiest rivers creates churning currents, shifting sandbanks, and a vast horizon of water stretching in every direction."
+  },
+  {
+    "id": "7260e0b16775b28aadab6271",
+    "index": 200,
+    "balance": "$345",
+    "picture": "https://images.unsplash.com/photo-1574236170878-2d68c2f5b0a5?auto=format&fit=crop&w=1170&q=80",
+    "name": "Rajshahi University Campus",
+    "about": "Rajshahi University campus is one of the most beautiful university campuses in Bangladesh, featuring a large shaded lake, centuries-old rain trees, and elegant colonial-era academic buildings. The serene lakeside walking paths and seasonal boat rides make it a popular escape."
+  },
+  {
+    "id": "7260e0b16775b28aadab6272",
+    "index": 201,
+    "balance": "$265",
+    "picture": "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1170&q=80",
+    "name": "Choto Sona Mosque Nawabganj",
+    "about": "Choto Sona Mosque or Small Golden Mosque in Nawabganj is a perfectly proportioned 15th-century Sultanate mosque with an extraordinary gilded mirhab interior. The compact, exquisitely detailed mosque is considered the jewel of Bengal Sultanate sacred architecture."
+  },
+  {
+    "id": "7260e0b16775b28aadab6273",
+    "index": 202,
+    "balance": "$185",
+    "picture": "https://images.unsplash.com/photo-1584449185692-0cc7bd576083?auto=format&fit=crop&w=1170&q=80",
+    "name": "Rajshahi Silk Museum",
+    "about": "The Silk Museum in Rajshahi documents the complete process of silk production from silkworm rearing to finished fabric. Live demonstrations by master weavers and a gallery of historic silk textiles make this museum a fascinating introduction to Bangladesh's silk heritage."
+  },
+  {
+    "id": "7260e0b16775b28aadab6274",
+    "index": 203,
+    "balance": "$295",
+    "picture": "https://images.unsplash.com/photo-1471078617419-d5d6b4cdb9b7?auto=format&fit=crop&w=1170&q=80",
+    "name": "Porsha Nawabganj",
+    "about": "Porsha in Nawabganj is set in the heart of the Barind Tract mango country. During the May-June harvest season, roadside mango markets overflow with hundreds of varieties of mangoes and the air is heavy with the intoxicating fragrance of ripe fruit."
+  },
+  {
+    "id": "7260e0b16775b28aadab6275",
+    "index": 204,
+    "balance": "$215",
+    "picture": "https://images.unsplash.com/photo-1568454537842-d933259bb258?auto=format&fit=crop&w=1170&q=80",
+    "name": "Barahat Rajshahi",
+    "about": "Barahat in Rajshahi is a historic village featuring a remarkable collection of over 30 ancient terracotta-decorated Hindu temples from the 18th and 19th centuries. The village temple trail through fields and ponds is an extraordinary architectural heritage discovery."
+  },
+  {
+    "id": "7260e0b16775b28aadab6276",
+    "index": 205,
+    "balance": "$240",
+    "picture": "https://images.unsplash.com/photo-1501963422762-3d89bd989568?auto=format&fit=crop&w=1170&q=80",
+    "name": "Govinda Temple Dinajpur",
+    "about": "The Govinda Temple in Parbatipur, Dinajpur, is a beautiful 18th-century Hindu temple dedicated to Lord Vishnu. The ornate multi-spired temple tower rising above a large sacred pond and banyan tree creates an exceptionally picturesque religious landscape."
+  },
+  {
+    "id": "7260e0b16775b28aadab6277",
+    "index": 206,
+    "balance": "$175",
+    "picture": "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=1170&q=80",
+    "name": "Sundarpur Stone River Panchagarh",
+    "about": "The Karatoa and Talma rivers in Panchagarh flow over smooth stone beds giving them the appearance of Himalayan rivers, utterly unlike the muddy rivers typical of the Bangladesh plains. The clear fast-flowing stone rivers draw bathers and picnickers from across the north."
+  },
+  {
+    "id": "7260e0b16775b28aadab6278",
+    "index": 207,
+    "balance": "$200",
+    "picture": "https://images.unsplash.com/photo-1426604966848-d7adac402bff?auto=format&fit=crop&w=1170&q=80",
+    "name": "Vitomore Stone Collection Panchagarh",
+    "about": "The stone collection ghats along the rivers of Panchagarh are where workers dredge smooth river stones from the riverbed for use in construction. The unique stone-rich rivers with their pebble banks and clear water are unlike any river landscape elsewhere in Bangladesh."
+  },
+  {
+    "id": "7260e0b16775b28aadab6279",
+    "index": 208,
+    "balance": "$345",
+    "picture": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1170&q=80",
+    "name": "Banshbaria Sea Beach Sitakunda",
+    "about": "Banshbaria Beach in Sitakunda, Chattogram, is a quiet undeveloped beach backed by the Sitakunda Hills. The combination of sea, mangroves, and forested hills is unique along Bangladesh's coast and makes this a rewarding destination for nature-oriented travelers."
+  },
+  {
+    "id": "7260e0b16775b28aadab6280",
+    "index": 209,
+    "balance": "$280",
+    "picture": "https://images.unsplash.com/photo-1533929736458-ca588d08c8be?auto=format&fit=crop&w=1170&q=80",
+    "name": "Akkas Ali Khan Palace Sirajganj",
+    "about": "The Akkas Ali Khan Palace in Sirajganj is a splendid 19th-century zamindar mansion with elaborate plasterwork, ornate columns, and riverside gardens on the Jamuna. The crumbling mansion slowly surrendering to vegetation creates a powerfully atmospheric heritage ruin."
+  },
+  {
+    "id": "7260e0b16775b28aadab6281",
+    "index": 210,
+    "balance": "$225",
+    "picture": "https://images.unsplash.com/photo-1562690868-60bbe7293e94?auto=format&fit=crop&w=1170&q=80",
+    "name": "Enayetpur Sirajganj",
+    "about": "Enayetpur in Sirajganj is the center of Bangladesh's handloom textile industry, where thousands of weavers produce traditional lungi, gamcha, and sari fabrics on wooden pit looms. Walking through this weaving town with its rhythmic loom clatter is a unique cultural experience."
+  },
+  {
+    "id": "7260e0b16775b28aadab6282",
+    "index": 211,
+    "balance": "$190",
+    "picture": "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&w=1170&q=80",
+    "name": "Shahjadpur Rabindra Kuthi Sirajganj",
+    "about": "The Rabindra Kuthi in Shahjadpur, Sirajganj, is where Rabindranath Tagore stayed as landlord and wrote many celebrated Bengali songs and poems. The beautifully restored estate house contains manuscripts, photographs, and furniture from the poet's residence period."
+  },
+  {
+    "id": "7260e0b16775b28aadab6283",
+    "index": 212,
+    "balance": "$315",
+    "picture": "https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?auto=format&fit=crop&w=1170&q=80",
+    "name": "Kalni River Kishoreganj",
+    "about": "The Kalni-Kushiyara river system in Kishoreganj and Habiganj is a major haor drainage channel that during monsoon becomes an enormous inland sea. Sunset boat journeys when the water surface turns gold and flamingo-pink reflecting the evening sky are breathtaking."
+  },
+  {
+    "id": "7260e0b16775b28aadab6284",
+    "index": 213,
+    "balance": "$255",
+    "picture": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1170&q=80",
+    "name": "Shonir Akhra Narayanganj",
+    "about": "Shonir Akhra on the Shitalakkhya river bank in Narayanganj is the center of Bangladesh's traditional wooden boat-building industry. Enormous wooden river ferries and cargo boats are constructed entirely by hand by master shipwrights using skills passed across generations."
+  },
+  {
+    "id": "7260e0b16775b28aadab6285",
+    "index": 214,
+    "balance": "$270",
+    "picture": "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=1170&q=80",
+    "name": "Kadam Rasul Mosque Chattogram",
+    "about": "The historic Kadam Rasul shrine in Chattogram preserves a sacred footprint of Prophet Muhammad. The 16th-century Mughal-era mosque complex with its beautiful domes and riverside garden setting is one of Chattogram's oldest and most revered Islamic heritage sites."
+  },
+  {
+    "id": "7260e0b16775b28aadab6286",
+    "index": 215,
+    "balance": "$190",
+    "picture": "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1170&q=80",
+    "name": "Bayezid Bostami Shrine Chattogram",
+    "about": "The shrine of Bayezid Bostami in Nasirabad, Chattogram, is famous for its large sacred pond containing hundreds of black soft-shell turtles believed to be the transmigrated souls of sinners. The tranquil shrine complex surrounded by old trees is deeply atmospheric."
+  },
+  {
+    "id": "7260e0b16775b28aadab6287",
+    "index": 216,
+    "balance": "$305",
+    "picture": "https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1170&q=80",
+    "name": "Pahartali Lake Chattogram",
+    "about": "Pahartali lake in Chattogram is a peaceful urban lake surrounded by forested hills and the historic British-era railway colony bungalows. The tree-shaded lakeside promenade and calm water reflecting the surrounding hills make it a beloved urban retreat."
+  },
+  {
+    "id": "7260e0b16775b28aadab6288",
+    "index": 217,
+    "balance": "$230",
+    "picture": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1170&q=80",
+    "name": "DC Hill Chattogram",
+    "about": "DC Hill in Chattogram is a scenic forested hill in the heart of the city with a British-era bungalow converted to a museum at its summit. The shaded walking paths through the forested hill with panoramic city and harbor views make it a treasured urban green space."
+  },
+  {
+    "id": "7260e0b16775b28aadab6289",
+    "index": 218,
+    "balance": "$175",
+    "picture": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1170&q=80",
+    "name": "Chattogram War Cemetery",
+    "about": "The Chattogram War Cemetery is a beautifully maintained Commonwealth War Graves Commission cemetery containing the graves of 755 Allied soldiers who died in the Burma Campaign during World War II. The immaculate rows of white headstones in lush tropical gardens are moving."
+  },
+  {
+    "id": "7260e0b16775b28aadab6290",
+    "index": 219,
+    "balance": "$260",
+    "picture": "https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=1170&q=80",
+    "name": "Jafrabad Beach Cox's Bazar",
+    "about": "Jafrabad beach near Ramu in Cox's Bazar is a lesser-visited section of the Cox's Bazar coastline backed by Buddhist monasteries and Rakhain tribal villages. The undeveloped beach with its fishing village backdrop offers a more authentic coastal experience."
+  },
+  {
+    "id": "7260e0b16775b28aadab6291",
+    "index": 220,
+    "balance": "$285",
+    "picture": "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1170&q=80",
+    "name": "Ramu Buddhist Monastery",
+    "about": "Ramu, near Cox's Bazar, is a historic Buddhist community with numerous ornate temples and monasteries containing ancient Buddha statues and relics. The gold-adorned pagodas and peaceful monastery gardens make Ramu one of the most significant Buddhist heritage sites in Bangladesh."
+  },
+  {
+    "id": "7260e0b16775b28aadab6292",
+    "index": 221,
+    "balance": "$195",
+    "picture": "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=1170&q=80",
+    "name": "Barua Para Buddhist Village Cox's Bazar",
+    "about": "The Barua Para Buddhist village near Cox's Bazar is a traditional community of Bengali Buddhists maintaining centuries-old traditions. The monastery with its Burmese-style golden spire, ornate temple interiors, and annual Shubho Kathin robe-offering ceremony are remarkable cultural experiences."
+  },
+  {
+    "id": "7260e0b16775b28aadab6293",
+    "index": 222,
+    "balance": "$340",
+    "picture": "https://images.unsplash.com/photo-1458668383970-8ddd3927deed?auto=format&fit=crop&w=1170&q=80",
+    "name": "Naf River Teknaf",
+    "about": "The Naf River forms the international border between Bangladesh and Myanmar at Teknaf. Watching fishing boats and traditional vessels crossing this international river at dawn against the backdrop of Myanmar's forested hills creates a memorable borderland atmosphere."
+  },
+  {
+    "id": "7260e0b16775b28aadab6294",
+    "index": 223,
+    "balance": "$215",
+    "picture": "https://images.unsplash.com/photo-1459156212016-c812468e2115?auto=format&fit=crop&w=1170&q=80",
+    "name": "Balukhali Ukhia",
+    "about": "Ukhia in Cox's Bazar district is surrounded by dramatic hilly jungle terrain in the Naikkhongchhari ranges. The hills and valleys around Ukhia contain hidden streams, natural swimming holes, and diverse wildlife including elephants, making it rewarding for intrepid explorers."
+  },
+  {
+    "id": "7260e0b16775b28aadab6295",
+    "index": 224,
+    "balance": "$380",
+    "picture": "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1170&q=80",
+    "name": "Muhuri Irrigation Project Feni",
+    "about": "The Muhuri Irrigation Project reservoir in Feni is a vast man-made lake that attracts thousands of migratory ducks and geese each winter. The early morning sight of hundreds of thousands of waterfowl rising from the water surface as the sun rises is spectacular."
+  },
+  {
+    "id": "7260e0b16775b28aadab6296",
+    "index": 225,
+    "balance": "$225",
+    "picture": "https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=1170&q=80",
+    "name": "Chandpur River Port",
+    "about": "Chandpur is Bangladesh's busiest inland river port, where the Meghna, Padma, and Dakatia rivers converge. The constant traffic of river ferries, cargo vessels, and fishing boats against the backdrop of the vast confluence makes the Chandpur ghat endlessly fascinating to observe."
+  },
+  {
+    "id": "7260e0b16775b28aadab6297",
+    "index": 226,
+    "balance": "$200",
+    "picture": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1170&q=80",
+    "name": "Brahmaputra River Mymensingh",
+    "about": "The Old Brahmaputra river flowing through Mymensingh city is lined with colonial-era riverside buildings, ghats, and the beautiful Mymensingh Town Park. Evening walks along the riverbank with views of traditional boats and the Shashi Lodge heritage building are delightful."
+  },
+  {
+    "id": "7260e0b16775b28aadab6298",
+    "index": 227,
+    "balance": "$265",
+    "picture": "https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=1170&q=80",
+    "name": "Shashi Lodge Mymensingh",
+    "about": "Shashi Lodge is a stunning 19th-century palace built by Maharaja Shashi Kanta Acharya Chowdhury on the Brahmaputra riverbank in Mymensingh. The Italianate architecture with its ornate facade, riverside gardens, and romantic crumbling grandeur make it one of Bangladesh's finest heritage buildings."
   }
 ]
