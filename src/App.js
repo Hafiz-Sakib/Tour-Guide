@@ -18,6 +18,7 @@ import ForgotPassword from "./Components/Auth/ForgotPassword";
 
 import Booking from "./Components/Booking/Booking";
 import MyBookings from "./Components/MyBookings/MyBookings";
+import AdminDashboard from "./Components/Admin/AdminDashboard";
 
 function App() {
   return (
@@ -49,7 +50,7 @@ function App() {
             </RequireAuth>
           }
         />
-        ;
+        <Route path="/admin" element={<AdminDashboard />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
 
