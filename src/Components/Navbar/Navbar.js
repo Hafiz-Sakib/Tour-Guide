@@ -22,6 +22,8 @@ const links = [
   { name: "Contact", path: "/contact" },
 ];
 
+const ADMIN_EMAIL = "hafizsakib5@gmail.com"; // ← Your admin email
+
 const NavBar = () => {
   const [user, setUser] = useState(null);
   const [open, setOpen] = useState(false);
@@ -35,6 +37,9 @@ const NavBar = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const isHome = location.pathname === "/";
+
+  // Check if current user is Admin
+  const isAdmin = user?.email === ADMIN_EMAIL;
 
   /* ─── Auth listener ─── */
   useEffect(() => {
@@ -102,7 +107,7 @@ const NavBar = () => {
         }`}
       >
         <div className="mx-auto max-w-7xl px-6 lg:px-10 h-[76px] flex items-center justify-between">
-          {/* ── Logo ── */}
+          {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
             <div
               className={`relative w-10 h-10 flex items-center justify-center rounded-[14px] transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 ${
@@ -129,7 +134,7 @@ const NavBar = () => {
             </div>
           </Link>
 
-          {/* ── Desktop Nav ── */}
+          {/* Desktop Nav */}
           <ul className="hidden md:flex items-center gap-1">
             {links.map((link) => (
               <li key={link.path}>
@@ -139,17 +144,20 @@ const NavBar = () => {
               </li>
             ))}
 
-            {/* My Bookings - Visible only when logged in */}
+            {/* Conditional Link: Admin or My Bookings */}
             {user && (
               <li>
-                <CustomLink to="/my-bookings" solid={solid}>
-                  My Bookings
+                <CustomLink
+                  to={isAdmin ? "/admin" : "/my-bookings"}
+                  solid={solid}
+                >
+                  {isAdmin ? "Admin Dashboard" : "My Bookings"}
                 </CustomLink>
               </li>
             )}
           </ul>
 
-          {/* ── Right Side ── */}
+          {/* Right Side */}
           <div className="hidden md:flex items-center gap-3">
             {/* Dark Mode Toggle */}
             <button
@@ -199,7 +207,6 @@ const NavBar = () => {
                   />
                 </button>
 
-                {/* Dropdown */}
                 {userMenuOpen && (
                   <div className="absolute right-0 mt-2.5 w-60 bg-white rounded-2xl border border-[#e7dfd0] shadow-[0_16px_48px_rgba(13,31,53,0.14)] py-2 z-50 overflow-hidden animate-scale-in">
                     <div className="px-5 py-4 border-b border-[#e7dfd0]">
@@ -241,7 +248,7 @@ const NavBar = () => {
             )}
           </div>
 
-          {/* ── Mobile Menu Button ── */}
+          {/* Mobile Menu Button */}
           <button
             onClick={() => setOpen((p) => !p)}
             className={`md:hidden w-10 h-10 flex items-center justify-center rounded-[14px] transition-all duration-300 text-xl ${
@@ -256,7 +263,7 @@ const NavBar = () => {
         </div>
       </nav>
 
-      {/* ── Mobile Menu ── */}
+      {/* Mobile Menu */}
       <div
         className={`fixed inset-0 z-40 md:hidden transition-all duration-500 ${
           open
@@ -295,10 +302,10 @@ const NavBar = () => {
               </Link>
             ))}
 
-            {/* My Bookings in Mobile Menu */}
+            {/* Conditional Mobile Link */}
             {user && (
               <Link
-                to="/my-bookings"
+                to={isAdmin ? "/admin" : "/my-bookings"}
                 onClick={() => setOpen(false)}
                 className="group flex items-center justify-between py-4 border-b border-white/10 text-white/80 hover:text-white transition-all duration-300"
                 style={{
@@ -311,7 +318,7 @@ const NavBar = () => {
                   className="text-3xl font-black tracking-tight"
                   style={{ fontFamily: "var(--font-display)" }}
                 >
-                  My Bookings
+                  {isAdmin ? "Admin Dashboard" : "My Bookings"}
                 </span>
                 <span className="text-[#c9a84c] opacity-0 group-hover:opacity-100 transition-all translate-x-[-8px] group-hover:translate-x-0">
                   →
@@ -320,7 +327,7 @@ const NavBar = () => {
             )}
           </nav>
 
-          {/* User Section (Mobile) */}
+          {/* User Section */}
           <div className="mt-auto pb-12">
             {user ? (
               <div className="space-y-4">

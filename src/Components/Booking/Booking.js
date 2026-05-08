@@ -13,7 +13,7 @@ import {
 } from "react-icons/fi";
 import Modal from "./Modal";
 import { auth } from "../../Firebase.init";
-import { API_BASE_URL } from "../../config"; // ← Important
+import { API_BASE_URL } from "../../config";
 
 const inclusions = [
   "Dedicated trip coordinator",
@@ -28,9 +28,11 @@ const Booking = () => {
   const { bookingId } = useParams();
   const [service, setService] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [showModal, setShowModal] = useState(false); // Fixed: was openModal
+  const [showModal, setShowModal] = useState(false);
   const [travelers, setTravelers] = useState(1);
   const [date, setDate] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [address, setAddress] = useState("");
   const [formError, setFormError] = useState("");
   const [imgLoaded, setImgLoaded] = useState(false);
 
@@ -50,8 +52,16 @@ const Booking = () => {
   }, [bookingId]);
 
   const confirmBooking = async () => {
-    if (!date) {
-      setFormError("Please select your preferred travel date.");
+    if (!date || !phoneNumber || !address) {
+      setFormError("Please fill all required fields (Date, Phone, Address)");
+      return;
+    }
+
+    const phoneRegex = /^(013|014|015|016|017|018|019)\d{8}$/;
+
+    if (!phoneRegex.test(phoneNumber)) {
+      setFormError("");
+      toast.error("Enter a valid Bangladeshi phone number (e.g. 017XXXXXXXX)");
       return;
     }
 
@@ -76,6 +86,10 @@ const Booking = () => {
       travelers: Number(travelers),
       preferredDate: new Date(date),
       totalAmount: totalAmount,
+
+      // New Fields
+      phoneNumber: phoneNumber.trim(),
+      address: address.trim(),
       status: "pending",
     };
 
@@ -141,7 +155,6 @@ const Booking = () => {
   return (
     <main className="min-h-screen bg-[#f5f0e8] pt-[76px] text-[#0d1f35]">
       <section className="max-w-7xl mx-auto px-6 py-12 lg:px-10">
-        {/* Back link */}
         <Link
           to="/services"
           className="inline-flex items-center gap-2 text-sm font-bold text-[#0b6b62] mb-10 hover:text-[#0d1f35] hover:gap-3 transition-all duration-200 group"
@@ -151,9 +164,8 @@ const Booking = () => {
         </Link>
 
         <div className="grid lg:grid-cols-[1fr_400px] gap-12">
-          {/* Left Side */}
+          {/* Left Side - Details */}
           <div>
-            {/* Hero image */}
             <div className="relative rounded-[32px] overflow-hidden bg-[#0d1f35] shadow-2xl img-zoom">
               <img
                 src={service.picture}
@@ -265,6 +277,7 @@ const Booking = () => {
               </p>
 
               <div className="space-y-7">
+                {/* Preferred Date */}
                 <div>
                   <label className="block text-[10px] font-black uppercase tracking-widest text-[#5a6a7e] mb-3">
                     Preferred Travel Date
@@ -278,6 +291,7 @@ const Booking = () => {
                   />
                 </div>
 
+                {/* Travelers */}
                 <div>
                   <label className="block text-[10px] font-black uppercase tracking-widest text-[#5a6a7e] mb-3">
                     Number of Travelers
@@ -305,8 +319,44 @@ const Booking = () => {
                     </button>
                   </div>
                 </div>
+
+                {/* Phone Number */}
+                <div>
+                  <label className="block text-[10px] font-black uppercase tracking-widest text-[#5a6a7e] mb-3">
+                    Phone Number (BD)
+                  </label>
+                  <input
+                    type="tel"
+                    value={phoneNumber}
+                    onChange={(e) => {
+                      const value = e.target.value.replace(/\D/g, ""); // only digits
+                      if (value.length <= 11) {
+                        setPhoneNumber(value);
+                      }
+                    }}
+                    placeholder="01XXXXXXXXX"
+                    maxLength={11}
+                    pattern="^(013|014|015|016|017|018|019)\d{8}$"
+                    className="w-full border border-[#e7dfd0] bg-[#f5f0e8] rounded-2xl px-5 py-4 focus:border-[#0b6b62]/50 focus:bg-white outline-none transition-all duration-300 text-sm"
+                  />
+                </div>
+
+                {/* Address */}
+                <div>
+                  <label className="block text-[10px] font-black uppercase tracking-widest text-[#5a6a7e] mb-3">
+                    Address
+                  </label>
+                  <textarea
+                    value={address}
+                    onChange={(e) => setAddress(e.target.value)}
+                    placeholder="House No, Road No, Area, City"
+                    rows={3}
+                    className="resize-none w-full border border-[#e7dfd0] bg-[#f5f0e8] rounded-2xl px-5 py-4 focus:border-[#0b6b62]/50 focus:bg-white outline-none transition-all"
+                  />
+                </div>
               </div>
 
+              {/* Summary */}
               <div className="mt-7 bg-[#f5f0e8] border border-[#e7dfd0] rounded-[20px] p-5">
                 <div className="flex justify-between text-sm text-[#5a6a7e] mb-3">
                   <span>
