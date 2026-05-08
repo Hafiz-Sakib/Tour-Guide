@@ -156,6 +156,15 @@ const Login = () => {
               )}
             </div>
 
+            <div className="text-right mt-2">
+              <Link
+                to="/forgot-password"
+                className="text-sm text-green-400 hover:underline font-medium"
+              >
+                Forgot Password?
+              </Link>
+            </div>
+
             <button
               disabled={loading}
               className="inline-flex w-full items-center justify-center gap-2 bg-[#132236] px-7 py-4 text-xs font-black uppercase tracking-[0.16em] text-white transition hover:bg-[#0f766e] disabled:opacity-60"

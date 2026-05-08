@@ -16,6 +16,7 @@ import Login from "./Components/Auth/Login";
 import Registration from "./Components/Auth/Registration";
 
 import Booking from "./Components/Booking/Booking";
+import ForgotPassword from "./Components/Auth/ForgotPassword";
 
 function App() {
   return (
@@ -36,6 +37,8 @@ function App() {
         <Route path="/login" element={<Login />} />
 
         <Route path="/register" element={<Registration />} />
+
+        <Route path="/forgot-password" element={<ForgotPassword />} />
 
         <Route
           path="/booking/:bookingId"
