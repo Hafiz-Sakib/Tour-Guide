@@ -53,11 +53,26 @@ const Login = () => {
   };
 
   const handleProvider = async (Provider) => {
+    console.log("🔄 Google Sign-In started..."); // ← Add this
+
     try {
-      await signInWithPopup(auth, new Provider());
+      console.log("📡 Calling signInWithPopup..."); // ← Add this
+      const result = await signInWithPopup(auth, new Provider());
+
+      console.log("✅ Google Sign-In SUCCESS!", {
+        user: result.user.email,
+        displayName: result.user.displayName,
+        uid: result.user.uid,
+      });
+
       toast.success("Signed in successfully.");
       navigate(from, { replace: true });
-    } catch {
+    } catch (error) {
+      console.error("❌ Google Sign-In FAILED:", {
+        code: error.code,
+        message: error.message,
+        fullError: error,
+      });
       toast.error("Sign-in failed. Please try again.");
     }
   };

@@ -90,11 +90,25 @@ const Registration = () => {
   };
 
   const handleProvider = async (Provider) => {
+    console.log("🔄 Google Sign-Up started...");
+
     try {
-      await signInWithPopup(auth, new Provider());
+      console.log("📡 Calling signInWithPopup for registration...");
+      const result = await signInWithPopup(auth, new Provider());
+
+      console.log("✅ Google Sign-Up SUCCESS!", {
+        email: result.user.email,
+        name: result.user.displayName,
+        uid: result.user.uid,
+      });
+
       toast.success("Account ready.");
       navigate("/");
-    } catch {
+    } catch (error) {
+      console.error("❌ Google Sign-Up FAILED:", {
+        code: error.code,
+        message: error.message,
+      });
       toast.error("Sign-in failed. Please try again.");
     }
   };
