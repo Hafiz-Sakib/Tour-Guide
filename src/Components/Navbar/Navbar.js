@@ -22,7 +22,7 @@ const links = [
   { name: "Contact", path: "/contact" },
 ];
 
-const ADMIN_EMAIL = "hafizsakib5@gmail.com"; // ← Your admin email
+const ADMIN_EMAIL = "hafizsakib5@gmail.com";
 
 const NavBar = () => {
   const [user, setUser] = useState(null);
@@ -38,7 +38,6 @@ const NavBar = () => {
   const location = useLocation();
   const isHome = location.pathname === "/";
 
-  // Check if current user is Admin
   const isAdmin = user?.email === ADMIN_EMAIL;
 
   /* ─── Auth listener ─── */
@@ -127,7 +126,9 @@ const NavBar = () => {
                 Sababa
               </span>
               <span
-                className={`text-[9px] font-bold uppercase tracking-[0.32em] ${solid ? "text-[#c9a84c]" : "text-[#c9a84c]"}`}
+                className={`text-[9px] font-bold uppercase tracking-[0.32em] ${
+                  solid ? "text-[#c9a84c]" : "text-[#c9a84c]"
+                }`}
               >
                 TOURS
               </span>
@@ -144,7 +145,6 @@ const NavBar = () => {
               </li>
             ))}
 
-            {/* Conditional Link: Admin or My Bookings */}
             {user && (
               <li>
                 <CustomLink
@@ -157,9 +157,9 @@ const NavBar = () => {
             )}
           </ul>
 
-          {/* Right Side */}
-          <div className="hidden md:flex items-center gap-3">
-            {/* Dark Mode Toggle */}
+          {/* Right Side - Now Visible on All Devices */}
+          <div className="flex items-center gap-3">
+            {/* Dark Mode Toggle - Visible on Mobile & Desktop */}
             <button
               onClick={() => setDarkMode((p) => !p)}
               className={`w-10 h-10 flex items-center justify-center rounded-[14px] transition-all duration-300 hover:scale-110 ${
@@ -176,90 +176,95 @@ const NavBar = () => {
               )}
             </button>
 
-            {user ? (
-              <div className="relative" ref={menuRef}>
-                <button
-                  onClick={() => setUserMenuOpen((p) => !p)}
-                  className={`flex items-center gap-2.5 pl-1.5 pr-4 py-1.5 rounded-full border transition-all duration-300 hover:shadow-lg ${
-                    solid
-                      ? "border-[#e7dfd0] bg-white hover:border-[#c9a84c]/40"
-                      : "border-white/25 bg-white/10 hover:bg-white/15 backdrop-blur"
-                  }`}
-                >
-                  {user.photoURL ? (
-                    <img
-                      src={user.photoURL}
-                      alt={user.displayName || "User"}
-                      className="w-8 h-8 rounded-full object-cover ring-2 ring-[#c9a84c]/30"
-                      referrerPolicy="no-referrer"
+            {/* Desktop User Section */}
+            <div className="hidden md:block">
+              {user ? (
+                <div className="relative" ref={menuRef}>
+                  <button
+                    onClick={() => setUserMenuOpen((p) => !p)}
+                    className={`flex items-center gap-2.5 pl-1.5 pr-4 py-1.5 rounded-full border transition-all duration-300 hover:shadow-lg ${
+                      solid
+                        ? "border-[#e7dfd0] bg-white hover:border-[#c9a84c]/40"
+                        : "border-white/25 bg-white/10 hover:bg-white/15 backdrop-blur"
+                    }`}
+                  >
+                    {user.photoURL ? (
+                      <img
+                        src={user.photoURL}
+                        alt={user.displayName || "User"}
+                        className="w-8 h-8 rounded-full object-cover ring-2 ring-[#c9a84c]/30"
+                        referrerPolicy="no-referrer"
+                      />
+                    ) : (
+                      <div className="w-8 h-8 bg-gradient-to-br from-[#0b6b62] to-[#0d1f35] text-white flex items-center justify-center rounded-full font-bold text-sm">
+                        {(user.displayName ||
+                          user.email ||
+                          "U")[0].toUpperCase()}
+                      </div>
+                    )}
+                    <span className="text-sm font-semibold truncate max-w-[110px]">
+                      {user.displayName || user.email?.split("@")[0]}
+                    </span>
+                    <FiChevronDown
+                      size={15}
+                      className={`transition-transform duration-300 ${userMenuOpen ? "rotate-180" : ""}`}
                     />
-                  ) : (
-                    <div className="w-8 h-8 bg-gradient-to-br from-[#0b6b62] to-[#0d1f35] text-white flex items-center justify-center rounded-full font-bold text-sm">
-                      {(user.displayName || user.email || "U")[0].toUpperCase()}
+                  </button>
+
+                  {userMenuOpen && (
+                    <div className="absolute right-0 mt-2.5 w-60 bg-white rounded-2xl border border-[#e7dfd0] shadow-[0_16px_48px_rgba(13,31,53,0.14)] py-2 z-50 overflow-hidden animate-scale-in">
+                      <div className="px-5 py-4 border-b border-[#e7dfd0]">
+                        <p className="text-[10px] uppercase tracking-widest text-[#5a6a7e] font-bold">
+                          Signed in as
+                        </p>
+                        <p className="font-semibold mt-1 text-sm break-all text-[#0d1f35]">
+                          {user.email}
+                        </p>
+                      </div>
+                      <button
+                        onClick={logout}
+                        className="flex items-center gap-3 w-full px-5 py-3.5 text-sm text-red-500 hover:bg-red-50 transition font-medium"
+                      >
+                        <FiLogOut size={16} /> Sign Out
+                      </button>
                     </div>
                   )}
-                  <span className="text-sm font-semibold truncate max-w-[110px]">
-                    {user.displayName || user.email?.split("@")[0]}
-                  </span>
-                  <FiChevronDown
-                    size={15}
-                    className={`transition-transform duration-300 ${userMenuOpen ? "rotate-180" : ""}`}
-                  />
-                </button>
+                </div>
+              ) : (
+                <div className="flex items-center gap-2">
+                  <Link
+                    to="/login"
+                    className={`px-5 py-2.5 text-sm font-semibold rounded-full transition-all duration-300 hover:scale-105 ${
+                      solid
+                        ? "text-[#0d1f35] hover:bg-[#f5f0e8]"
+                        : "text-white/90 hover:bg-white/10"
+                    }`}
+                  >
+                    Sign In
+                  </Link>
+                  <Link
+                    to="/register"
+                    className="px-6 py-2.5 bg-gradient-to-r from-[#c9a84c] to-[#e8c96a] text-[#0d1f35] text-sm font-black rounded-full hover:shadow-lg hover:shadow-[#c9a84c]/30 hover:scale-105 transition-all duration-300 btn-glow"
+                  >
+                    Start Trip
+                  </Link>
+                </div>
+              )}
+            </div>
 
-                {userMenuOpen && (
-                  <div className="absolute right-0 mt-2.5 w-60 bg-white rounded-2xl border border-[#e7dfd0] shadow-[0_16px_48px_rgba(13,31,53,0.14)] py-2 z-50 overflow-hidden animate-scale-in">
-                    <div className="px-5 py-4 border-b border-[#e7dfd0]">
-                      <p className="text-[10px] uppercase tracking-widest text-[#5a6a7e] font-bold">
-                        Signed in as
-                      </p>
-                      <p className="font-semibold mt-1 text-sm break-all text-[#0d1f35]">
-                        {user.email}
-                      </p>
-                    </div>
-                    <button
-                      onClick={logout}
-                      className="flex items-center gap-3 w-full px-5 py-3.5 text-sm text-red-500 hover:bg-red-50 transition font-medium"
-                    >
-                      <FiLogOut size={16} /> Sign Out
-                    </button>
-                  </div>
-                )}
-              </div>
-            ) : (
-              <div className="flex items-center gap-2">
-                <Link
-                  to="/login"
-                  className={`px-5 py-2.5 text-sm font-semibold rounded-full transition-all duration-300 hover:scale-105 ${
-                    solid
-                      ? "text-[#0d1f35] hover:bg-[#f5f0e8]"
-                      : "text-white/90 hover:bg-white/10"
-                  }`}
-                >
-                  Sign In
-                </Link>
-                <Link
-                  to="/register"
-                  className="px-6 py-2.5 bg-gradient-to-r from-[#c9a84c] to-[#e8c96a] text-[#0d1f35] text-sm font-black rounded-full hover:shadow-lg hover:shadow-[#c9a84c]/30 hover:scale-105 transition-all duration-300 btn-glow"
-                >
-                  Start Trip
-                </Link>
-              </div>
-            )}
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setOpen((p) => !p)}
+              className={`md:hidden w-10 h-10 flex items-center justify-center rounded-[14px] transition-all duration-300 text-xl ${
+                solid
+                  ? "border border-[#e7dfd0] text-[#0d1f35]"
+                  : "border border-white/25 text-white"
+              }`}
+              aria-label="Toggle menu"
+            >
+              {open ? <FiX /> : <FiMenu />}
+            </button>
           </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setOpen((p) => !p)}
-            className={`md:hidden w-10 h-10 flex items-center justify-center rounded-[14px] transition-all duration-300 text-xl ${
-              solid
-                ? "border border-[#e7dfd0] text-[#0d1f35]"
-                : "border border-white/25 text-white"
-            }`}
-            aria-label="Toggle menu"
-          >
-            {open ? <FiX /> : <FiMenu />}
-          </button>
         </div>
       </nav>
 
@@ -302,7 +307,6 @@ const NavBar = () => {
               </Link>
             ))}
 
-            {/* Conditional Mobile Link */}
             {user && (
               <Link
                 to={isAdmin ? "/admin" : "/my-bookings"}
@@ -327,7 +331,7 @@ const NavBar = () => {
             )}
           </nav>
 
-          {/* User Section */}
+          {/* User Section in Mobile Menu */}
           <div className="mt-auto pb-12">
             {user ? (
               <div className="space-y-4">
