@@ -436,7 +436,7 @@ const ServicesPanel = () => {
           <input
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            placeholder="Search services..." // ← Shortened for mobile
+            placeholder="Search by name, category, location…" // ← Shortened for mobile
             className="bg-transparent outline-none text-sm flex-1 text-[#0d1f35] placeholder:text-[#a0aab4] min-w-0"
           />
           {search && (
