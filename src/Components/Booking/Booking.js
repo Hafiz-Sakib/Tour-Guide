@@ -1,7 +1,7 @@
 // src/Components/Booking/Booking.js
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { useAuthState } from "react-firebase-hooks/auth"; // ← Add this
+import { useAuthState } from "react-firebase-hooks/auth";
 import toast from "react-hot-toast";
 
 import {
@@ -13,6 +13,7 @@ import {
 } from "react-icons/fi";
 import Modal from "./Modal";
 import { auth } from "../../Firebase.init";
+import { API_BASE_URL } from "../../config"; // ← Important
 
 const inclusions = [
   "Dedicated trip coordinator",
@@ -27,11 +28,13 @@ const Booking = () => {
   const { bookingId } = useParams();
   const [service, setService] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [openModal, setOpenModal] = useState(false);
+  const [showModal, setShowModal] = useState(false); // Fixed: was openModal
   const [travelers, setTravelers] = useState(1);
   const [date, setDate] = useState("");
   const [formError, setFormError] = useState("");
   const [imgLoaded, setImgLoaded] = useState(false);
+
+  const [user] = useAuthState(auth);
 
   useEffect(() => {
     fetch(
@@ -39,19 +42,12 @@ const Booking = () => {
     )
       .then((r) => r.json())
       .then((d) => {
-        const foundService =
-          d.find((i) => String(i.id) === String(bookingId)) || null;
-
+        const foundService = d.find((i) => String(i.id) === String(bookingId));
         setService(foundService);
-
-        console.log(foundService);
-
         setLoading(false);
       })
       .catch(() => setLoading(false));
   }, [bookingId]);
-
-  const [user] = useAuthState(auth); // ← Add this near your other useState hooks
 
   const confirmBooking = async () => {
     if (!date) {
@@ -64,23 +60,27 @@ const Booking = () => {
       return;
     }
 
+    const price =
+      parseFloat(String(service.balance).replace(/[^0-9.]/g, "")) || 0;
+    const totalAmount = Number((price * travelers).toFixed(0));
+
     const bookingData = {
       userId: user.uid,
       userEmail: user.email,
       userName: user.displayName || user.email?.split("@")[0],
 
-      serviceId: service.id || service._id,
+      serviceId: service.id,
       serviceName: service.name,
       serviceBalance: service.balance,
 
       travelers: Number(travelers),
       preferredDate: new Date(date),
-      totalAmount: Number(total),
+      totalAmount: totalAmount,
       status: "pending",
     };
 
     try {
-      const response = await fetch("http://localhost:5000/api/bookings", {
+      const response = await fetch(`${API_BASE_URL}/api/bookings`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(bookingData),
@@ -89,14 +89,14 @@ const Booking = () => {
       const result = await response.json();
 
       if (result.success) {
-        setOpenModal(true);
+        setShowModal(true);
         toast.success("🎉 Booking request submitted successfully!");
       } else {
         toast.error(result.message || "Failed to submit booking");
       }
     } catch (error) {
       console.error(error);
-      toast.error("Network error. Make sure backend server is running.");
+      toast.error("Network error. Please try again.");
     }
   };
 
@@ -151,7 +151,7 @@ const Booking = () => {
         </Link>
 
         <div className="grid lg:grid-cols-[1fr_400px] gap-12">
-          {/* ── Left ── */}
+          {/* Left Side */}
           <div>
             {/* Hero image */}
             <div className="relative rounded-[32px] overflow-hidden bg-[#0d1f35] shadow-2xl img-zoom">
@@ -249,10 +249,9 @@ const Booking = () => {
             </div>
           </div>
 
-          {/* ── Booking Sidebar ── */}
+          {/* Booking Sidebar */}
           <aside className="lg:sticky lg:top-24 h-fit">
             <div className="border border-[#e7dfd0] bg-white rounded-[28px] p-8 shadow-[0_16px_48px_rgba(13,31,53,0.08)] overflow-hidden relative">
-              {/* Gold top bar */}
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#c9a84c] to-[#e8c96a]" />
 
               <p className="text-[10px] uppercase tracking-widest text-[#5a6a7e] font-bold mt-2">
@@ -266,7 +265,6 @@ const Booking = () => {
               </p>
 
               <div className="space-y-7">
-                {/* Date */}
                 <div>
                   <label className="block text-[10px] font-black uppercase tracking-widest text-[#5a6a7e] mb-3">
                     Preferred Travel Date
@@ -276,14 +274,10 @@ const Booking = () => {
                     value={date}
                     min={new Date().toISOString().split("T")[0]}
                     onChange={(e) => setDate(e.target.value)}
-                    className="
-                      w-full border border-[#e7dfd0] bg-[#f5f0e8] rounded-2xl px-5 py-4
-                      focus:border-[#0b6b62]/50 focus:bg-white outline-none transition-all duration-300 text-sm
-                    "
+                    className="w-full border border-[#e7dfd0] bg-[#f5f0e8] rounded-2xl px-5 py-4 focus:border-[#0b6b62]/50 focus:bg-white outline-none transition-all duration-300 text-sm"
                   />
                 </div>
 
-                {/* Travelers */}
                 <div>
                   <label className="block text-[10px] font-black uppercase tracking-widest text-[#5a6a7e] mb-3">
                     Number of Travelers
@@ -313,7 +307,6 @@ const Booking = () => {
                 </div>
               </div>
 
-              {/* Summary */}
               <div className="mt-7 bg-[#f5f0e8] border border-[#e7dfd0] rounded-[20px] p-5">
                 <div className="flex justify-between text-sm text-[#5a6a7e] mb-3">
                   <span>
@@ -342,12 +335,7 @@ const Booking = () => {
 
               <button
                 onClick={confirmBooking}
-                className="
-                  mt-6 w-full py-5 bg-gradient-to-r from-[#c9a84c] to-[#e8c96a]
-                  text-[#0d1f35] font-black uppercase tracking-widest rounded-2xl
-                  hover:shadow-xl hover:shadow-[#c9a84c]/25 hover:scale-[1.02]
-                  active:scale-[0.99] transition-all duration-300 text-sm btn-glow
-                "
+                className="mt-6 w-full py-5 bg-gradient-to-r from-[#c9a84c] to-[#e8c96a] text-[#0d1f35] font-black uppercase tracking-widest rounded-2xl hover:shadow-xl hover:shadow-[#c9a84c]/25 hover:scale-[1.02] active:scale-[0.99] transition-all duration-300 text-sm btn-glow"
               >
                 Confirm Booking Request
               </button>
@@ -360,9 +348,9 @@ const Booking = () => {
         </div>
       </section>
 
-      {openModal && (
+      {showModal && (
         <Modal
-          closeModal={() => setOpenModal(false)}
+          closeModal={() => setShowModal(false)}
           service={service}
           travelers={travelers}
           date={date}
