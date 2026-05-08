@@ -1,28 +1,66 @@
 // src/Components/Home/Review.js
 import { useEffect, useRef } from "react";
 import { FiStar } from "react-icons/fi";
+import nadiaImg from "../../assets/Review/nadia.png";
+import sabnamImg from "../../assets/Review/sabnam.jpg";
+import sakibImg from "../../assets/Review/sakib.png";
 
 const reviews = [
   {
     name: "Nadia Rahman",
     role: "Family Traveler",
     text: "Sababa made our Cox's Bazar and Bandarban itinerary feel effortless. Every transfer, stay, and guide was exactly as promised.",
-    avatar: "https://randomuser.me/api/portraits/women/44.jpg",
+    avatar: nadiaImg,
     rating: 5,
   },
   {
-    name: "Amin Chowdhury",
+    name: "Sabnam Chowdhury",
     role: "Corporate Retreat Lead",
     text: "The planning was polished and practical. Our team retreat had the right balance of adventure, comfort, and downtime.",
+    avatar: sabnamImg,
+    rating: 5,
+  },
+  {
+    name: "Sakib",
+    role: "Solo Explorer",
+    text: "I wanted local insight without stress. The team handled every detail and still gave me space to explore at my own pace.",
+    avatar: sakibImg,
+    rating: 4.5,
+  },
+  {
+    name: "Tanvir Hasan",
+    role: "Adventure Traveler",
+    text: "The entire trip felt smooth and well-organized. From transport to local guides, everything was handled perfectly while still giving us freedom to enjoy the journey.",
     avatar: "https://randomuser.me/api/portraits/men/32.jpg",
     rating: 5,
   },
   {
-    name: "Sophia Miller",
-    role: "Solo Explorer",
-    text: "I wanted local insight without stress. The team handled every detail and still gave me space to explore at my own pace.",
-    avatar: "https://randomuser.me/api/portraits/women/68.jpg",
+    name: "Nusrat Jahan",
+    role: "Family Vacationer",
+    text: "Traveling with kids can be stressful, but this experience was incredibly comfortable and enjoyable. The accommodations and support exceeded our expectations.",
+    avatar: "https://randomuser.me/api/portraits/women/44.jpg",
     rating: 5,
+  },
+  {
+    name: "Mehedi Rahman",
+    role: "Nature Enthusiast",
+    text: "I loved discovering hidden spots and scenic locations that I would never have found on my own. The trip felt authentic and unforgettable.",
+    avatar: "https://randomuser.me/api/portraits/men/51.jpg",
+    rating: 4,
+  },
+  {
+    name: "Farzana Akter",
+    role: "Couple Traveler",
+    text: "Our honeymoon tour was beautifully arranged with amazing attention to detail. Every destination felt special and relaxing.",
+    avatar: "https://randomuser.me/api/portraits/women/57.jpg",
+    rating: 5,
+  },
+  {
+    name: "Rakib Chowdhury",
+    role: "Weekend Explorer",
+    text: "Perfect short getaway! The itinerary was balanced, the local food recommendations were excellent, and the overall experience was worth every moment.",
+    avatar: "https://randomuser.me/api/portraits/men/73.jpg",
+    rating: 4,
   },
 ];
 

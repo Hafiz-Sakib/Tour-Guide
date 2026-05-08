@@ -48,14 +48,32 @@ const Footer = () => {
             {/* Social */}
             <div className="flex gap-3">
               {[
-                { icon: <FaFacebookF />, label: "Facebook" },
-                { icon: <FaInstagram />, label: "Instagram" },
-                { icon: <FaLinkedinIn />, label: "LinkedIn" },
-                { icon: <FaTwitter />, label: "Twitter" },
+                {
+                  icon: <FaFacebookF />,
+                  label: "Facebook",
+                  link: "https://www.facebook.com/Sakib1056",
+                },
+                {
+                  icon: <FaInstagram />,
+                  label: "Instagram",
+                  link: "https://www.instagram.com/___sakib.404/",
+                },
+                {
+                  icon: <FaLinkedinIn />,
+                  label: "LinkedIn",
+                  link: "https://www.linkedin.com/in/hafiz-sakib-96b8b3229/",
+                },
+                {
+                  icon: <FaTwitter />,
+                  label: "Twitter",
+                  link: "https://x.com/hafiz_sakib1",
+                },
               ].map((s) => (
                 <a
                   key={s.label}
-                  href="sababatours.com"
+                  href={s.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={s.label}
                   className="
                     group w-11 h-11 flex items-center justify-center
