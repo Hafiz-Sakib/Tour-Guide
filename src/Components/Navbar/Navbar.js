@@ -269,10 +269,8 @@ const NavBar = () => {
 
       {/* ── Mobile Menu ── */}
       <div
-        className={`
-        fixed inset-0 z-40 md:hidden transition-all duration-500
-        ${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}
-      `}
+        className={`fixed inset-0 z-40 md:hidden transition-all duration-500
+    ${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
       >
         {/* Backdrop */}
         <div
@@ -288,11 +286,7 @@ const NavBar = () => {
                 key={link.path}
                 to={link.path}
                 onClick={() => setOpen(false)}
-                className="
-                  group flex items-center justify-between py-4
-                  border-b border-white/10 text-white/80 hover:text-white
-                  transition-all duration-300
-                "
+                className="group flex items-center justify-between py-4 border-b border-white/10 text-white/80 hover:text-white transition-all duration-300"
                 style={{
                   animation: open
                     ? `fadeUp 0.4s var(--ease-expo) ${i * 0.06}s both`
@@ -312,21 +306,60 @@ const NavBar = () => {
             ))}
           </nav>
 
-          <div className="mt-auto pb-12 flex gap-3">
-            <Link
-              to="/login"
-              onClick={() => setOpen(false)}
-              className="flex-1 py-4 text-center border border-white/25 text-white rounded-2xl font-semibold hover:bg-white/10 transition"
-            >
-              Sign In
-            </Link>
-            <Link
-              to="/register"
-              onClick={() => setOpen(false)}
-              className="flex-1 py-4 text-center bg-gradient-to-r from-[#c9a84c] to-[#e8c96a] text-[#0d1f35] rounded-2xl font-black transition hover:scale-105"
-            >
-              Start Trip
-            </Link>
+          {/* ── User Section (Mobile) ── */}
+          <div className="mt-auto pb-12">
+            {user ? (
+              <div className="space-y-4">
+                {/* User Info Card */}
+                <div className="bg-white/10 backdrop-blur border border-white/20 rounded-3xl p-5 flex items-center gap-4">
+                  {user.photoURL ? (
+                    <img
+                      src={user.photoURL}
+                      alt={user.displayName || "User"}
+                      className="w-14 h-14 rounded-2xl object-cover ring-2 ring-[#c9a84c]/50"
+                      referrerPolicy="no-referrer"
+                    />
+                  ) : (
+                    <div className="w-14 h-14 bg-gradient-to-br from-[#0b6b62] to-[#0d1f35] text-white flex items-center justify-center rounded-2xl font-bold text-2xl">
+                      {(user.displayName || user.email || "U")[0].toUpperCase()}
+                    </div>
+                  )}
+                  <div className="flex-1 min-w-0">
+                    <p className="font-semibold text-white truncate">
+                      {user.displayName || user.email?.split("@")[0]}
+                    </p>
+                    <p className="text-white/60 text-sm truncate">
+                      {user.email}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Sign Out Button */}
+                <button
+                  onClick={logout}
+                  className="w-full py-4 bg-white/10 hover:bg-red-500/10 border border-white/20 hover:border-red-500/30 text-white hover:text-red-400 rounded-3xl font-medium flex items-center justify-center gap-3 transition-all"
+                >
+                  <FiLogOut size={18} /> Sign Out
+                </button>
+              </div>
+            ) : (
+              <div className="flex gap-3">
+                <Link
+                  to="/login"
+                  onClick={() => setOpen(false)}
+                  className="flex-1 py-4 text-center border border-white/25 text-white rounded-3xl font-semibold hover:bg-white/10 transition"
+                >
+                  Sign In
+                </Link>
+                <Link
+                  to="/register"
+                  onClick={() => setOpen(false)}
+                  className="flex-1 py-4 text-center bg-gradient-to-r from-[#c9a84c] to-[#e8c96a] text-[#0d1f35] rounded-3xl font-black transition hover:scale-105"
+                >
+                  Start Trip
+                </Link>
+              </div>
+            )}
           </div>
         </div>
       </div>
