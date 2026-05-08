@@ -330,12 +330,22 @@ const Booking = () => {
                       {existingBooking.status}
                     </span>
                   </p>
+
                   <Link
-                    to="/dashboard"
+                    to="/my-bookings" // ← Updated
                     className="inline-block px-8 py-3 bg-[#0d1f35] text-white rounded-2xl font-semibold hover:bg-[#0b6b62] transition-all"
                   >
                     View My Bookings
                   </Link>
+
+                  <p className="text-[#5a6a7e] mb-6 mt-6">
+                    You have already submitted a request for this tour.
+                    <br />
+                    Current Status:{" "}
+                    <span className="font-semibold capitalize text-amber-700">
+                      {existingBooking.status}
+                    </span>
+                  </p>
                 </div>
               ) : (
                 // Booking Form
