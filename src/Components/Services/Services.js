@@ -3,6 +3,8 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { FiFilter, FiSearch, FiX } from "react-icons/fi";
 import ServiceCard from "./ServiceCard";
 
+const API = "https://sababa-tours-backend.onrender.com/api/services";
+
 const sortOptions = [
   { value: "default", label: "Recommended" },
   { value: "name", label: "Name" },
@@ -20,22 +22,16 @@ const Services = () => {
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const res = await fetch(
-          "https://raw.githubusercontent.com/Hafiz-Sakib/FakeData/main/FakeData.json",
-        );
-
+        const res = await fetch(API);
         const data = await res.json();
-
-        console.log(data);
-
-        setServices(data);
+        // Normalise: MongoDB uses _id, ServiceCard expects id
+        setServices(data.map((s) => ({ ...s, id: s._id })));
       } catch (error) {
         console.error("Failed to fetch services:", error);
       } finally {
         setLoading(false);
       }
     };
-
     fetchServices();
   }, []);
 
@@ -117,11 +113,7 @@ const Services = () => {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Search destinations, hills, beaches, culture..."
-                className="
-                  w-full border border-[#e7dfd0] bg-[#faf7f2] pl-12 pr-11 py-4
-                  rounded-2xl focus:border-[#0b6b62]/50 focus:bg-white outline-none
-                  text-sm placeholder:text-[#5a6a7e]/50 transition-all duration-300
-                "
+                className="w-full border border-[#e7dfd0] bg-[#faf7f2] pl-12 pr-11 py-4 rounded-2xl focus:border-[#0b6b62]/50 focus:bg-white outline-none text-sm placeholder:text-[#5a6a7e]/50 transition-all duration-300"
               />
               {query && (
                 <button
@@ -142,15 +134,11 @@ const Services = () => {
                 <button
                   key={opt.value}
                   onClick={() => setSortBy(opt.value)}
-                  className={`
-                    px-5 py-2.5 text-[11px] font-black uppercase tracking-widest rounded-xl border
-                    transition-all duration-300 active:scale-95
-                    ${
-                      sortBy === opt.value
-                        ? "bg-[#0d1f35] text-white border-[#0d1f35] shadow-md"
-                        : "border-[#e7dfd0] text-[#5a6a7e] hover:border-[#0b6b62]/40 hover:text-[#0b6b62]"
-                    }
-                  `}
+                  className={`px-5 py-2.5 text-[11px] font-black uppercase tracking-widest rounded-xl border transition-all duration-300 active:scale-95 ${
+                    sortBy === opt.value
+                      ? "bg-[#0d1f35] text-white border-[#0d1f35] shadow-md"
+                      : "border-[#e7dfd0] text-[#5a6a7e] hover:border-[#0b6b62]/40 hover:text-[#0b6b62]"
+                  }`}
                 >
                   {opt.label}
                 </button>
