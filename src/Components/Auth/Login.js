@@ -2,14 +2,12 @@ import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
   getAuth,
-  GithubAuthProvider,
   GoogleAuthProvider,
   signInWithEmailAndPassword,
   signInWithPopup,
 } from "firebase/auth";
 import { FiArrowRight, FiEye, FiEyeOff, FiLock, FiMail } from "react-icons/fi";
 import { FcGoogle } from "react-icons/fc";
-import { FaGithub } from "react-icons/fa";
 import toast from "react-hot-toast";
 import app from "../../Firebase.init";
 
@@ -180,12 +178,6 @@ const Login = () => {
               className="flex items-center justify-center gap-3 border border-[#e7dfd0] px-5 py-4 text-sm font-bold transition hover:border-[#0f766e]"
             >
               <FcGoogle className="text-xl" /> Continue with Google
-            </button>
-            <button
-              onClick={() => handleProvider(GithubAuthProvider)}
-              className="flex items-center justify-center gap-3 bg-[#24292f] px-5 py-4 text-sm font-bold text-white transition hover:bg-[#15191d]"
-            >
-              <FaGithub className="text-xl" /> Continue with GitHub
             </button>
           </div>
         </div>
