@@ -14,9 +14,10 @@ import NotFound from "./Components/Pages/NotFound";
 
 import Login from "./Components/Auth/Login";
 import Registration from "./Components/Auth/Registration";
+import ForgotPassword from "./Components/Auth/ForgotPassword";
 
 import Booking from "./Components/Booking/Booking";
-import ForgotPassword from "./Components/Auth/ForgotPassword";
+import MyBookings from "./Components/MyBookings/MyBookings";
 
 function App() {
   return (
@@ -25,21 +26,13 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-
         <Route path="/services" element={<Services />} />
-
         <Route path="/blogs" element={<Blogs />} />
-
         <Route path="/about" element={<About />} />
-
         <Route path="/contact" element={<Contact />} />
-
         <Route path="/login" element={<Login />} />
-
         <Route path="/register" element={<Registration />} />
-
         <Route path="/forgot-password" element={<ForgotPassword />} />
-
         <Route
           path="/booking/:bookingId"
           element={
@@ -48,7 +41,15 @@ function App() {
             </RequireAuth>
           }
         />
-
+        <Route
+          path="/my-bookings"
+          element={
+            <RequireAuth>
+              <MyBookings />
+            </RequireAuth>
+          }
+        />
+        ;
         <Route path="*" element={<NotFound />} />
       </Routes>
 

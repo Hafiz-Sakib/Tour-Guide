@@ -95,27 +95,23 @@ const NavBar = () => {
   return (
     <>
       <nav
-        className={`
-          fixed inset-x-0 top-0 z-50 nav-blur
-          ${
-            solid
-              ? "bg-white/96 backdrop-blur-2xl border-b border-[#e7dfd0] shadow-[0_2px_24px_rgba(13,31,53,0.07)] text-[#0d1f35]"
-              : "bg-transparent border-b border-white/10 text-white"
-          }
-        `}
+        className={`fixed inset-x-0 top-0 z-50 nav-blur ${
+          solid
+            ? "bg-white/96 backdrop-blur-2xl border-b border-[#e7dfd0] shadow-[0_2px_24px_rgba(13,31,53,0.07)] text-[#0d1f35]"
+            : "bg-transparent border-b border-white/10 text-white"
+        }`}
       >
         <div className="mx-auto max-w-7xl px-6 lg:px-10 h-[76px] flex items-center justify-between">
           {/* ── Logo ── */}
           <Link to="/" className="flex items-center gap-3 group">
             <div
-              className={`
-              relative w-10 h-10 flex items-center justify-center rounded-[14px]
-              transition-all duration-500 group-hover:scale-110 group-hover:rotate-6
-              ${solid ? "bg-[#0d1f35] text-white shadow-lg" : "bg-white/12 text-white backdrop-blur border border-white/20"}
-            `}
+              className={`relative w-10 h-10 flex items-center justify-center rounded-[14px] transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 ${
+                solid
+                  ? "bg-[#0d1f35] text-white shadow-lg"
+                  : "bg-white/12 text-white backdrop-blur border border-white/20"
+              }`}
             >
               <FiCompass className="text-xl" />
-              {/* gold dot accent */}
               <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-[#c9a84c] rounded-full border-2 border-white" />
             </div>
             <div>
@@ -142,6 +138,15 @@ const NavBar = () => {
                 </CustomLink>
               </li>
             ))}
+
+            {/* My Bookings - Visible only when logged in */}
+            {user && (
+              <li>
+                <CustomLink to="/my-bookings" solid={solid}>
+                  My Bookings
+                </CustomLink>
+              </li>
+            )}
           </ul>
 
           {/* ── Right Side ── */}
@@ -149,15 +154,11 @@ const NavBar = () => {
             {/* Dark Mode Toggle */}
             <button
               onClick={() => setDarkMode((p) => !p)}
-              className={`
-                w-10 h-10 flex items-center justify-center rounded-[14px]
-                transition-all duration-300 hover:scale-110
-                ${
-                  solid
-                    ? "border border-[#e7dfd0] hover:bg-[#f5f0e8] text-[#5a6a7e]"
-                    : "border border-white/25 hover:bg-white/10 text-white/80"
-                }
-              `}
+              className={`w-10 h-10 flex items-center justify-center rounded-[14px] transition-all duration-300 hover:scale-110 ${
+                solid
+                  ? "border border-[#e7dfd0] hover:bg-[#f5f0e8] text-[#5a6a7e]"
+                  : "border border-white/25 hover:bg-white/10 text-white/80"
+              }`}
               aria-label="Toggle dark mode"
             >
               {darkMode ? (
@@ -171,15 +172,11 @@ const NavBar = () => {
               <div className="relative" ref={menuRef}>
                 <button
                   onClick={() => setUserMenuOpen((p) => !p)}
-                  className={`
-                    flex items-center gap-2.5 pl-1.5 pr-4 py-1.5 rounded-full
-                    border transition-all duration-300 hover:shadow-lg
-                    ${
-                      solid
-                        ? "border-[#e7dfd0] bg-white hover:border-[#c9a84c]/40"
-                        : "border-white/25 bg-white/10 hover:bg-white/15 backdrop-blur"
-                    }
-                  `}
+                  className={`flex items-center gap-2.5 pl-1.5 pr-4 py-1.5 rounded-full border transition-all duration-300 hover:shadow-lg ${
+                    solid
+                      ? "border-[#e7dfd0] bg-white hover:border-[#c9a84c]/40"
+                      : "border-white/25 bg-white/10 hover:bg-white/15 backdrop-blur"
+                  }`}
                 >
                   {user.photoURL ? (
                     <img
@@ -204,13 +201,7 @@ const NavBar = () => {
 
                 {/* Dropdown */}
                 {userMenuOpen && (
-                  <div
-                    className="
-                    absolute right-0 mt-2.5 w-60 bg-white rounded-2xl
-                    border border-[#e7dfd0] shadow-[0_16px_48px_rgba(13,31,53,0.14)]
-                    py-2 z-50 overflow-hidden animate-scale-in
-                  "
-                  >
+                  <div className="absolute right-0 mt-2.5 w-60 bg-white rounded-2xl border border-[#e7dfd0] shadow-[0_16px_48px_rgba(13,31,53,0.14)] py-2 z-50 overflow-hidden animate-scale-in">
                     <div className="px-5 py-4 border-b border-[#e7dfd0]">
                       <p className="text-[10px] uppercase tracking-widest text-[#5a6a7e] font-bold">
                         Signed in as
@@ -232,19 +223,17 @@ const NavBar = () => {
               <div className="flex items-center gap-2">
                 <Link
                   to="/login"
-                  className={`px-5 py-2.5 text-sm font-semibold rounded-full transition-all duration-300 hover:scale-105
-                    ${solid ? "text-[#0d1f35] hover:bg-[#f5f0e8]" : "text-white/90 hover:bg-white/10"}`}
+                  className={`px-5 py-2.5 text-sm font-semibold rounded-full transition-all duration-300 hover:scale-105 ${
+                    solid
+                      ? "text-[#0d1f35] hover:bg-[#f5f0e8]"
+                      : "text-white/90 hover:bg-white/10"
+                  }`}
                 >
                   Sign In
                 </Link>
                 <Link
                   to="/register"
-                  className="
-                    px-6 py-2.5 bg-gradient-to-r from-[#c9a84c] to-[#e8c96a]
-                    text-[#0d1f35] text-sm font-black rounded-full
-                    hover:shadow-lg hover:shadow-[#c9a84c]/30 hover:scale-105
-                    transition-all duration-300 btn-glow
-                  "
+                  className="px-6 py-2.5 bg-gradient-to-r from-[#c9a84c] to-[#e8c96a] text-[#0d1f35] text-sm font-black rounded-full hover:shadow-lg hover:shadow-[#c9a84c]/30 hover:scale-105 transition-all duration-300 btn-glow"
                 >
                   Start Trip
                 </Link>
@@ -255,11 +244,11 @@ const NavBar = () => {
           {/* ── Mobile Menu Button ── */}
           <button
             onClick={() => setOpen((p) => !p)}
-            className={`
-              md:hidden w-10 h-10 flex items-center justify-center rounded-[14px]
-              transition-all duration-300 text-xl
-              ${solid ? "border border-[#e7dfd0] text-[#0d1f35]" : "border border-white/25 text-white"}
-            `}
+            className={`md:hidden w-10 h-10 flex items-center justify-center rounded-[14px] transition-all duration-300 text-xl ${
+              solid
+                ? "border border-[#e7dfd0] text-[#0d1f35]"
+                : "border border-white/25 text-white"
+            }`}
             aria-label="Toggle menu"
           >
             {open ? <FiX /> : <FiMenu />}
@@ -269,16 +258,17 @@ const NavBar = () => {
 
       {/* ── Mobile Menu ── */}
       <div
-        className={`fixed inset-0 z-40 md:hidden transition-all duration-500
-    ${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
+        className={`fixed inset-0 z-40 md:hidden transition-all duration-500 ${
+          open
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
+        }`}
       >
-        {/* Backdrop */}
         <div
           className="absolute inset-0 bg-[#0d1f35]/95 backdrop-blur-xl"
           onClick={() => setOpen(false)}
         />
 
-        {/* Content */}
         <div className="relative pt-24 px-8 h-full flex flex-col">
           <nav className="flex flex-col gap-2">
             {links.map((link, i) => (
@@ -304,13 +294,36 @@ const NavBar = () => {
                 </span>
               </Link>
             ))}
+
+            {/* My Bookings in Mobile Menu */}
+            {user && (
+              <Link
+                to="/my-bookings"
+                onClick={() => setOpen(false)}
+                className="group flex items-center justify-between py-4 border-b border-white/10 text-white/80 hover:text-white transition-all duration-300"
+                style={{
+                  animation: open
+                    ? `fadeUp 0.4s var(--ease-expo) ${links.length * 0.06}s both`
+                    : "none",
+                }}
+              >
+                <span
+                  className="text-3xl font-black tracking-tight"
+                  style={{ fontFamily: "var(--font-display)" }}
+                >
+                  My Bookings
+                </span>
+                <span className="text-[#c9a84c] opacity-0 group-hover:opacity-100 transition-all translate-x-[-8px] group-hover:translate-x-0">
+                  →
+                </span>
+              </Link>
+            )}
           </nav>
 
-          {/* ── User Section (Mobile) ── */}
+          {/* User Section (Mobile) */}
           <div className="mt-auto pb-12">
             {user ? (
               <div className="space-y-4">
-                {/* User Info Card */}
                 <div className="bg-white/10 backdrop-blur border border-white/20 rounded-3xl p-5 flex items-center gap-4">
                   {user.photoURL ? (
                     <img
@@ -334,7 +347,6 @@ const NavBar = () => {
                   </div>
                 </div>
 
-                {/* Sign Out Button */}
                 <button
                   onClick={logout}
                   className="w-full py-4 bg-white/10 hover:bg-red-500/10 border border-white/20 hover:border-red-500/30 text-white hover:text-red-400 rounded-3xl font-medium flex items-center justify-center gap-3 transition-all"

@@ -1,6 +1,9 @@
 // src/Components/Booking/Booking.js
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth"; // ← Add this
+import toast from "react-hot-toast";
+
 import {
   FiArrowLeft,
   FiCheck,
@@ -9,6 +12,7 @@ import {
   FiStar,
 } from "react-icons/fi";
 import Modal from "./Modal";
+import { auth } from "../../Firebase.init";
 
 const inclusions = [
   "Dedicated trip coordinator",
@@ -47,13 +51,53 @@ const Booking = () => {
       .catch(() => setLoading(false));
   }, [bookingId]);
 
-  const confirmBooking = () => {
+  const [user] = useAuthState(auth); // ← Add this near your other useState hooks
+
+  const confirmBooking = async () => {
     if (!date) {
       setFormError("Please select your preferred travel date.");
       return;
     }
-    setFormError("");
-    setOpenModal(true);
+
+    if (!user) {
+      toast.error("Please login to make a booking");
+      return;
+    }
+
+    const bookingData = {
+      userId: user.uid,
+      userEmail: user.email,
+      userName: user.displayName || user.email?.split("@")[0],
+
+      serviceId: service.id || service._id,
+      serviceName: service.name,
+      serviceBalance: service.balance,
+
+      travelers: Number(travelers),
+      preferredDate: new Date(date),
+      totalAmount: Number(total),
+      status: "pending",
+    };
+
+    try {
+      const response = await fetch("http://localhost:5000/api/bookings", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(bookingData),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setOpenModal(true);
+        toast.success("🎉 Booking request submitted successfully!");
+      } else {
+        toast.error(result.message || "Failed to submit booking");
+      }
+    } catch (error) {
+      console.error(error);
+      toast.error("Network error. Make sure backend server is running.");
+    }
   };
 
   if (loading) {
