@@ -65,6 +65,13 @@ const Booking = () => {
       return;
     }
 
+    const addressWordCount = address.trim().split(/\s+/).filter(Boolean).length;
+
+    if (addressWordCount > 30) {
+      toast.error("Address must not exceed 30 words");
+      return;
+    }
+
     if (!user) {
       toast.error("Please login to make a booking");
       return;
@@ -348,11 +355,23 @@ const Booking = () => {
                   </label>
                   <textarea
                     value={address}
-                    onChange={(e) => setAddress(e.target.value)}
+                    onChange={(e) => {
+                      const input = e.target.value;
+
+                      const words = input.trim().split(/\s+/).filter(Boolean);
+
+                      if (words.length <= 30) {
+                        setAddress(input);
+                      }
+                    }}
                     placeholder="House No, Road No, Area, City"
                     rows={3}
                     className="resize-none w-full border border-[#e7dfd0] bg-[#f5f0e8] rounded-2xl px-5 py-4 focus:border-[#0b6b62]/50 focus:bg-white outline-none transition-all"
                   />
+                  <p className="text-xs text-gray-500 mt-2">
+                    {address.trim().split(/\s+/).filter(Boolean).length}/30
+                    words
+                  </p>
                 </div>
               </div>
 
