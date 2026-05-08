@@ -12,6 +12,7 @@ import {
 } from "react-icons/fi";
 import ServiceCard from "../Services/ServiceCard";
 import Review from "./Review";
+import { API_BASE_URL } from "../../config";
 
 /* ─────────────────────────── data ─────────────────────────── */
 const pillars = [
@@ -131,16 +132,32 @@ const Home = () => {
   const plannerRef = useReveal();
 
   useEffect(() => {
-    fetch(
-      "https://raw.githubusercontent.com/Hafiz-Sakib/FakeData/main/FakeData.json",
-    )
-      .then((r) => r.json())
-      .then((d) => {
-        setServices(d);
+    const fetchServices = async () => {
+      try {
+        const response = await fetch(`${API_BASE_URL}/api/services`);
+
+        const data = await response.json();
+
+        const servicesData = Array.isArray(data) ? data : data.data;
+
+        setServices(
+          servicesData.map((s) => ({
+            ...s,
+            id: s._id,
+          })),
+        );
+      } catch (error) {
+        console.error("Failed to fetch services:", error);
+        setServices([]);
+      } finally {
         setLoading(false);
-      })
-      .catch(() => setLoading(false));
+      }
+    };
+
+    fetchServices();
+
     const t = setTimeout(() => setHeroLoaded(true), 120);
+
     return () => clearTimeout(t);
   }, []);
 
@@ -671,8 +688,8 @@ const Home = () => {
               <div className="h-12 w-12 animate-spin rounded-full border-4 border-white/10 border-t-[#c9a84c]" />
             </div>
           ) : (
-            <div className="grid md:grid-cols-2 gap-7">
-              {services.slice(0, 2).map((s) => (
+            <div className="grid md:grid-cols-3 gap-7">
+              {services.slice(0, 3).map((s) => (
                 <ServiceCard key={s.id} service={s} dark />
               ))}
             </div>

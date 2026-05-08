@@ -39,16 +39,32 @@ const Booking = () => {
   const [user] = useAuthState(auth);
 
   useEffect(() => {
-    fetch(
-      "https://raw.githubusercontent.com/Hafiz-Sakib/FakeData/main/FakeData.json",
-    )
-      .then((r) => r.json())
-      .then((d) => {
-        const foundService = d.find((i) => String(i.id) === String(bookingId));
-        setService(foundService);
+    const fetchService = async () => {
+      try {
+        const response = await fetch(`${API_BASE_URL}/api/services`);
+
+        const data = await response.json();
+
+        const services = Array.isArray(data) ? data : data.data;
+
+        const foundService = services.find(
+          (item) => String(item._id) === String(bookingId),
+        );
+
+        if (foundService) {
+          setService({
+            ...foundService,
+            id: foundService._id,
+          });
+        }
+      } catch (error) {
+        console.error("Failed to fetch service:", error);
+      } finally {
         setLoading(false);
-      })
-      .catch(() => setLoading(false));
+      }
+    };
+
+    fetchService();
   }, [bookingId]);
 
   const confirmBooking = async () => {
