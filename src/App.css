@@ -2,6 +2,21 @@
 
 /* ─── CSS Variables ─── */
 :root {
+  --gold-gradient: linear-gradient(
+    135deg,
+    #c9a84c 0%,
+    #e8c96a 50%,
+    #f4d88a 100%
+  );
+  --teal-gradient: linear-gradient(135deg, #0b6b62 0%, #0f8f84 100%);
+  --navy-gradient: linear-gradient(135deg, #0d1f35 0%, #132236 100%);
+  --dark-gold: linear-gradient(135deg, #0d1f35 0%, #c9a84c 100%);
+  --hero-gradient: linear-gradient(135deg, #0d1f35 0%, #0b6b62 100%);
+
+  /* Subtle overlays */
+  --glass-gold: rgba(201, 168, 76, 0.12);
+  --glow-gold: 0 0 25px rgba(201, 168, 76, 0.35);
+
   --navy: #0d1f35;
   --navy-deep: #070e1c;
   --teal: #0b6b62;
@@ -494,4 +509,13 @@ html.dark .planner-choice:not(.active) {
   font-weight: 700;
 
   opacity: 0.82;
+}
+/* Premium Gradient Cards */
+.gradient-card {
+  background: linear-gradient(145deg, #ffffff, #f8f4eb);
+  border: 1px solid rgba(201, 168, 76, 0.2);
+}
+
+html.dark .gradient-card {
+  background: linear-gradient(145deg, #0d1828, #132236);
 }

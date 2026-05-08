@@ -166,7 +166,7 @@ const Home = () => {
           />
         </div>
         {/* Gradient overlays */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0d1f35]/95 via-[#0d1f35]/75 to-[#0b6b62]/40" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0d1f35]/95 via-[#0b6b62]/70 to-[#0d1f35]/90" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0d1f35]/80 via-transparent to-transparent" />
 
         {/* Decorative ring */}
