@@ -428,36 +428,43 @@ const ServicesPanel = () => {
         />
       </div>
 
-      <div className="flex flex-wrap items-center gap-3 mb-5">
-        <div className="flex items-center gap-2 bg-white border border-[#e7dfd0] rounded-xl px-3 py-2 flex-1 min-w-[180px]">
-          <FiSearch size={15} className="text-[#5a6a7e]" />
+      {/* Toolbar - Improved Mobile Experience */}
+      <div className="flex flex-col sm:flex-row gap-3 mb-5">
+        {/* Search Bar */}
+        <div className="flex items-center gap-2 bg-white border border-[#e7dfd0] rounded-xl px-3 py-2 flex-1 min-w-0">
+          <FiSearch size={15} className="text-[#5a6a7e] shrink-0" />
           <input
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            placeholder="Search by name, category, location…"
-            className="bg-transparent outline-none text-sm flex-1 text-[#0d1f35] placeholder:text-[#a0aab4]"
+            placeholder="Search services..." // ← Shortened for mobile
+            className="bg-transparent outline-none text-sm flex-1 text-[#0d1f35] placeholder:text-[#a0aab4] min-w-0"
           />
           {search && (
             <button
               onClick={() => setSearch("")}
-              className="text-[#5a6a7e] hover:text-[#0d1f35]"
+              className="text-[#5a6a7e] hover:text-[#0d1f35] shrink-0"
             >
               <FiX size={14} />
             </button>
           )}
         </div>
-        <button
-          onClick={() => setModal("add")}
-          className="flex items-center gap-2 px-5 py-2.5 bg-[#0d1f35] text-white rounded-xl hover:bg-[#0b6b62] text-sm font-semibold"
-        >
-          <FiPlus size={16} /> Add Service
-        </button>
-        <button
-          onClick={fetchServices}
-          className="flex items-center gap-2 px-4 py-2.5 border border-[#e7dfd0] bg-white rounded-xl hover:bg-[#f5f0e8] text-sm font-semibold text-[#5a6a7e]"
-        >
-          <FiRefreshCw size={15} />
-        </button>
+
+        {/* Action Buttons */}
+        <div className="flex items-center gap-3">
+          <button
+            onClick={() => setModal("add")}
+            className="flex items-center gap-2 px-5 py-2.5 bg-[#0d1f35] text-white rounded-xl hover:bg-[#0b6b62] text-sm font-semibold whitespace-nowrap"
+          >
+            <FiPlus size={16} /> Add Service
+          </button>
+          <button
+            onClick={fetchServices}
+            className="flex items-center gap-2 px-4 py-2.5 border border-[#e7dfd0] bg-white rounded-xl hover:bg-[#f5f0e8] text-sm font-semibold text-[#5a6a7e]"
+            aria-label="Refresh"
+          >
+            <FiRefreshCw size={15} />
+          </button>
+        </div>
       </div>
 
       {loading ? (
