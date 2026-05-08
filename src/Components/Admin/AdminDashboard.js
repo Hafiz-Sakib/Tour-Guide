@@ -4,7 +4,7 @@ import { auth } from "../../Firebase.init";
 import toast from "react-hot-toast";
 import { FiTrash2, FiCheckCircle, FiXCircle } from "react-icons/fi";
 
-const ADMIN_EMAIL = "hafizsakib5@email.com"; // ← Change this to your admin email
+const ADMIN_EMAIL = "hafizsakib5@gmail.com";
 
 const AdminDashboard = () => {
   const [user] = useAuthState(auth);
@@ -119,7 +119,7 @@ const AdminDashboard = () => {
                 </thead>
                 <tbody>
                   {bookings.map((b) => (
-                    <tr key={b._id} className="border-b hover:bg-[#f9f5eb]">
+                    <tr key={b._id} className="border-b hover:bg-slate-950">
                       <td className="p-6 font-medium">{b.serviceName}</td>
                       <td className="p-6">
                         <div>{b.userName}</div>
