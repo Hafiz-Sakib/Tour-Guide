@@ -423,7 +423,7 @@ const AdminDashboard = () => {
                       <tr
                         key={b._id}
                         onClick={() => setSelected(b)}
-                        className="border-b border-[#f0ebe2] hover:bg-[#f9f7f3] cursor-pointer transition-colors"
+                        className="border-b border-[#f0ebe2] hover:bg-slate-800 cursor-pointer transition-colors"
                       >
                         <td
                           className="px-5 py-4 font-semibold text-sm text-[#0d1f35] max-w-[160px] truncate"
