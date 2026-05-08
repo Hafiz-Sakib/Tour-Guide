@@ -23,15 +23,28 @@ const Services = () => {
     const fetchServices = async () => {
       try {
         const res = await fetch(API);
-        const data = await res.json();
-        // Normalise: MongoDB uses _id, ServiceCard expects id
-        setServices(data.map((s) => ({ ...s, id: s._id })));
+
+        if (!res.ok) throw new Error("Network error");
+
+        const result = await res.json();
+
+        const servicesData = Array.isArray(result) ? result : result.data;
+
+        setServices(
+          servicesData.map((s) => ({
+            ...s,
+            id: s._id,
+            price: parseFloat(String(s.balance).replace(/[^0-9.]/g, "")) || 0,
+          })),
+        );
       } catch (error) {
         console.error("Failed to fetch services:", error);
+        setServices([]); // fallback
       } finally {
         setLoading(false);
       }
     };
+
     fetchServices();
   }, []);
 
