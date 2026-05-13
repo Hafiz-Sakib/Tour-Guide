@@ -19,6 +19,7 @@ const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -44,10 +45,13 @@ const Login = () => {
     }
     setErrors({});
     setLoading(true);
+
     try {
       await signInWithEmailAndPassword(auth, email, password);
       toast.success("Welcome back.");
-      navigate(from, { replace: true });
+      setTimeout(() => {
+        navigate(from, { replace: true });
+      }, 150);
     } catch {
       toast.error("Login failed. Please check your credentials.");
     } finally {
@@ -60,25 +64,21 @@ const Login = () => {
     const provider = new GoogleAuthProvider();
 
     try {
-      // Try popup first — works in most browsers when called from a direct click
       const result = await signInWithPopup(auth, provider);
-      console.log("Google sign-in result:", result);
+      console.log("✅ Google Popup Success:", result.user.email);
       toast.success("Signed in successfully.");
       navigate(from, { replace: true });
     } catch (popupError) {
       if (
         popupError.code === "auth/popup-blocked" ||
-        popupError.code === "auth/popup-cancelled-by-user" ||
         popupError.code === "auth/cancelled-popup-request"
       ) {
-        // Popup was blocked — fall back to full-page redirect
         try {
           sessionStorage.setItem("redirectFrom", from);
           await signInWithRedirect(auth, provider);
-          // Page navigates away; nothing runs after this
         } catch (redirectError) {
-          console.error("Redirect fallback failed:", redirectError);
-          toast.error("Google sign-in failed. Please try again.");
+          console.error("Redirect failed:", redirectError);
+          toast.error("Google sign-in failed.");
           setGoogleLoading(false);
         }
       } else {

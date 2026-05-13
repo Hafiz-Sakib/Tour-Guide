@@ -13,6 +13,7 @@ import {
 } from "react-icons/fi";
 import { auth } from "../../Firebase.init";
 import CustomLink from "../Utilities/CustomLink";
+import toast from "react-hot-toast";
 
 const links = [
   { name: "Home", path: "/" },
@@ -42,7 +43,9 @@ const NavBar = () => {
 
   /* ─── Auth listener ─── */
   useEffect(() => {
-    const unsub = onAuthStateChanged(auth, (u) => setUser(u || null));
+    const unsub = onAuthStateChanged(auth, (u) => {
+      setUser(u || null);
+    });
     return unsub;
   }, []);
 
@@ -69,8 +72,9 @@ const NavBar = () => {
   /* ─── Click outside user-menu ─── */
   useEffect(() => {
     const handler = (e) => {
-      if (menuRef.current && !menuRef.current.contains(e.target))
+      if (menuRef.current && !menuRef.current.contains(e.target)) {
         setUserMenuOpen(false);
+      }
     };
     document.addEventListener("mousedown", handler);
     return () => document.removeEventListener("mousedown", handler);
@@ -88,6 +92,7 @@ const NavBar = () => {
     try {
       await signOut(auth);
       navigate("/");
+      toast.success("Signed out successfully"); // Optional: add toast if you want
     } catch (err) {
       console.error(err);
     }
@@ -157,9 +162,9 @@ const NavBar = () => {
             )}
           </ul>
 
-          {/* Right Side - Now Visible on All Devices */}
+          {/* Right Side */}
           <div className="flex items-center gap-3">
-            {/* Dark Mode Toggle - Visible on Mobile & Desktop */}
+            {/* Dark Mode Toggle - Visible everywhere */}
             <button
               onClick={() => setDarkMode((p) => !p)}
               className={`w-10 h-10 flex items-center justify-center rounded-[14px] transition-all duration-300 hover:scale-110 ${
@@ -268,7 +273,7 @@ const NavBar = () => {
         </div>
       </nav>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu - Unchanged but kept clean */}
       <div
         className={`fixed inset-0 z-40 md:hidden transition-all duration-500 ${
           open
@@ -331,7 +336,7 @@ const NavBar = () => {
             )}
           </nav>
 
-          {/* User Section in Mobile Menu */}
+          {/* Mobile User Section */}
           <div className="mt-auto pb-12">
             {user ? (
               <div className="space-y-4">

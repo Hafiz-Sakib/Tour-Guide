@@ -97,30 +97,26 @@ const Registration = () => {
     const provider = new GoogleAuthProvider();
 
     try {
-      // Try popup first — works in most browsers when called from a direct click
       const result = await signInWithPopup(auth, provider);
-      console.log("Google sign-up result:", result);
+      console.log("✅ Google Sign-Up Success:", result.user.email);
       toast.success("Account ready. Welcome!");
       navigate("/");
     } catch (popupError) {
       if (
         popupError.code === "auth/popup-blocked" ||
-        popupError.code === "auth/popup-cancelled-by-user" ||
         popupError.code === "auth/cancelled-popup-request"
       ) {
-        // Popup was blocked — fall back to full-page redirect
         try {
           sessionStorage.setItem("redirectFrom", "/");
           await signInWithRedirect(auth, provider);
-          // Page navigates away; nothing runs after this
         } catch (redirectError) {
-          console.error("Redirect fallback failed:", redirectError);
-          toast.error("Google sign-in failed. Please try again.");
+          console.error("Redirect failed:", redirectError);
+          toast.error("Google sign-up failed.");
           setGoogleLoading(false);
         }
       } else {
         console.error("Google sign-up error:", popupError);
-        toast.error("Google sign-in failed. Please try again.");
+        toast.error("Google sign-up failed. Please try again.");
         setGoogleLoading(false);
       }
     }
@@ -288,6 +284,7 @@ const Registration = () => {
             </span>
             <span className="h-px flex-1 bg-[#e7dfd0]" />
           </div>
+
           <div className="grid gap-3">
             <button
               onClick={handleGoogleSignUp}
