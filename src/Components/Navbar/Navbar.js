@@ -44,6 +44,7 @@ const NavBar = () => {
   /* ─── Auth listener ─── */
   useEffect(() => {
     const unsub = onAuthStateChanged(auth, (u) => {
+      console.log("🔥 Auth State Changed:", u ? u.email : "No user"); // ← Add this
       setUser(u || null);
     });
     return unsub;
