@@ -15,6 +15,7 @@ import NotFound from "./Components/Pages/NotFound";
 import Login from "./Components/Auth/Login";
 import Registration from "./Components/Auth/Registration";
 import ForgotPassword from "./Components/Auth/ForgotPassword";
+import AuthRedirectHandler from "./Components/Auth/AuthRedirectHandler";
 
 import Booking from "./Components/Booking/Booking";
 import MyBookings from "./Components/MyBookings/MyBookings";
@@ -24,7 +25,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-
+      <AuthRedirectHandler />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
@@ -53,7 +54,6 @@ function App() {
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-
       <Footer />
     </div>
   );
