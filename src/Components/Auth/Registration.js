@@ -99,6 +99,7 @@ const Registration = () => {
     try {
       // Try popup first — works in most browsers when called from a direct click
       const result = await signInWithPopup(auth, provider);
+      console.log("Google sign-up result:", result);
       toast.success("Account ready. Welcome!");
       navigate("/");
     } catch (popupError) {

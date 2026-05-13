@@ -62,6 +62,7 @@ const Login = () => {
     try {
       // Try popup first — works in most browsers when called from a direct click
       const result = await signInWithPopup(auth, provider);
+      console.log("Google sign-in result:", result);
       toast.success("Signed in successfully.");
       navigate(from, { replace: true });
     } catch (popupError) {
