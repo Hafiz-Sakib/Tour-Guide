@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
   getAuth,
   GoogleAuthProvider,
   signInWithEmailAndPassword,
-  signInWithPopup,
+  signInWithRedirect,
+  getRedirectResult,
 } from "firebase/auth";
 import { FiArrowRight, FiEye, FiEyeOff, FiLock, FiMail } from "react-icons/fi";
 import { FcGoogle } from "react-icons/fc";
@@ -22,6 +23,25 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
+  const [redirectLoading, setRedirectLoading] = useState(true);
+
+  // Handle the result after Google redirect returns
+  useEffect(() => {
+    getRedirectResult(auth)
+      .then((result) => {
+        if (result?.user) {
+          toast.success("Signed in successfully.");
+          navigate(from, { replace: true });
+        }
+      })
+      .catch((error) => {
+        if (error.code !== "auth/no-current-user") {
+          console.error("Redirect sign-in error:", error);
+          toast.error("Google sign-in failed. Please try again.");
+        }
+      })
+      .finally(() => setRedirectLoading(false));
+  }, [from, navigate]);
 
   const validate = () => {
     const nextErrors = {};
@@ -52,28 +72,14 @@ const Login = () => {
     }
   };
 
-  const handleProvider = async (Provider) => {
-    console.log("🔄 Google Sign-In started..."); // ← Add this
-
+  const handleGoogleSignIn = async () => {
+    const provider = new GoogleAuthProvider();
     try {
-      console.log("📡 Calling signInWithPopup..."); // ← Add this
-      const result = await signInWithPopup(auth, new Provider());
-
-      console.log("✅ Google Sign-In SUCCESS!", {
-        user: result.user.email,
-        displayName: result.user.displayName,
-        uid: result.user.uid,
-      });
-
-      toast.success("Signed in successfully.");
-      navigate(from, { replace: true });
+      await signInWithRedirect(auth, provider);
+      // Page will redirect to Google — no code runs after this
     } catch (error) {
-      console.error("❌ Google Sign-In FAILED:", {
-        code: error.code,
-        message: error.message,
-        fullError: error,
-      });
-      toast.error("Sign-in failed. Please try again.");
+      console.error("Google sign-in error:", error);
+      toast.error("Could not initiate Google sign-in. Please try again.");
     }
   };
 
@@ -83,6 +89,23 @@ const Login = () => {
         ? "border-[#d94f3d]"
         : "border-[#e7dfd0] focus:border-[#0f766e]"
     }`;
+
+  // Show a brief loading state while checking redirect result on page load
+  if (redirectLoading) {
+    return (
+      <div className="flex items-center justify-center min-h-screen bg-[#f8f5ef]">
+        <div className="flex flex-col items-center gap-5">
+          <div className="relative w-14 h-14">
+            <div className="absolute inset-0 rounded-full border-2 border-[#0f766e]/20"></div>
+            <div className="absolute inset-0 rounded-full border-2 border-transparent border-t-[#0f766e] animate-spin"></div>
+          </div>
+          <p className="text-xs text-[#132236]/40 tracking-[0.3em] uppercase font-semibold">
+            Loading…
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <main className="min-h-screen bg-[#f6f2ea] pt-[76px] text-[#132236]">
@@ -132,6 +155,7 @@ const Login = () => {
                   value={email}
                   onChange={(event) => setEmail(event.target.value)}
                   placeholder="you@example.com"
+                  autoComplete="email"
                   className={inputClass("email")}
                 />
               </div>
@@ -153,6 +177,7 @@ const Login = () => {
                   value={password}
                   onChange={(event) => setPassword(event.target.value)}
                   placeholder="Your password"
+                  autoComplete="current-password"
                   className={`${inputClass("password")} pr-12`}
                 />
                 <button
@@ -198,7 +223,7 @@ const Login = () => {
 
           <div className="grid gap-3">
             <button
-              onClick={() => handleProvider(GoogleAuthProvider)}
+              onClick={handleGoogleSignIn}
               className="flex items-center justify-center gap-3 border border-[#e7dfd0] px-5 py-4 text-sm font-bold transition hover:border-[#0f766e]"
             >
               <FcGoogle className="text-xl" /> Continue with Google
